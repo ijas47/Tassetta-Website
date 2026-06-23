@@ -41,43 +41,37 @@ export default function ScrollAnimations() {
         });
 
         if (content) {
-          gsap.fromTo(
-            content,
-            { opacity: 0, y: 64 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 1,
-              ease: "power3.out",
-              scrollTrigger: {
-                trigger: section,
-                start: "top 75%",
-                toggleActions: "play none none reverse",
-              },
-            }
-          );
+          gsap.from(content, {
+            opacity: 0,
+            y: 64,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: section,
+              start: "top 85%",
+              once: true,
+            },
+          });
 
           const items = section.querySelectorAll(".scene-item");
           if (items.length) {
-            gsap.fromTo(
-              items,
-              { opacity: 0, y: 40 },
-              {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                stagger: 0.12,
-                ease: "power2.out",
-                scrollTrigger: {
-                  trigger: section,
-                  start: "top 70%",
-                  toggleActions: "play none none reverse",
-                },
-              }
-            );
+            gsap.from(items, {
+              opacity: 0,
+              y: 40,
+              duration: 0.8,
+              stagger: 0.12,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: section,
+                start: "top 80%",
+                once: true,
+              },
+            });
           }
         }
       });
+
+      ScrollTrigger.refresh();
     });
 
     return () => ctx.revert();

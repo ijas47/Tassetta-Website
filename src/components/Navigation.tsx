@@ -17,8 +17,11 @@ export default function Navigation() {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const onHero = !scrolled;
 
   return (
     <header
@@ -34,7 +37,7 @@ export default function Navigation() {
         <a
           href="#"
           className="flex items-center gap-2.5 no-underline"
-          style={{ color: "var(--ink)" }}
+          style={{ color: onHero ? "#fff" : "var(--ink)" }}
         >
           <span
             className="flex items-center justify-center rounded-2xl font-extrabold"
@@ -63,14 +66,27 @@ export default function Navigation() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="nav-link">
+            <a
+              key={link.href}
+              href={link.href}
+              className="nav-link"
+              style={{
+                color: onHero ? "rgba(255, 255, 255, 0.88)" : "var(--muted)",
+              }}
+            >
               {link.label}
             </a>
           ))}
         </nav>
 
         <div className="hidden items-center gap-4 md:flex">
-          <a href="#login" className="nav-link">
+          <a
+            href="#login"
+            className="nav-link"
+            style={{
+              color: onHero ? "rgba(255, 255, 255, 0.88)" : "var(--muted)",
+            }}
+          >
             Log in
           </a>
           <a href="#nexus-study" className="btn-primary">
@@ -80,7 +96,12 @@ export default function Navigation() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-white md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-xl border md:hidden"
+          style={{
+            borderColor: onHero ? "rgba(255,255,255,0.35)" : "rgba(0,0,0,0.1)",
+            background: onHero ? "rgba(255,255,255,0.12)" : "#fff",
+            color: onHero ? "#fff" : "var(--ink)",
+          }}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
         >

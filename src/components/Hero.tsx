@@ -69,10 +69,11 @@ export default function Hero() {
           <SplitTitle
             text="Sales tax, handled."
             as="h1"
-            className="font-extrabold leading-[1.05] tracking-tight text-white"
+            className="font-extrabold leading-[1.05] tracking-tight"
             style={{
               fontFamily: "var(--font-manrope)",
               fontSize: "var(--text-hero)",
+              color: "#fff",
             }}
           />
 

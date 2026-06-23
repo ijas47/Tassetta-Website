@@ -87,20 +87,13 @@ body {
 /* Splitting.js letter animation */
 .split-title .char {
   display: inline-block;
-  opacity: 0;
-  transform: translateY(1.1em);
+  color: inherit;
 }
 
-.split-title.is-ready .char {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Blend-mode headline over photography */
+/* Photography headline — readable without blend-mode */
 .blend-headline {
-  mix-blend-mode: difference;
   color: #fff;
-  isolation: isolate;
+  text-shadow: 0 2px 24px rgba(15, 27, 26, 0.45);
 }
 
 .hero-bg {
@@ -170,11 +163,6 @@ body {
 }
 
 .scene-content {
-  opacity: 0;
-  transform: translateY(48px);
-}
-
-.scene-content.is-visible {
   opacity: 1;
   transform: translateY(0);
 }

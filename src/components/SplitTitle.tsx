@@ -29,9 +29,10 @@ export default function SplitTitle({
     void import("splitting").then(({ default: Splitting }) => {
       if (cancelled) return;
       Splitting({ target: el, by: "chars" });
-      el.classList.add("is-ready");
 
       const chars = el.querySelectorAll(".char");
+      if (!chars.length) return;
+
       gsap.fromTo(
         chars,
         { opacity: 0, y: "1.1em" },
