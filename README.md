@@ -24,12 +24,17 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Deploy to Vercel
 
-1. Push this repo to GitHub (`ijas47/Tassetta-Website`)
-2. Import the repo at [vercel.com/new](https://vercel.com/new)
-3. Vercel auto-detects Next.js — click Deploy
+**Live site:** https://tassetta-website-6bry.vercel.app
 
-Or use the Vercel CLI:
+If `tassetta-website.vercel.app` shows a Vercel 404, you have two projects linked to this repo. Fix it in the Vercel dashboard:
+
+1. Open the empty `tassetta-website` project → **Settings → General → Delete Project**
+2. Open the working `tassetta-website-6bry` project → **Settings → General → Project Name** → rename to `tassetta-website`
+3. Production URL becomes `https://tassetta-website.vercel.app`
+
+Or import fresh at [vercel.com/new](https://vercel.com/new) with **Framework Preset: Next.js** (not "Other").
 
 ```bash
-npx vercel
+npm run build   # verify locally first
+npx vercel --prod
 ```
