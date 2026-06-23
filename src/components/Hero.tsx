@@ -47,19 +47,9 @@ export default function Hero() {
       id="hero"
       className="relative flex min-h-screen items-end overflow-hidden"
     >
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="https://images.pexels.com/photos/144197/pexels-photo-144197.jpeg?auto=compress&cs=tinysrgb&w=1920"
-      >
-        <source
-          src="https://videos.pexels.com/video-files/3571264/3571264-sd_640_360_30fps.mp4"
-          type="video/mp4"
-        />
-      </video>
+      <div className="hero-bg" aria-hidden="true">
+        <div className="hero-glow" />
+      </div>
 
       <div className="hero-overlay absolute inset-0" />
 
@@ -79,7 +69,7 @@ export default function Hero() {
           <SplitTitle
             text="Sales tax, handled."
             as="h1"
-            className="blend-headline font-extrabold leading-[1.05] tracking-tight"
+            className="font-extrabold leading-[1.05] tracking-tight text-white"
             style={{
               fontFamily: "var(--font-manrope)",
               fontSize: "var(--text-hero)",
@@ -87,7 +77,7 @@ export default function Hero() {
           />
 
           <p
-            className="blend-headline mt-2 max-w-2xl font-semibold"
+            className="mt-2 max-w-2xl font-semibold text-white/95"
             style={{
               fontFamily: "var(--font-manrope)",
               fontSize: "var(--text-display)",
@@ -98,7 +88,7 @@ export default function Hero() {
           </p>
 
           <p
-            className="mt-6 max-w-xl text-white/90"
+            className="mt-6 max-w-xl text-white/80"
             style={{ fontSize: "var(--text-body)" }}
           >
             Nexus monitoring, registrations, filing, and audit response — managed

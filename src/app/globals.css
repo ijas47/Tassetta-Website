@@ -103,12 +103,55 @@ body {
   isolation: isolate;
 }
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(145deg, #0a655c 0%, #0d7d72 38%, #0f1b1a 100%);
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&w=1920");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  mix-blend-mode: luminosity;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, black 20%, transparent 90%);
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(217, 237, 233, 0.22), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(13, 125, 114, 0.35), transparent 55%);
+  animation: hero-glow-shift 12s ease-in-out infinite alternate;
+}
+
+@keyframes hero-glow-shift {
+  from { opacity: 0.85; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.04); }
+}
+
 .hero-overlay {
   background: linear-gradient(
     180deg,
-    rgba(15, 27, 26, 0.55) 0%,
-    rgba(15, 27, 26, 0.35) 40%,
-    rgba(15, 27, 26, 0.75) 100%
+    rgba(15, 27, 26, 0.2) 0%,
+    rgba(15, 27, 26, 0.1) 45%,
+    rgba(15, 27, 26, 0.55) 100%
   );
 }
 

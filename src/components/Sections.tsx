@@ -52,7 +52,7 @@ export default function Sections() {
       {/* Photography + blend-mode headline */}
       <section className="scroll-section relative min-h-[70vh] overflow-hidden">
         <img
-          src="https://images.pexels.com/photos/53610/large-clouds-clouds-formations-mount-everest-53610.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1920"
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
         />
