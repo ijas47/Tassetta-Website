@@ -90,7 +90,7 @@ body {
   color: inherit;
 }
 
-/* Photography headline — readable without blend-mode */
+/* Photography headline: readable without blend-mode */
 .blend-headline {
   color: #fff;
   text-shadow: 0 2px 24px rgba(15, 27, 26, 0.45);

@@ -27,7 +27,7 @@ const steps = [
   {
     num: "01",
     title: "Connect your sales",
-    desc: "Shopify, marketplaces, and payment processors — separated automatically.",
+    desc: "Shopify, marketplaces, and payment processors, separated automatically.",
   },
   {
     num: "02",
@@ -99,7 +99,7 @@ export default function Sections() {
           />
           <p className="mt-6 max-w-2xl" style={{ color: "var(--muted)" }}>
             Economic nexus thresholds crossed quietly. Marketplace facilitator
-            rules misread. Q4 exposure that shows up as a notice — not a
+            rules misread. Q4 exposure that shows up as a notice, not a
             dashboard warning.
           </p>
         </div>
@@ -133,7 +133,7 @@ export default function Sections() {
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             <div className="scene-item card">
               <p className="text-sm font-semibold uppercase tracking-wide text-teal">
-                You — the live view
+                You: the live view
               </p>
               <p className="mt-3" style={{ color: "var(--muted)" }}>
                 Real-time nexus exposure, registration status, and return
@@ -148,7 +148,7 @@ export default function Sections() {
             </div>
             <div className="scene-item card">
               <p className="text-sm font-semibold uppercase tracking-wide text-teal">
-                We — the accountable filing
+                We: the accountable filing
               </p>
               <p className="mt-3" style={{ color: "var(--muted)" }}>
                 Everything between &ldquo;you might owe&rdquo; and &ldquo;it is
@@ -159,7 +159,7 @@ export default function Sections() {
                 className="mt-6 flex h-48 items-center justify-center rounded-xl text-sm"
                 style={{ background: "var(--mint)", color: "var(--teal-dark)" }}
               >
-                [ Filing workflow — prepare → approve → file ]
+                [ Filing workflow: prepare → approve → file ]
               </div>
             </div>
           </div>
@@ -231,7 +231,7 @@ export default function Sections() {
           </h2>
           <p className="mt-4 max-w-2xl" style={{ color: "var(--muted)" }}>
             Marketplace-aware. Direct Shopify sales, facilitator-remitted
-            channels, and payment processors — separated automatically. No
+            channels, and payment processors, separated automatically. No
             double-counting.
           </p>
 
@@ -281,7 +281,7 @@ export default function Sections() {
             className="scene-item mx-auto mt-10 flex h-24 max-w-lg items-center justify-center rounded-2xl text-sm"
             style={{ background: "#fff", color: "var(--muted)" }}
           >
-            [ Customer logos — pending permission ]
+            [ Customer logos, pending permission ]
           </div>
         </div>
       </section>
@@ -364,7 +364,7 @@ export default function Sections() {
                   States where you are approaching a threshold and should watch.
                 </li>
                 <li className="scene-item">
-                  An estimate of your current exposure — the tax you may already
+                  An estimate of your current exposure, the tax you may already
                   owe.
                 </li>
                 <li className="scene-item">

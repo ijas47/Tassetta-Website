@@ -15,11 +15,11 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Tassetta — Managed US Sales Tax Compliance",
+  title: "Tassetta | Managed US Sales Tax Compliance",
   description:
     "Sales tax, handled. Not handed back to you. Managed compliance for Shopify brands and multi-channel sellers.",
   openGraph: {
-    title: "Tassetta — Managed US Sales Tax Compliance",
+    title: "Tassetta | Managed US Sales Tax Compliance",
     description:
       "Sales tax, handled. Not handed back to you.",
     type: "website",

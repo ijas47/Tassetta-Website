@@ -1,17 +1,17 @@
 # Tassetta Website
 
-Premium marketing site for Tassetta — managed US sales tax compliance.
+Premium marketing site for Tassetta, managed US sales tax compliance.
 
 Built with Next.js, GSAP ScrollTrigger, Lenis smooth scroll, Three.js painted texture background, and Splitting.js letter animations.
 
 ## Stack
 
 - **Next.js 15** (App Router)
-- **GSAP + ScrollTrigger** — pinned hero, cinematic section reveals
-- **Lenis** — smooth scroll
-- **Three.js** — cursor-reactive painted texture background
-- **Splitting.js** — letter-by-letter title animation on load
-- **CSS** — `clamp()` typography, `mix-blend-mode`, linear-gradient overlays
+- **GSAP + ScrollTrigger**: pinned hero, cinematic section reveals
+- **Lenis**: smooth scroll
+- **Three.js**: cursor-reactive painted texture background
+- **Splitting.js**: letter-by-letter title animation on load
+- **CSS**: `clamp()` typography, `mix-blend-mode`, linear-gradient overlays
 
 ## Develop
 

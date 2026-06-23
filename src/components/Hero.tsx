@@ -92,7 +92,7 @@ export default function Hero() {
             className="mt-6 max-w-xl text-white/80"
             style={{ fontSize: "var(--text-body)" }}
           >
-            Nexus monitoring, registrations, filing, and audit response — managed
+            Nexus monitoring, registrations, filing, and audit response, managed
             end to end for Shopify brands and multi-channel sellers.
           </p>
 
