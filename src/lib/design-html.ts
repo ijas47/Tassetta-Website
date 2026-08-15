@@ -1,0 +1,619 @@
+/*
+ * Auto-generated from _design/sections/*.html.
+ * Do not edit by hand — re-run scripts/extract-design.py.
+ */
+
+export const homeHtml = `<!-- Hero -->
+    <section style="background: #eef2f0; padding: clamp(56px,9vw,112px) 0 clamp(48px,7vw,88px);">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="max-width: 920px;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; background: #d9ede9; color: #0a1413; font-family: Inter; font-weight: 600; font-size: 13px; padding: 6px 14px; border-radius: 9999px; margin-bottom: 28px;">Managed US sales tax compliance</div>
+          <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(40px,7vw,82px); line-height: 1.02; letter-spacing: -0.025em; color: #0f1b1a; margin: 0 0 28px;">Sales tax, handled. Not handed back to you.</h1>
+          <p style="font-family: Inter; font-weight: 400; font-size: clamp(17px,2vw,21px); line-height: 1.5; color: #41504d; margin: 0 0 36px; max-width: 760px;">Tassetta takes US sales tax off your plate completely. The platform watches where you owe across all 50 states, pulls your Shopify and marketplace sales, and computes every return automatically. A tax expert reviews each one, you approve in one click, and we handle the registrations, filings, and notices. You see all of it live in your dashboard, with a monthly report and an audit trail that holds up.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
+            <a class="th-1" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+            <a class="th-2" href="/how-it-works" style="display: inline-flex; align-items: center; justify-content: center; background: #fff; color: #0f1b1a; border: 1px solid #0f1b1a; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">See how it works</a>
+          </div>
+          <p style="font-family: Inter; font-weight: 400; font-size: 14px; line-height: 1.5; color: #7a8783; margin: 18px 0 0; max-width: 560px;">The study takes one CSV export from Shopify. We tell you which states you already owe in, and what it would take to get clean.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product placeholder band -->
+    <section style="background: #eef2f0; padding: 0 0 clamp(48px,7vw,80px);">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="background: #fff; border-radius: 24px; padding: clamp(16px,2vw,22px); box-shadow: 0 24px 60px -28px rgba(15,27,26,0.28);">
+          <div style="border-radius: 14px; overflow: hidden; background-color: #f4f7f5; background-image: repeating-linear-gradient(135deg, #e7eeec 0 14px, #f4f7f5 14px 28px); height: clamp(220px,34vw,420px); display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 13px; color: #7a8783; background: rgba(255,255,255,0.85); padding: 8px 14px; border-radius: 8px;">[ product shot — live nexus dashboard ]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section style="background: #fff; padding: clamp(56px,8vw,104px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="max-width: 820px;">
+          <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px,4vw,46px); line-height: 1.07; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 32px;">You probably owe sales tax in states you have never registered in.</h2>
+          <p style="font-family: Inter; font-size: clamp(16px,1.6vw,19px); line-height: 1.62; color: #41504d; margin: 0 0 22px;">The moment your sales crossed a threshold in another state, you got a filing obligation there. Most states set it around $100,000 in sales or 200 transactions in a year. If you sell on Shopify into 30 states, you have likely tripped several without noticing, because nothing in Shopify tells you when it happens.</p>
+          <p style="font-family: Inter; font-size: clamp(16px,1.6vw,19px); line-height: 1.62; color: #41504d; margin: 0 0 22px;">The exposure compounds quietly. Uncollected tax becomes a liability you owe out of your own margin, plus penalties and interest, and it keeps growing every month you do not register. Brands usually find out the expensive way: a notice from a state, or a question in due diligence that stalls a fundraise or an acquisition.</p>
+          <p style="font-family: Inter; font-size: clamp(16px,1.6vw,19px); line-height: 1.62; color: #41504d; margin: 0;">The reason it stays unsolved is that the existing options are bad. Software makes you do the work. A bookkeeper is slow and works blind, with no live view of where your exposure is building. So it sits on a someday list until a state forces it to the top.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How different -->
+    <section style="background: #eef2f0; padding: clamp(56px,8vw,104px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="max-width: 820px; margin-bottom: 48px;">
+          <p style="font-family: Inter; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #7a8783; margin: 0 0 16px;">How Tassetta is different</p>
+          <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px,4vw,46px); line-height: 1.07; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">You watch it. We file it.</h2>
+          <p style="font-family: Inter; font-size: clamp(16px,1.6vw,19px); line-height: 1.62; color: #41504d; margin: 0;">Tassetta is a platform and a service in one. The platform gives you a live view of your entire sales tax position. The service is the part nobody else does for you: a tax expert who actually files.</p>
+        </div>
+        <div class="t-watch-file" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div style="background: #fff; border-radius: 24px; padding: clamp(24px,3vw,36px);">
+            <div style="display: inline-flex; align-items: center; gap: 8px; background: #d9ede9; color: #0a1413; font-family: Inter; font-weight: 600; font-size: 13px; padding: 6px 14px; border-radius: 9999px; margin-bottom: 20px;">You — the live view</div>
+            <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">You connect Shopify and your marketplace channels once. From there the platform runs on its own: it pulls your orders and refunds, tracks your economic nexus across all 50 states and DC against current thresholds, and computes every return automatically. You log in any time and see exactly where you have crossed, where you are getting close, where you are clear, and what each upcoming return looks like. Nothing is hidden behind us.</p>
+          </div>
+          <div style="background: #0f1b1a; border-radius: 24px; padding: clamp(24px,3vw,36px);">
+            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(217,237,233,0.16); color: #d9ede9; font-family: Inter; font-weight: 600; font-size: 13px; padding: 6px 14px; border-radius: 9999px; margin-bottom: 20px;">We — the accountable filing</div>
+            <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #c7d2cf; margin: 0;">The one step that stays human is the one that should. Before any return goes out, a Tassetta tax expert reviews it against the tax you actually collected and resolves anything that looks off. You approve in one click. Then we file, remit, register you in new states as you cross, and handle any notice a state sends back.</p>
+          </div>
+        </div>
+        <p style="font-family: Inter; font-size: clamp(16px,1.6vw,19px); line-height: 1.62; color: #41504d; margin: 40px 0 0; max-width: 920px;">That is the difference in one line. Avalara and TaxJar sell you a calculator and a dashboard, and you still file. A bookkeeper files but gives you no live view. Tassetta gives you both: the platform shows you everything in real time, and a person who is accountable does the filing.</p>
+      </div>
+    </section>
+
+    <!-- What we handle overview -->
+    <section style="background: #fff; padding: clamp(56px,8vw,104px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="max-width: 860px; margin-bottom: 48px;">
+          <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(26px,3.4vw,42px); line-height: 1.08; letter-spacing: -0.02em; color: #0f1b1a; margin: 0;">Everything between “you might owe” and “it is filed and archived.”</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+          <a class="th-3" href="/what-we-handle/nexus" style="text-decoration: none; background: #eef2f0; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; gap: 12px;">
+            <span style="font-family: Manrope; font-weight: 800; font-size: 14px; color: #0d7d72;">01</span>
+            <h3 style="font-family: Manrope; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">Nexus monitoring</h3>
+            <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">We watch all 50 states and DC against your live sales and tell you where you have crossed before a state does.</p>
+            <span style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; margin-top: 4px;">Learn more →</span>
+          </a>
+          <a class="th-4" href="/what-we-handle/registrations" style="text-decoration: none; background: #eef2f0; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; gap: 12px;">
+            <span style="font-family: Manrope; font-weight: 800; font-size: 14px; color: #0d7d72;">02</span>
+            <h3 style="font-family: Manrope; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">Registrations</h3>
+            <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">When you cross a threshold, we register you in that state and track it through to approved.</p>
+            <span style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; margin-top: 4px;">Learn more →</span>
+          </a>
+          <a class="th-5" href="/what-we-handle/filing" style="text-decoration: none; background: #eef2f0; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; gap: 12px;">
+            <span style="font-family: Manrope; font-weight: 800; font-size: 14px; color: #0d7d72;">03</span>
+            <h3 style="font-family: Manrope; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">Filing and remittance</h3>
+            <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">Expert-prepared returns, your one-click approval, then we file and remit on the schedule each state assigns you.</p>
+            <span style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; margin-top: 4px;">Learn more →</span>
+          </a>
+          <a class="th-6" href="/what-we-handle/notices" style="text-decoration: none; background: #eef2f0; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; gap: 12px;">
+            <span style="font-family: Manrope; font-weight: 800; font-size: 14px; color: #0d7d72;">04</span>
+            <h3 style="font-family: Manrope; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">Notices and audits</h3>
+            <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">A state sends a notice, we read it, draft the response, and keep the full evidence trail for seven years.</p>
+            <span style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; margin-top: 4px;">Learn more →</span>
+          </a>
+        </div>
+        <div style="margin-top: 28px;">
+          <a class="th-7" href="/what-we-handle" style="font-family: Inter; font-weight: 600; font-size: 15px; color: #0d7d72; text-decoration: none;">See everything we handle →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marketplace-aware -->
+    <section style="background: #eef2f0; padding: clamp(56px,8vw,104px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div class="t-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px,5vw,72px); align-items: center;">
+          <div>
+            <p style="font-family: Inter; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #7a8783; margin: 0 0 16px;">Marketplace-aware</p>
+            <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(26px,3.4vw,42px); line-height: 1.08; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">We know the difference between your sales and Amazon’s.</h2>
+            <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0 0 20px;">If you sell on Amazon, Walmart, Etsy, or TikTok Shop, those marketplaces already collect and remit sales tax for you as the facilitator. The mistake brands and generic tools make is counting that tax as yours, which means you either over-remit or you cannot reconcile your own books.</p>
+            <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">Tassetta separates facilitator-collected sales from your direct Shopify sales automatically. You file on what is actually yours to file. Your liability matches your books, and you are not paying twice.</p>
+          </div>
+          <div style="background: #fff; border-radius: 24px; padding: clamp(20px,2.4vw,30px); display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-radius: 14px; background: #f4f7f5;">
+              <span style="font-family: Inter; font-weight: 600; font-size: 15px; color: #0f1b1a;">Direct Shopify sales</span>
+              <span style="font-family: Inter; font-weight: 600; font-size: 13px; color: #0d7d72; background: #d9ede9; padding: 5px 12px; border-radius: 9999px;">Yours to file</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-radius: 14px; background: #f4f7f5;">
+              <span style="font-family: Inter; font-weight: 600; font-size: 15px; color: #0f1b1a;">Amazon · Walmart · Etsy</span>
+              <span style="font-family: Inter; font-weight: 600; font-size: 13px; color: #41504d; background: #eef2f0; padding: 5px 12px; border-radius: 9999px;">Facilitator remits</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-radius: 14px; background: #f4f7f5;">
+              <span style="font-family: Inter; font-weight: 600; font-size: 15px; color: #0f1b1a;">TikTok Shop · Stripe · PayPal</span>
+              <span style="font-family: Inter; font-weight: 600; font-size: 13px; color: #41504d; background: #eef2f0; padding: 5px 12px; border-radius: 9999px;">Facilitator remits</span>
+            </div>
+            <p style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #7a8783; margin: 6px 2px 0;">Separated automatically — no double-counting</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof / trust band (dark) -->
+    <section style="background: #0a1413; padding: clamp(56px,8vw,104px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="max-width: 820px;">
+          <p style="font-family: Inter; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #7a8783; margin: 0 0 16px;">Proof and trust</p>
+          <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px,4vw,46px); line-height: 1.07; letter-spacing: -0.02em; color: #fff; margin: 0 0 24px;">Built for the day someone checks your work.</h2>
+          <p style="font-family: Inter; font-size: clamp(16px,1.6vw,19px); line-height: 1.62; color: #c7d2cf; margin: 0 0 22px;">Every return carries a workpaper: gross, taxable, exempt, and marketplace sales, the expected liability against what you actually collected, and any variance we caught. Every approval records who signed and when. Every filing records its confirmation number. It all lives in a tamper-evident archive for seven years.</p>
+          <p style="font-family: Inter; font-size: clamp(16px,1.6vw,19px); line-height: 1.62; color: #c7d2cf; margin: 0;">When an auditor calls, or a buyer’s diligence team asks for your sales tax history, the answer is a folder, not a fire drill.</p>
+        </div>
+        <div style="margin-top: 44px; border: 1px dashed #41504d; border-radius: 16px; padding: 28px;">
+          <p style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.04em; color: #7a8783; margin: 0 0 10px;">[ PLACEHOLDER — customer logos, pending permission to use ]</p>
+          <p style="font-family: Inter; font-size: 16px; line-height: 1.55; color: #c7d2cf; margin: 0;">Used by Shopify brands doing seven and eight figures across multiple states. <span style="color: #7a8783;">Swap for named customers the moment you can.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing teaser -->
+    <section style="background: #fff; padding: clamp(56px,8vw,104px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="max-width: 760px;">
+          <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px,4vw,46px); line-height: 1.07; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">Flat fee per state. No surprise bills in Q4.</h2>
+          <p style="font-family: Inter; font-size: clamp(16px,1.6vw,19px); line-height: 1.62; color: #41504d; margin: 0 0 28px;">You pay a simple monthly base plus a flat fee per state you are registered in. That is it. No per-transaction metering, so your bill does not spike the month you have a good sale.</p>
+          <a class="th-8" href="/pricing" style="font-family: Inter; font-weight: 600; font-size: 15px; color: #0d7d72; text-decoration: none;">See pricing →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section style="background: #eef2f0; padding: clamp(56px,8vw,104px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="background: #0f1b1a; border-radius: 28px; padding: clamp(36px,5vw,72px); text-align: center;">
+          <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px,4.4vw,52px); line-height: 1.05; letter-spacing: -0.02em; color: #fff; margin: 0 0 20px;">Find out where you stand. It is free.</h2>
+          <p style="font-family: Inter; font-size: clamp(16px,1.7vw,19px); line-height: 1.6; color: #c7d2cf; margin: 0 auto 32px; max-width: 680px;">Send us one CSV export from Shopify. We will tell you which states you already owe in, where you are about to cross, and what getting compliant would actually cost. No call required to get the report.</p>
+          <a class="th-9" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 16px 32px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+        </div>
+      </div>
+    </section>`;
+
+export const nexusStudyHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0 clamp(40px,6vw,64px);">
+    <section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0 clamp(40px,6vw,64px);">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: #d9ede9; color: #0a1413; font-family: Inter; font-weight: 600; font-size: 13px; padding: 6px 14px; border-radius: 9999px; margin-bottom: 24px;">Free nexus exposure study</div>
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(36px,5.6vw,68px); line-height: 1.04; letter-spacing: -0.025em; color: #0f1b1a; margin: 0 0 24px; max-width: 880px;">Find out where you owe sales tax. Free.</h1>
+        <p style="font-family: Inter; font-size: clamp(17px,2vw,21px); line-height: 1.5; color: #41504d; margin: 0; max-width: 720px;">Send us one CSV export from Shopify. Within 3 to 5 business days we send back a report showing every state where you have already crossed a sales tax threshold, where you are about to, and what it would take to get compliant. No call required to get it.</p>
+      </div>
+    </section>
+
+    <!-- Upload focal action -->
+    <section style="background: #eef2f0; padding: 0 0 clamp(56px,8vw,96px);">
+      <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="background: #fff; border-radius: 28px; padding: clamp(24px,4vw,44px); box-shadow: 0 30px 70px -34px rgba(15,27,26,0.32);">
+          <!--NEXUS_UPLOADER-->
+          
+          <p style="font-family: Inter; font-size: 14px; line-height: 1.5; color: #7a8783; text-align: center; margin: 22px 0 0;">Not sure which export to pull? <a href="/contact" style="color: #0d7d72; text-decoration: none; font-weight: 600;">Book a 15-minute call.</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What you get -->
+    <section style="background: #fff; padding: clamp(56px,8vw,96px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div class="t-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px,5vw,64px);">
+          <div>
+            <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(24px,3vw,34px); line-height: 1.1; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">What you get in the report</h2>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="display: flex; gap: 14px; align-items: flex-start;"><span style="flex: none; width: 22px; height: 22px; border-radius: 9999px; background: #d9ede9; color: #0d7d72; font-family: Manrope; font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px;">✓</span><p style="font-family: Inter; font-size: 16px; line-height: 1.55; color: #41504d; margin: 0;">Every state where your sales have crossed the economic nexus threshold, with the date you crossed.</p></div>
+              <div style="display: flex; gap: 14px; align-items: flex-start;"><span style="flex: none; width: 22px; height: 22px; border-radius: 9999px; background: #d9ede9; color: #0d7d72; font-family: Manrope; font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px;">✓</span><p style="font-family: Inter; font-size: 16px; line-height: 1.55; color: #41504d; margin: 0;">States where you are approaching a threshold and should watch.</p></div>
+              <div style="display: flex; gap: 14px; align-items: flex-start;"><span style="flex: none; width: 22px; height: 22px; border-radius: 9999px; background: #d9ede9; color: #0d7d72; font-family: Manrope; font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px;">✓</span><p style="font-family: Inter; font-size: 16px; line-height: 1.55; color: #41504d; margin: 0;">An estimate of your current exposure, the tax you may already owe.</p></div>
+              <div style="display: flex; gap: 14px; align-items: flex-start;"><span style="flex: none; width: 22px; height: 22px; border-radius: 9999px; background: #d9ede9; color: #0d7d72; font-family: Manrope; font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px;">✓</span><p style="font-family: Inter; font-size: 16px; line-height: 1.55; color: #41504d; margin: 0;">A clear next step for each state, register now, monitor, or no action.</p></div>
+            </div>
+          </div>
+          <div>
+            <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(24px,3vw,34px); line-height: 1.1; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">What we need from you</h2>
+            <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">One export of your sales by state from Shopify. That is the whole ask. If you sell on marketplaces too, send those exports and we will factor them in. We will tell you exactly which report to pull.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why free + honest -->
+    <section style="background: #eef2f0; padding: clamp(56px,8vw,96px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+          <div style="background: #fff; border-radius: 24px; padding: clamp(24px,3vw,36px);">
+            <h3 style="font-family: Manrope; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 16px;">Why we do this for free</h3>
+            <p style="font-family: Inter; font-size: 16px; line-height: 1.6; color: #41504d; margin: 0;">Because most brands do not know they have a problem, and the fastest way to show you what we do is to show you your own exposure. If the report says you are fine, you are fine, and you have lost nothing. If it says you owe in nine states, now you know, and you can decide what to do about it.</p>
+          </div>
+          <div style="background: #fff; border-radius: 24px; padding: clamp(24px,3vw,36px);">
+            <h3 style="font-family: Manrope; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 16px;">The honest version of the pitch</h3>
+            <p style="font-family: Inter; font-size: 16px; line-height: 1.6; color: #41504d; margin: 0;">We are not going to scare you with a number we made up. The report runs on your real sales data against current state thresholds. If anything in it needs a caveat, we flag it. The thresholds and rates we use are starting values that we verify against each state’s tax authority before anyone files, and we will tell you where a number is an estimate versus a confirmed obligation.</p>
+          </div>
+        </div>
+      </div>
+    </section>`;
+
+export const howItWorksHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(36px,5.6vw,68px); line-height: 1.04; letter-spacing: -0.025em; color: #0f1b1a; margin: 0 0 24px; max-width: 820px;">How Tassetta works</h1>
+        <p style="font-family: Inter; font-size: clamp(17px,2vw,21px); line-height: 1.5; color: #41504d; margin: 0; max-width: 720px;">Four stages, from the first data pull to a filed return. You are involved at exactly one of them: the approval. The rest is ours.</p>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(56px,8vw,96px) 0;">
+      <div style="max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px); display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: grid; grid-template-columns: 72px 1fr; gap: clamp(16px,3vw,32px); align-items: start; background: #eef2f0; border-radius: 24px; padding: clamp(24px,3vw,36px);">
+          <span style="font-family: Manrope; font-weight: 800; font-size: clamp(28px,4vw,44px); color: #0d7d72; line-height: 1;">01</span>
+          <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,30px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 12px;">Connect your sales</h2><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">You connect Shopify with one click, or upload a CSV. If you sell on Amazon, Walmart, Etsy, Stripe, PayPal, or TikTok Shop, we pull those too. We pull your order and refund history and keep it synced, so nexus tracking runs on what you are actually selling, not a snapshot.</p></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 72px 1fr; gap: clamp(16px,3vw,32px); align-items: start; background: #eef2f0; border-radius: 24px; padding: clamp(24px,3vw,36px);">
+          <span style="font-family: Manrope; font-weight: 800; font-size: clamp(28px,4vw,44px); color: #0d7d72; line-height: 1;">02</span>
+          <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,30px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 12px;">See where you owe</h2><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">The platform maps your sales against economic nexus thresholds in all 50 states and DC. You get a live map: crossed, approaching, clear. For every state where you have crossed, we show you when it happened and what the exposure looks like.</p></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 72px 1fr; gap: clamp(16px,3vw,32px); align-items: start; background: #eef2f0; border-radius: 24px; padding: clamp(24px,3vw,36px);">
+          <span style="font-family: Manrope; font-weight: 800; font-size: clamp(28px,4vw,44px); color: #0d7d72; line-height: 1;">03</span>
+          <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,30px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 12px;">We prepare, you approve</h2><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">When a return is due, a Tassetta tax expert prepares it and checks it against the tax you actually collected that period. If something is off, an invoice taxed wrong, an exemption that does not hold, a rate that looks stale, we catch it and resolve it before it reaches you. You get a clean return. You approve it in one click.</p></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 72px 1fr; gap: clamp(16px,3vw,32px); align-items: start; background: #eef2f0; border-radius: 24px; padding: clamp(24px,3vw,36px);">
+          <span style="font-family: Manrope; font-weight: 800; font-size: clamp(28px,4vw,44px); color: #0d7d72; line-height: 1;">04</span>
+          <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,30px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 12px;">We file, remit, and keep the record</h2><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">We handle the filing and the remittance on each state’s schedule. If a state sends a notice, we handle that too. Everything goes into your audit archive: the workpaper, your approval, the confirmation number. Every filing, every state, every period.</p></div>
+        </div>
+      </div>
+    </section>
+    <section style="background: #0a1413; padding: clamp(56px,8vw,96px) 0;">
+      <div style="max-width: 820px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #7a8783; margin: 0 0 16px;">Why there is a human in the loop</p>
+        <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(24px,3.2vw,38px); line-height: 1.1; letter-spacing: -0.02em; color: #fff; margin: 0 0 24px;">The one step we keep human on purpose is the filing itself.</h2>
+        <p style="font-family: Inter; font-size: clamp(16px,1.7vw,19px); line-height: 1.62; color: #c7d2cf; margin: 0;">Almost everything here is automated: the data sync, the nexus tracking, the calculation, the reconciliation, the audit trail. The one step we keep human on purpose is the filing itself. A tax expert reviews and submits every return, because a filing that goes out under your name should have a person accountable for it, not a script. You get the speed of automation everywhere it helps and a real reviewer where it matters.</p>
+        <a class="th-10" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none; margin-top: 36px;">Get your free nexus study</a>
+      </div>
+    </section>`;
+
+export const whoItsForHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(36px,5.6vw,68px); line-height: 1.04; letter-spacing: -0.025em; color: #0f1b1a; margin: 0 0 24px; max-width: 820px;">Who Tassetta is for</h1>
+        <p style="font-family: Inter; font-size: clamp(17px,2vw,21px); line-height: 1.5; color: #41504d; margin: 0; max-width: 760px;">Tassetta is built for ecommerce brands that have outgrown “we only collect in our home state” but do not want to turn sales tax into a job for someone on the team.</p>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(56px,8vw,96px) 0;">
+      <div style="max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div class="t-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div style="background: #eef2f0; border-radius: 24px; padding: clamp(28px,3.4vw,40px);">
+            <h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,28px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 16px;">You are a fit if</h2>
+            <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0 0 16px;">You sell on Shopify, or Shopify plus marketplaces. You ship to customers in many states. You are doing roughly $1M to $20M in sales. And you have a quiet suspicion that you have crossed tax thresholds in places you have not dealt with yet.</p>
+            <p style="font-family: Inter; font-weight: 600; font-size: 17px; line-height: 1.6; color: #0f1b1a; margin: 0;">That suspicion is almost always right. That is the exact problem we exist to close.</p>
+          </div>
+          <div style="background: #eef2f0; border-radius: 24px; padding: clamp(28px,3.4vw,40px);">
+            <h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,28px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 16px;">You are probably not a fit yet if</h2>
+            <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">You only sell in one state, or you are pre-revenue. You do not have a sales tax problem yet, and we would rather tell you that than sell you something you do not need. Come back when you start shipping across state lines at volume.</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+          <a href="/who-its-for/shopify" style="text-decoration: none; background: #0f1b1a; border-radius: 24px; padding: clamp(28px,3.4vw,40px); display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="font-family: Manrope; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: #fff; margin: 0;">Shopify brands →</h3>
+            <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #c7d2cf; margin: 0;">Direct-store sellers who need to know where the liability is building.</p>
+          </a>
+          <a href="/who-its-for/multi-channel" style="text-decoration: none; background: #0f1b1a; border-radius: 24px; padding: clamp(28px,3.4vw,40px); display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="font-family: Manrope; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: #fff; margin: 0;">Multi-channel sellers →</h3>
+            <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #c7d2cf; margin: 0;">Shopify plus marketplaces, where the rules differ per channel.</p>
+          </a>
+        </div>
+      </div>
+    </section>`;
+
+export const whoShopifyHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <a class="th-11" href="/who-its-for" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #41504d; text-decoration: none; display: inline-block; margin-bottom: 20px;">← Who it’s for</a>
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px,5.2vw,62px); line-height: 1.05; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 820px;">Sales tax for Shopify brands</h1>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 24px;">Shopify calculates tax at checkout. It does not tell you where you have a filing obligation, it does not register you, and it does not file anything. That gap is where the liability builds.</p>
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">Tassetta connects to your store directly, reads your real order and refund data, and runs nexus tracking continuously. When you cross a threshold in a new state, you hear it from us, with a registration ready to go, not from the state two years later with penalties attached.</p>
+        <a class="th-12" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+    </section>`;
+
+export const whoMultiHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <a class="th-13" href="/who-its-for" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #41504d; text-decoration: none; display: inline-block; margin-bottom: 20px;">← Who it’s for</a>
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(32px,5vw,58px); line-height: 1.06; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 880px;">Sales tax when you sell on Shopify and marketplaces</h1>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 24px;">Selling on Amazon, Walmart, Etsy, or TikTok Shop alongside your own store makes the tax picture harder, not easier, because the rules are different per channel. The marketplaces collect and remit for you. Your Shopify sales are yours to handle.</p>
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">Tassetta pulls every channel, separates facilitator-collected sales from your direct sales, and files on what is actually yours. You stop double-counting, your books reconcile, and you are not remitting tax twice.</p>
+        <a class="th-14" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+    </section>`;
+
+export const whatWeHandleHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(36px,5.6vw,68px); line-height: 1.04; letter-spacing: -0.025em; color: #0f1b1a; margin: 0 0 24px; max-width: 820px;">What Tassetta handles</h1>
+        <p style="font-family: Inter; font-size: clamp(17px,2vw,21px); line-height: 1.5; color: #41504d; margin: 0; max-width: 780px;">The full lifecycle of a sales tax obligation, from the moment you might owe to the archived proof that you filed. Each piece below is a thing you would otherwise be doing yourself or paying a bookkeeper to do slowly.</p>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(56px,8vw,96px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px); display: flex; flex-direction: column; gap: 16px;">
+        <a class="th-15" href="/what-we-handle/nexus" style="text-decoration: none; display: grid; grid-template-columns: 56px 1fr auto; gap: 20px; align-items: center; background: #eef2f0; border-radius: 24px; padding: clamp(22px,2.6vw,30px);">
+          <span style="font-family: Manrope; font-weight: 800; font-size: 22px; color: #0d7d72;">01</span>
+          <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(19px,2.2vw,24px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 6px;">Nexus monitoring</h2><p style="font-family: Inter; font-size: 15px; line-height: 1.5; color: #41504d; margin: 0;">Know where you owe before the state does.</p></div>
+          <span style="font-family: Inter; font-weight: 700; font-size: 20px; color: #0f1b1a;">→</span>
+        </a>
+        <a class="th-16" href="/what-we-handle/registrations" style="text-decoration: none; display: grid; grid-template-columns: 56px 1fr auto; gap: 20px; align-items: center; background: #eef2f0; border-radius: 24px; padding: clamp(22px,2.6vw,30px);">
+          <span style="font-family: Manrope; font-weight: 800; font-size: 22px; color: #0d7d72;">02</span>
+          <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(19px,2.2vw,24px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 6px;">Registrations</h2><p style="font-family: Inter; font-size: 15px; line-height: 1.5; color: #41504d; margin: 0;">We get you registered in new states.</p></div>
+          <span style="font-family: Inter; font-weight: 700; font-size: 20px; color: #0f1b1a;">→</span>
+        </a>
+        <a class="th-17" href="/what-we-handle/filing" style="text-decoration: none; display: grid; grid-template-columns: 56px 1fr auto; gap: 20px; align-items: center; background: #eef2f0; border-radius: 24px; padding: clamp(22px,2.6vw,30px);">
+          <span style="font-family: Manrope; font-weight: 800; font-size: 22px; color: #0d7d72;">03</span>
+          <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(19px,2.2vw,24px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 6px;">Filing and remittance</h2><p style="font-family: Inter; font-size: 15px; line-height: 1.5; color: #41504d; margin: 0;">Returns filed, on time, reviewed by a person.</p></div>
+          <span style="font-family: Inter; font-weight: 700; font-size: 20px; color: #0f1b1a;">→</span>
+        </a>
+        <a class="th-18" href="/what-we-handle/notices" style="text-decoration: none; display: grid; grid-template-columns: 56px 1fr auto; gap: 20px; align-items: center; background: #eef2f0; border-radius: 24px; padding: clamp(22px,2.6vw,30px);">
+          <span style="font-family: Manrope; font-weight: 800; font-size: 22px; color: #0d7d72;">04</span>
+          <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(19px,2.2vw,24px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 6px;">Notices and audits</h2><p style="font-family: Inter; font-size: 15px; line-height: 1.5; color: #41504d; margin: 0;">When a state writes back, we answer.</p></div>
+          <span style="font-family: Inter; font-weight: 700; font-size: 20px; color: #0f1b1a;">→</span>
+        </a>
+        <a class="th-19" href="/what-we-handle/exemptions" style="text-decoration: none; display: grid; grid-template-columns: 56px 1fr auto; gap: 20px; align-items: center; background: #eef2f0; border-radius: 24px; padding: clamp(22px,2.6vw,30px);">
+          <span style="font-family: Manrope; font-weight: 800; font-size: 22px; color: #0d7d72;">05</span>
+          <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(19px,2.2vw,24px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 6px;">Exemption certificates</h2><p style="font-family: Inter; font-size: 15px; line-height: 1.5; color: #41504d; margin: 0;">Wholesale and exempt sales, documented properly.</p></div>
+          <span style="font-family: Inter; font-weight: 700; font-size: 20px; color: #0f1b1a;">→</span>
+        </a>
+      </div>
+    </section>`;
+
+export const nexusHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <a class="th-20" href="/what-we-handle" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #41504d; text-decoration: none; display: inline-block; margin-bottom: 20px;">← What we handle</a>
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(32px,5vw,58px); line-height: 1.06; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 880px;">Know where you owe before the state does</h1>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">We track your sales against economic nexus thresholds in all 50 states and DC, updated as the rules change. Thresholds vary, some states count transactions, some count dollars, some count both, some include marketplace sales in the math and some do not. We handle that variation so you do not have to learn it. You get one view: where you have crossed, where you are close, where you are clear.</p>
+        <a class="th-21" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+    </section>`;
+
+export const registrationsHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <a class="th-22" href="/what-we-handle" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #41504d; text-decoration: none; display: inline-block; margin-bottom: 20px;">← What we handle</a>
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px,5.2vw,62px); line-height: 1.05; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 880px;">We get you registered in new states</h1>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">Crossing a threshold means you have to register before you can legally collect and file. We prepare the registration, an expert reviews it, you approve, and we track it through to the state’s confirmation. Then that state moves into your filing calendar automatically.</p>
+        <a class="th-23" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+    </section>`;
+
+export const filingHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <a class="th-24" href="/what-we-handle" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #41504d; text-decoration: none; display: inline-block; margin-bottom: 20px;">← What we handle</a>
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(32px,5vw,58px); line-height: 1.06; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 880px;">Returns filed, on time, reviewed by a person</h1>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 24px;">We project every return you owe, per state, on the frequency each state assigns you, monthly, quarterly, or annual. Our experts prepare each one and reconcile it against the tax you collected. You approve. We file and remit.</p>
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">The filing itself stays human on purpose. A tax expert reviews and submits every return, because a filing that goes out under your name should have a person accountable for it, not a script. Everywhere automation helps, it runs; where a reviewer matters, there is one.</p>
+        <a class="th-25" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+    </section>`;
+
+export const noticesHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <a class="th-26" href="/what-we-handle" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #41504d; text-decoration: none; display: inline-block; margin-bottom: 20px;">← What we handle</a>
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px,5.2vw,62px); line-height: 1.05; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 880px;">When a state writes back, we answer</h1>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">A state notice is stressful because most brands do not know what it means or how fast they have to respond. We intake the notice, match it to the filing period in question, draft the response, you approve it, and we close it out. The whole exchange is logged.</p>
+        <a class="th-27" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+    </section>`;
+
+export const exemptionsHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <a class="th-28" href="/what-we-handle" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #41504d; text-decoration: none; display: inline-block; margin-bottom: 20px;">← What we handle</a>
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(32px,5vw,58px); line-height: 1.06; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 880px;">Wholesale and exempt sales, documented properly</h1>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">If you sell wholesale or to exempt buyers, you need valid exemption certificates on file, or that “exempt” sale becomes taxable and the liability is yours. We collect certificates, check them for validity and expiry, and resolve which sales are genuinely exempt. No more guessing at audit time.</p>
+        <a class="th-29" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+    </section>`;
+
+export const pricingHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px,5.4vw,64px); line-height: 1.04; letter-spacing: -0.025em; color: #0f1b1a; margin: 0 0 24px; max-width: 820px;">Simple pricing. One line per state.</h1>
+        <p style="font-family: Inter; font-size: clamp(17px,2vw,21px); line-height: 1.5; color: #41504d; margin: 0 0 20px; max-width: 760px;">You pay a flat monthly base plus a flat fee per state you are registered in. No per-transaction fees, so a big sales month does not become a big software bill.</p>
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: #faf1dd; color: #8a6410; font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; padding: 7px 14px; border-radius: 9999px; border: 1px solid #ecd9a8;">⚠ Starting points from the internal plan — validate before publishing, not final</div>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,80px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+          <div style="background: #eef2f0; border-radius: 24px; padding: clamp(24px,2.6vw,32px); display: flex; flex-direction: column;">
+            <h2 style="font-family: Manrope; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 8px;">Nexus Watch</h2>
+            <p style="font-family: Inter; font-size: 14px; line-height: 1.5; color: #41504d; margin: 0 0 18px; min-height: 60px;">For brands that are not registered anywhere yet and want to know where they stand. Continuous monitoring across all 50 states, threshold alerts, and an annual review.</p>
+            <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 6px;"><span style="font-family: Manrope; font-weight: 800; font-size: 28px; color: #0f1b1a;">$99–$199</span><span style="font-family: Inter; font-size: 14px; color: #7a8783;">/mo</span></div>
+            <span style="align-self: flex-start; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #8a6410; background: #faf1dd; border: 1px solid #ecd9a8; padding: 3px 9px; border-radius: 9999px; margin-bottom: 22px;">validate</span>
+            <a class="th-30" href="/nexus-study" style="margin-top: auto; text-align: center; background: #fff; color: #0f1b1a; border: 1px solid #0f1b1a; font-family: Inter; font-weight: 600; font-size: 15px; padding: 12px; border-radius: 24px; text-decoration: none;">Start with a study</a>
+          </div>
+          <div style="background: #0f1b1a; border-radius: 24px; padding: clamp(24px,2.6vw,32px); display: flex; flex-direction: column;">
+            <span style="align-self: flex-start; font-family: Inter; font-weight: 600; font-size: 12px; color: #0a1413; background: #d9ede9; padding: 4px 11px; border-radius: 9999px; margin-bottom: 12px;">Most brands start here</span>
+            <h2 style="font-family: Manrope; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: #fff; margin: 0 0 8px;">Compliance Core</h2>
+            <p style="font-family: Inter; font-size: 14px; line-height: 1.5; color: #c7d2cf; margin: 0 0 18px; min-height: 60px;">For brands registered in 1 to 5 states. Everything in Nexus Watch, plus filings, the client portal, and monthly reports.</p>
+            <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px;"><span style="font-family: Manrope; font-weight: 800; font-size: 28px; color: #fff;">$349–$599</span><span style="font-family: Inter; font-size: 14px; color: #7a8783;">/mo</span></div>
+            <p style="font-family: Inter; font-size: 13px; color: #c7d2cf; margin: 0 0 6px;">plus $50–$75 per state per month</p>
+            <span style="align-self: flex-start; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #f0d28a; background: rgba(224,163,46,0.16); border: 1px solid rgba(224,163,46,0.34); padding: 3px 9px; border-radius: 9999px; margin-bottom: 22px;">validate</span>
+            <a class="th-31" href="/nexus-study" style="margin-top: auto; text-align: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 15px; padding: 12px; border-radius: 24px; text-decoration: none;">Start with a study</a>
+          </div>
+          <div style="background: #eef2f0; border-radius: 24px; padding: clamp(24px,2.6vw,32px); display: flex; flex-direction: column;">
+            <h2 style="font-family: Manrope; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 8px;">Compliance Plus</h2>
+            <p style="font-family: Inter; font-size: 14px; line-height: 1.5; color: #41504d; margin: 0 0 18px; min-height: 60px;">For brands in 6 to 15 states. Everything in Core, plus notices handling, exemption certificate management, and a priority expert.</p>
+            <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 6px;"><span style="font-family: Manrope; font-weight: 800; font-size: 28px; color: #0f1b1a;">$799–$1,499</span><span style="font-family: Inter; font-size: 14px; color: #7a8783;">/mo</span></div>
+            <span style="align-self: flex-start; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #8a6410; background: #faf1dd; border: 1px solid #ecd9a8; padding: 3px 9px; border-radius: 9999px; margin-bottom: 22px;">validate</span>
+            <a class="th-32" href="/nexus-study" style="margin-top: auto; text-align: center; background: #fff; color: #0f1b1a; border: 1px solid #0f1b1a; font-family: Inter; font-weight: 600; font-size: 15px; padding: 12px; border-radius: 24px; text-decoration: none;">Start with a study</a>
+          </div>
+          <div style="background: #eef2f0; border-radius: 24px; padding: clamp(24px,2.6vw,32px); display: flex; flex-direction: column;">
+            <h2 style="font-family: Manrope; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 8px;">Enterprise</h2>
+            <p style="font-family: Inter; font-size: 14px; line-height: 1.5; color: #41504d; margin: 0 0 18px; min-height: 60px;">For brands in 15 or more states, heavy multi-channel, or with back-filing and voluntary disclosure projects.</p>
+            <div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 6px;"><span style="font-family: Manrope; font-weight: 800; font-size: 28px; color: #0f1b1a;">Custom</span></div>
+            <p style="font-family: Inter; font-size: 13px; color: #41504d; margin: 0 0 6px;">starting around $2,000 per month</p>
+            <span style="align-self: flex-start; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #8a6410; background: #faf1dd; border: 1px solid #ecd9a8; padding: 3px 9px; border-radius: 9999px; margin-bottom: 22px;">validate</span>
+            <a class="th-33" href="/contact" style="margin-top: auto; text-align: center; background: #fff; color: #0f1b1a; border: 1px solid #0f1b1a; font-family: Inter; font-weight: 600; font-size: 15px; padding: 12px; border-radius: 24px; text-decoration: none;">Talk to us</a>
+          </div>
+        </div>
+        <div style="margin-top: 24px; background: #eef2f0; border-radius: 24px; padding: clamp(24px,3vw,36px);">
+          <h3 style="font-family: Manrope; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 12px;">One-time projects</h3>
+          <p style="font-family: Inter; font-size: 16px; line-height: 1.6; color: #41504d; margin: 0;">State registration <span style="font-weight: 600; color: #0f1b1a;">($150 to $300 per state)</span>, back-filing and voluntary disclosure agreements, and nexus studies for brands not ready for a monthly plan. <span style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #8a6410; background: #faf1dd; border: 1px solid #ecd9a8; padding: 2px 8px; border-radius: 9999px;">validate</span></p>
+        </div>
+      </div>
+    </section>
+    <section style="background: #fff; padding: 0 0 clamp(56px,8vw,96px);">
+      <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(24px,3vw,34px); line-height: 1.1; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 16px;">Why flat fee</h2>
+        <p style="font-family: Inter; font-size: clamp(16px,1.7vw,19px); line-height: 1.62; color: #41504d; margin: 0 0 36px;">Avalara and the per-transaction tools charge based on volume and calculations, which means your compliance cost rises exactly when you are busiest. A flat fee per state matches what the work actually is. Filing one state’s return costs the same whether you had a slow month or your best month ever.</p>
+        <div style="background: #eef2f0; border-radius: 24px; padding: clamp(24px,3vw,32px);">
+          <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0 0 18px;">Get your free nexus study first. We will tell you how many states you actually need, so you are not paying for coverage you do not.</p>
+          <a class="th-34" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 14px 26px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+        </div>
+      </div>
+    </section>`;
+
+export const compareSoftwareHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #7a8783; margin: 0 0 16px;">Compare</p>
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(36px,5.6vw,68px); line-height: 1.04; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 820px;">Tassetta vs sales tax software</h1>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 820px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 22px;">Avalara and TaxJar are good at what they are: tax calculation engines and filing dashboards. The question is not whether they work. It is who does the work.</p>
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 22px;">With software, you are the operator. You configure the product mappings, you watch the nexus dashboard, you reconcile the numbers, and you click to file, or you pay extra for managed filing on top of the software fee. The tool is one more thing your team logs into. And the billing usually scales with your transaction volume, so the cost climbs as you grow.</p>
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 32px;">With Tassetta, we are the operator. A tax expert reviews every return. You approve in one click. You do not log into a calculation engine, you do not reconcile marketplace tax by hand, and you pay a flat fee per state instead of per transaction.</p>
+        <div class="t-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 32px;">
+          <div style="background: #eef2f0; border-radius: 20px; padding: 26px;"><p style="font-family: Inter; font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #7a8783; margin: 0 0 10px;">Software</p><p style="font-family: Manrope; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">A tool you run.</p></div>
+          <div style="background: #0f1b1a; border-radius: 20px; padding: 26px;"><p style="font-family: Inter; font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #7a8783; margin: 0 0 10px;">Tassetta</p><p style="font-family: Manrope; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; color: #fff; margin: 0;">A team that runs it for you.</p></div>
+        </div>
+        <p style="font-family: Inter; font-size: clamp(16px,1.7vw,18px); line-height: 1.62; color: #41504d; margin: 0 0 36px;"><span style="font-weight: 600; color: #0f1b1a;">Where software might be the better call:</span> if you have an in-house tax person who wants to own the process and just needs a calculation engine, a tool is the right buy. Tassetta is for brands that do not want to build that function internally.</p>
+        <a class="th-35" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+    </section>`;
+
+export const compareCpaHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #7a8783; margin: 0 0 16px;">Compare</p>
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px,5.4vw,64px); line-height: 1.05; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 820px;">Tassetta vs a bookkeeper or CPA</h1>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 820px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 22px;">A good CPA can absolutely handle your sales tax. The problem is usually how, not who. Most run on spreadsheets and manual logins to state portals. That means no live view of where your exposure is building, slower turnaround, and a bill that grows with the hours.</p>
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 32px;">Tassetta does the same job on a platform built for it. Your nexus is tracked in real time, not recalculated at quarter-end. Returns are reconciled against your actual collected tax automatically. Everything is logged in an audit archive you can see any time. And the price is a flat fee, not an hourly meter.</p>
+        <p style="font-family: Inter; font-size: clamp(16px,1.7vw,18px); line-height: 1.62; color: #41504d; margin: 0 0 36px;"><span style="font-weight: 600; color: #0f1b1a;">Where a CPA might be the better call:</span> if your tax situation is entangled with complex income tax, entity structure, or international questions, you want a full accounting relationship, and sales tax is just one piece. We do one thing. We do it completely. Many of our clients keep their CPA for everything else and use us for sales tax specifically.</p>
+        <a class="th-36" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+    </section>`;
+
+export const aboutHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(36px,5.6vw,68px); line-height: 1.04; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 820px;">About Tassetta</h1>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 820px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 22px;">Tassetta exists because the two ways to handle sales tax both put the work back on the brand. Software hands you a dashboard and a calculation API and calls it solved. A bookkeeper does it by hand, slowly, with no real-time view of your risk. Neither one actually takes it off your plate.</p>
+        <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">So we built the thing in between: a tax team that does the work, running on a platform we built ourselves so the work is faster, more accurate, and fully documented. You get the outcome of hiring an expert with the speed and transparency of good software, without operating either one.</p>
+        <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(22px,2.8vw,32px); line-height: 1.1; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">What we believe about the work</h2>
+        <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 44px;">
+          <div style="display: flex; gap: 14px; align-items: flex-start;"><span style="flex: none; width: 24px; height: 24px; border-radius: 9999px; background: #d9ede9; color: #0d7d72; font-family: Manrope; font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px;">1</span><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">A return that goes out under your name should be reviewed by a person who is accountable for it.</p></div>
+          <div style="display: flex; gap: 14px; align-items: flex-start;"><span style="flex: none; width: 24px; height: 24px; border-radius: 9999px; background: #d9ede9; color: #0d7d72; font-family: Manrope; font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px;">2</span><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">Your compliance cost should be predictable.</p></div>
+          <div style="display: flex; gap: 14px; align-items: flex-start;"><span style="flex: none; width: 24px; height: 24px; border-radius: 9999px; background: #d9ede9; color: #0d7d72; font-family: Manrope; font-weight: 800; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px;">3</span><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">The day an auditor asks for your history, the proof should already exist.</p></div>
+        </div>
+        <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0 0 40px;">Those three beliefs are why the product works the way it does.</p>
+        <div style="border: 1px dashed #b9ccc6; border-radius: 20px; padding: 28px; margin-bottom: 40px; background: #f8faf9;">
+          <p style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.04em; color: #7a8783; margin: 0 0 10px;">[ PLACEHOLDER — team section ]</p>
+          <p style="font-family: Inter; font-size: 16px; line-height: 1.55; color: #41504d; margin: 0;">Names and faces here raise trust a lot for a service business handling someone’s tax filings. Worth adding before taking paid clients.</p>
+        </div>
+        <a class="th-37" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+    </section>`;
+
+export const securityHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(32px,5vw,58px); line-height: 1.06; letter-spacing: -0.025em; color: #0f1b1a; margin: 0 0 24px; max-width: 880px;">How we protect your data and your filings</h1>
+        <p style="font-family: Inter; font-size: clamp(17px,2vw,21px); line-height: 1.5; color: #41504d; margin: 0; max-width: 720px;">You are handing us your sales data and authority to file on your behalf. Here is how that is protected.</p>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
+          <div style="background: #eef2f0; border-radius: 20px; padding: 28px;"><h3 style="font-family: Manrope; font-weight: 800; font-size: 18px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 10px;">Role-based access</h3><p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">People only see the clients and records they are allowed to.</p></div>
+          <div style="background: #eef2f0; border-radius: 20px; padding: 28px;"><h3 style="font-family: Manrope; font-weight: 800; font-size: 18px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 10px;">Multi-factor authentication</h3><p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">Enforced for staff on every account.</p></div>
+          <div style="background: #eef2f0; border-radius: 20px; padding: 28px;"><h3 style="font-family: Manrope; font-weight: 800; font-size: 18px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 10px;">Encrypted credential vault</h3><p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">For any portal or account credentials we hold.</p></div>
+          <div style="background: #eef2f0; border-radius: 20px; padding: 28px;"><h3 style="font-family: Manrope; font-weight: 800; font-size: 18px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 10px;">Tamper-evident audit log</h3><p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">Hash-chained, so the record of what happened cannot be quietly altered.</p></div>
+          <div style="background: #eef2f0; border-radius: 20px; padding: 28px;"><h3 style="font-family: Manrope; font-weight: 800; font-size: 18px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 10px;">Seven-year evidence archive</h3><p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">Kept per filing, for the day someone checks.</p></div>
+          <div style="background: #eef2f0; border-radius: 20px; padding: 28px;"><h3 style="font-family: Manrope; font-weight: 800; font-size: 18px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 10px;">Backups and monitoring</h3><p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">Regular backups and monitoring across the platform.</p></div>
+        </div>
+        <div style="margin-top: 28px; border: 1px dashed #b9ccc6; border-radius: 20px; padding: 28px; background: #f8faf9;">
+          <p style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.04em; color: #7a8783; margin: 0 0 10px;">[ HONEST FORWARD-LOOKING NOTE — confirm before publishing ]</p>
+          <p style="font-family: Inter; font-size: 16px; line-height: 1.6; color: #41504d; margin: 0;">Be straight about what is in progress versus done. If you are not yet SOC 2 certified or carrying E&amp;O insurance, do not imply you are. State what you have today and what is on the roadmap. Sophisticated buyers ask, and getting caught overstating this is worse than not having it yet.</p>
+        </div>
+      </div>
+    </section>`;
+
+export const resourcesHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px,5.4vw,64px); line-height: 1.05; letter-spacing: -0.025em; color: #0f1b1a; margin: 0 0 24px; max-width: 880px;">Sales tax, explained for ecommerce brands</h1>
+        <p style="font-family: Inter; font-size: clamp(17px,2vw,21px); line-height: 1.5; color: #41504d; margin: 0; max-width: 720px;">Plain-English writing on the parts of sales tax that actually affect Shopify and multi-channel brands. No jargon for its own sake.</p>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <p style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #7a8783; margin: 0 0 20px;">[ PLACEHOLDER — starter article angles, not yet published ]</p>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div style="background: #eef2f0; border-radius: 20px; padding: 28px;"><h3 style="font-family: Manrope; font-weight: 800; font-size: clamp(18px,2vw,22px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">What economic nexus actually means, and the threshold for all 50 states in one place</h3></div>
+          <div style="background: #eef2f0; border-radius: 20px; padding: 28px;"><h3 style="font-family: Manrope; font-weight: 800; font-size: clamp(18px,2vw,22px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">Do marketplace sales count toward nexus? It depends on the state, here is the map</h3></div>
+          <div style="background: #eef2f0; border-radius: 20px; padding: 28px;"><h3 style="font-family: Manrope; font-weight: 800; font-size: clamp(18px,2vw,22px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">You got a sales tax notice from a state. Here is what to do in the first 48 hours</h3></div>
+          <div style="background: #eef2f0; border-radius: 20px; padding: 28px;"><h3 style="font-family: Manrope; font-weight: 800; font-size: clamp(18px,2vw,22px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">When does a Shopify brand need to start worrying about sales tax in other states</h3></div>
+          <div style="background: #eef2f0; border-radius: 20px; padding: 28px;"><h3 style="font-family: Manrope; font-weight: 800; font-size: clamp(18px,2vw,22px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">Voluntary disclosure agreements: how to get clean on back taxes without the full penalty</h3></div>
+        </div>
+      </div>
+    </section>`;
+
+export const contactHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px,5.4vw,64px); line-height: 1.05; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 820px;">Talk to us about your sales tax</h1>
+      </div>
+    </section>
+    <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
+      <div style="max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
+        <div class="t-2col" style="display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(28px,4vw,56px); align-items: start;">
+          <div>
+            <p style="font-family: Inter; font-size: clamp(16px,1.7vw,19px); line-height: 1.62; color: #41504d; margin: 0 0 24px;">A brand reaching out either has a notice and is worried, or is sizing up the service. Either way, give us the basics and we will get back fast.</p>
+            <div style="background: #d9ede9; border-radius: 20px; padding: 26px;">
+              <h3 style="font-family: Manrope; font-weight: 800; font-size: 19px; letter-spacing: -0.01em; color: #0a1413; margin: 0 0 8px;">Not ready to talk yet?</h3>
+              <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #0a1413; margin: 0 0 16px;">The free nexus study is the low-friction way in. No call required to get your report.</p>
+              <a class="th-38" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+            </div>
+          </div>
+          <div style="background: #eef2f0; border-radius: 24px; padding: clamp(24px,3vw,34px); display: flex; flex-direction: column; gap: 16px;">
+            <div style="display: flex; flex-direction: column; gap: 7px;"><label style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a;">Name</label><input type="text" placeholder="Your name" style="font-family: Inter; font-size: 15px; color: #0f1b1a; background: #fff; border: 1px solid #cdd8d4; border-radius: 12px; padding: 12px 14px; outline: none;"></div>
+            <div style="display: flex; flex-direction: column; gap: 7px;"><label style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a;">Store URL</label><input type="text" placeholder="yourstore.com" style="font-family: Inter; font-size: 15px; color: #0f1b1a; background: #fff; border: 1px solid #cdd8d4; border-radius: 12px; padding: 12px 14px; outline: none;"></div>
+            <div style="display: flex; flex-direction: column; gap: 7px;"><label style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a;">Roughly how many states do you sell into?</label><input type="text" placeholder="e.g. 25" style="font-family: Inter; font-size: 15px; color: #0f1b1a; background: #fff; border: 1px solid #cdd8d4; border-radius: 12px; padding: 12px 14px; outline: none;"></div>
+            <div style="display: flex; flex-direction: column; gap: 7px;"><label style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a;">What prompted the outreach?</label><textarea rows="3" placeholder="A notice, sizing up the service, something else" style="font-family: Inter; font-size: 15px; color: #0f1b1a; background: #fff; border: 1px solid #cdd8d4; border-radius: 12px; padding: 12px 14px; outline: none; resize: vertical;"></textarea></div>
+            <button class="th-39" style="margin-top: 4px; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 14px; border-radius: 24px; border: none; cursor: pointer;">Book a call</button>
+          </div>
+        </div>
+      </div>
+    </section>`;
+
+export const fallbackHtml = `<section style="background: #eef2f0; padding: clamp(64px,10vw,140px) 0;">
+      <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px); text-align: center;">
+        <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px,4vw,44px); line-height: 1.08; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 16px;">{{ fallbackTitle }}</h1>
+        <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0 0 32px;">This page connects to the app or a legal document in the live product. For now, start with your free nexus study.</p>
+        <a class="th-40" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+    </section>`;

@@ -1,0 +1,29 @@
+<header style="position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.92); backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid #eef2f0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px); height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a href="/" style="display: flex; align-items: center; gap: 9px; text-decoration: none; flex: none;">
+        <span style="width: 26px; height: 26px; border-radius: 8px; background: #0d7d72; display: inline-flex; align-items: center; justify-content: center; color: #fff; font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px;">T</span>
+        <span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 20px; letter-spacing: -0.02em; color: #0f1b1a;">Tassetta</span>
+      </a>
+      <nav class="t-nav-desktop" style="align-items: center; gap: 30px;">
+        <a class="th-41" href="/how-it-works" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; text-decoration: none;">How it works</a>
+        <a class="th-42" href="/what-we-handle" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; text-decoration: none;">What we handle</a>
+        <a class="th-43" href="/pricing" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; text-decoration: none;">Pricing</a>
+        <a class="th-44" href="/compare/software" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; text-decoration: none;">Compare</a>
+        <a class="th-45" href="/about" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; text-decoration: none;">About</a>
+      </nav>
+      <div class="t-nav-desktop" style="align-items: center; gap: 18px; flex: none;">
+        <a class="th-46" href="/login" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #41504d; text-decoration: none;">Log in</a>
+        <a class="th-47" href="/nexus-study" style="display: inline-flex; align-items: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 14px; padding: 11px 20px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+      </div>
+      <button class="t-burger" onclick="{{ toggleMenu }}" aria-label="Menu" style="align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; border: 1px solid #eef2f0; background: #fff; cursor: pointer; flex: none; color: #0f1b1a; font-size: 18px;">☰</button>
+    </div>
+    <div class="t-mobile-menu {{ menuClass }}" style="flex-direction: column; padding: 8px 20px 20px; gap: 4px; border-top: 1px solid #eef2f0; background: #fff;">
+      <a href="/how-it-works" onclick="{{ closeMenu }}" style="font-family: Inter; font-weight: 600; font-size: 16px; color: #0f1b1a; text-decoration: none; padding: 12px 4px; border-bottom: 1px solid #f4f7f5;">How it works</a>
+      <a href="/what-we-handle" onclick="{{ closeMenu }}" style="font-family: Inter; font-weight: 600; font-size: 16px; color: #0f1b1a; text-decoration: none; padding: 12px 4px; border-bottom: 1px solid #f4f7f5;">What we handle</a>
+      <a href="/pricing" onclick="{{ closeMenu }}" style="font-family: Inter; font-weight: 600; font-size: 16px; color: #0f1b1a; text-decoration: none; padding: 12px 4px; border-bottom: 1px solid #f4f7f5;">Pricing</a>
+      <a href="/compare/software" onclick="{{ closeMenu }}" style="font-family: Inter; font-weight: 600; font-size: 16px; color: #0f1b1a; text-decoration: none; padding: 12px 4px; border-bottom: 1px solid #f4f7f5;">Compare</a>
+      <a href="/about" onclick="{{ closeMenu }}" style="font-family: Inter; font-weight: 600; font-size: 16px; color: #0f1b1a; text-decoration: none; padding: 12px 4px; border-bottom: 1px solid #f4f7f5;">About</a>
+      <a href="/login" onclick="{{ closeMenu }}" style="font-family: Inter; font-weight: 600; font-size: 16px; color: #41504d; text-decoration: none; padding: 12px 4px; border-bottom: 1px solid #f4f7f5;">Log in</a>
+      <a href="/nexus-study" onclick="{{ closeMenu }}" style="margin-top: 12px; text-align: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 14px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
+    </div>
+  </header>
