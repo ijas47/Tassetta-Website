@@ -171,7 +171,7 @@ export default function Home() {
             }}
           >
             <video
-              src="/videos/explainer-30s.mp4"
+              src="/videos/explainer-45s.mp4"
               controls
               playsInline
               muted

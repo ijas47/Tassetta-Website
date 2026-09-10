@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Remotion video project
+/video/node_modules/
+/video/.remotion/
+/video/out/
