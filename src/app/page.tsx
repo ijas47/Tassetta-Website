@@ -333,8 +333,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ CONTRAST ============ */}
+      {/* ============ YOUR PORTAL ============ */}
       <section style={{ background: '#fff', padding: 'clamp(56px,8vw,104px) 0' }}>
+        <div style={container}>
+          <div className="t-2col" style={{ display: 'grid', gridTemplateColumns: '5fr 7fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }}>
+            <div>
+              <p style={eyebrow}>Your view</p>
+              <h2 style={h2}>You sign in and see one page.</h2>
+              <p style={{ ...body, marginBottom: 20 }}>
+                Your Client Portal shows exactly what you need to see: your onboarding readiness, the return waiting
+                for your approval, your live nexus, and the states you&rsquo;re registered in. That&rsquo;s it.
+              </p>
+              <p style={body}>
+                Everything else — the workbench, the notice workflow, the whole-book reports — runs on our side. You
+                will never open it. You will never need to.
+              </p>
+            </div>
+            <div
+              style={{
+                background: T.canvasSoft,
+                borderRadius: 24,
+                padding: 'clamp(12px,1.6vw,18px)',
+                boxShadow: '0 24px 60px -28px rgba(15,27,26,0.28)',
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/app/client-portal.jpg"
+                alt="Client Portal — Client readiness checklist and the current filing packet waiting for your one-click approval."
+                loading="lazy"
+                decoding="async"
+                width={1512}
+                height={949}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  borderRadius: 14,
+                  aspectRatio: '1512 / 949',
+                }}
+              />
+              <p style={{ ...body, fontFamily: 'ui-monospace, Menlo, monospace', fontSize: 12, color: T.mute, margin: '12px 6px 4px', letterSpacing: '0.04em' }}>
+                Client Portal — your only screen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ CONTRAST ============ */}
+      <section style={{ background: '#fff', padding: 'clamp(56px,8vw,104px) 0', borderTop: '1px solid #e6ece9' }}>
         <div style={container}>
           <div style={{ maxWidth: 820, marginBottom: 48 }}>
             <p style={eyebrow}>What changes for you</p>

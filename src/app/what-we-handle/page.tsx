@@ -100,7 +100,7 @@ const CAPS: Capability[] = [
       'A crossed threshold surfaces as an obligation in the Filing calendar automatically.',
     ],
     surface: {
-      label: 'Reports · Liability by state',
+      label: 'Ops view · Liability by state',
       rows: [
         ['CA · May 2026', '$6,262 open', 'neg'],
         ['WA · May 2026', '$4,423 open', 'neg'],
@@ -122,7 +122,7 @@ const CAPS: Capability[] = [
       'Portal credentials get vaulted so filings can be submitted end-to-end.',
     ],
     surface: {
-      label: 'Client portal · Prior registrations',
+      label: 'In your portal · Prior registrations',
       rows: [
         ['GA — active', 'Approved', 'pos'],
         ['IL — active', 'Approved', 'pos'],
@@ -143,7 +143,7 @@ const CAPS: Capability[] = [
       'ACH runs on schedule; if it fails, we surface it and drive it to resolved.',
     ],
     surface: {
-      label: 'Filing calendar',
+      label: 'Ops view · Filing calendar',
       rows: [
         ['Ember Home Co. · GA · May 2026', 'Overdue — 82d', 'neg'],
         ['Northstar Goods · CA · May 2026', 'Overdue — 82d', 'neg'],
@@ -165,7 +165,7 @@ const CAPS: Capability[] = [
       'The evidence trail (source data, workpaper, sign-offs) stays attached for audit.',
     ],
     surface: {
-      label: 'Expert workbench · Review queue',
+      label: 'Ops view · Notice workflow',
       rows: [
         ['Ember Home Co. · GA May 2026', 'Payment failure', 'neg'],
         ['Northstar Goods · CA May 2026', '3 exceptions', 'warn'],
@@ -185,7 +185,7 @@ const CAPS: Capability[] = [
       'When an auditor asks, the answer is a folder — not a search.',
     ],
     surface: {
-      label: 'Return workpaper · GA May 2026',
+      label: 'In your portal · Return workpaper — GA May 2026',
       rows: [
         ['Gross sales (H)', '$38,200', 'ink'],
         ['Net taxable (J)', '$36,770', 'ink'],
@@ -270,8 +270,9 @@ export default function WhatWeHandle() {
             Everything from &ldquo;you might owe&rdquo; to &ldquo;it is filed and archived.&rdquo;
           </h1>
           <p style={{ ...lede, maxWidth: 780 }}>
-            Five capabilities. One team behind them. Each one has a real surface in the platform — not a slide, not a
-            deliverable emailed once a quarter.
+            Five capabilities. One team behind them. Some of these live in your Client Portal — that&rsquo;s what you
+            see when you sign in. The rest run in the ops workbench we operate on your behalf. Every screen below is
+            labeled so you know which side of the wall it&rsquo;s on.
           </p>
         </div>
       </section>
