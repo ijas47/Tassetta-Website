@@ -159,7 +159,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ PRODUCT BAND ============ */}
+      {/* ============ VIDEO ============ */}
       <section style={{ background: T.canvasSoft, padding: '0 0 clamp(48px,7vw,80px)' }}>
         <div style={container}>
           <div
@@ -170,31 +170,29 @@ export default function Home() {
               boxShadow: '0 24px 60px -28px rgba(15,27,26,0.28)',
             }}
           >
-            <div
+            <video
+              src="/videos/explainer-30s.mp4"
+              controls
+              playsInline
+              muted
+              autoPlay
+              loop
+              preload="metadata"
+              aria-label="Tassetta — 30-second explainer"
               style={{
+                width: '100%',
+                display: 'block',
                 borderRadius: 14,
-                overflow: 'hidden',
-                backgroundColor: '#f4f7f5',
-                backgroundImage: 'repeating-linear-gradient(135deg, #e7eeec 0 14px, #f4f7f5 14px 28px)',
-                height: 'clamp(220px,34vw,420px)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
+                background: '#f4f7f5',
+                aspectRatio: '16 / 9',
               }}
             >
-              <span
-                style={{
-                  fontFamily: 'ui-monospace, "SF Mono", Menlo, monospace',
-                  fontSize: 13,
-                  color: T.mute,
-                  background: 'rgba(255,255,255,0.85)',
-                  padding: '8px 14px',
-                  borderRadius: 8,
-                }}
-              >
-                [ product shot — live nexus dashboard ]
-              </span>
-            </div>
+              Your browser doesn&rsquo;t support video playback.{' '}
+              <a href="/videos/explainer-30s.mp4" style={{ color: T.primary }}>
+                Download the explainer
+              </a>
+              .
+            </video>
           </div>
         </div>
       </section>
