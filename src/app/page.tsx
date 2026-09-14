@@ -137,12 +137,12 @@ export default function Home() {
  <section style={{ background: T.canvasSoft, padding: 'clamp(56px,9vw,112px) 0 clamp(48px,7vw,88px)' }}>
  <div style={container}>
  <div style={{ maxWidth: 920 }}>
- <span style={chip}>Sales tax software · CPA-approved</span>
- <h1 style={h1}>Sales tax, automated. CPA-approved. You watch it live.</h1>
- <p style={{ ...lede, maxWidth: 760 }}>
- Tassetta is software that runs your US sales tax across all 50 states. The platform tracks
- where you owe, prepares every return automatically, and files after a CPA signs off and you
- approve. You see every step in the dashboard as it happens.
+ <span style={chip}>For Shopify and multi-channel brands</span>
+ <h1 style={h1}>Sales tax you actually watch happen.</h1>
+ <p style={{ ...lede, maxWidth: 720 }}>
+ Most brands outsource sales tax to an accountant and hope. Tassetta puts it on a platform in
+ front of you. Software does the heavy lifting. A CPA checks every filing. You approve in one
+ click, and see every step in real time.
  </p>
  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, alignItems: 'center' }}>
  <a href="/nexus-study" style={ctaPrimary} className="th-1">
