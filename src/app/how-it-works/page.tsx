@@ -10,12 +10,12 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
  title: 'How it works',
  description:
- 'Connect your sales channels once. Tassetta then measures nexus continuously, calculates each return, has a CPA verify it, waits for your approval, files with the state and archives the evidence.',
+ 'Connect your channels once. Then every period: Tassetta calculates the return, a CPA verifies it, you approve it, and someone files it with the state.',
  alternates: { canonical: '/how-it-works' },
  openGraph: {
  title: 'How Tassetta works',
  description:
- 'Connect once. Then every period: calculate, CPA verify, your approval, file, archive. Four stages, one of them yours.',
+ 'Connect once. Then every period: Tassetta calculates, a CPA verifies, you approve, a human files. Four steps, one of them yours.',
  url: '/how-it-works',
  type: 'website',
  },
@@ -380,7 +380,7 @@ export default function HowItWorks() {
  n: '04',
  head: 'Filed',
  body:
- 'Tassetta submits, captures the state confirmation number, and writes it to the archive next to the workpaper, the CPA sign-off and your approval. Seven years, per filing, per state.',
+ 'Someone at Tassetta submits it to the state portal, captures the confirmation number, and writes it to the archive next to the workpaper, the CPA sign-off and your approval. Seven years, per filing, per state.',
  },
  ].map((s) => (
  <div key={s.n} style={{ background: T.canvasSoft, borderRadius: 20, padding: 'clamp(22px,3vw,28px)', display: 'grid', gridTemplateColumns: '56px 1fr', gap: 18 }}>

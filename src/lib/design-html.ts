@@ -47,7 +47,7 @@ export const homeHtml = `<!-- Hero -->
  <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
  <div style="max-width: 820px; margin-bottom: 48px;">
  <p style="font-family: Inter; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #7a8783; margin: 0 0 16px;">How Tassetta is different</p>
- <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px,4vw,46px); line-height: 1.07; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">You watch it. The platform files it.</h2>
+ <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px,4vw,46px); line-height: 1.07; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">You watch it. We file it.</h2>
  <p style="font-family: Inter; font-size: clamp(16px,1.6vw,19px); line-height: 1.62; color: #41504d; margin: 0;">Tassetta is a platform and a service in one. The platform gives you a live view of your entire sales tax position. The service is the part nobody else does for you: a tax expert who actually files.</p>
  </div>
  <div class="t-watch-file" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">

@@ -13,12 +13,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
  description:
- 'Ecommerce sales tax compliance platform. Tassetta tracks nexus in all 50 states, calculates every return, and files it. A CPA verifies each one and you approve it before it goes out.',
+ 'Sales tax platform for US ecommerce. Tassetta tracks where you owe across all 50 states, handles registrations, and gets every return filed on time. Tassetta calculates it, a CPA verifies it, you approve it, a human files it.',
  alternates: { canonical: '/' },
  openGraph: {
- title: 'Tassetta. Sales tax filed by software, checked by a CPA.',
+ title: 'Tassetta. The sales tax platform that actually files.',
  description:
- 'Nexus tracked in all 50 states. Every return calculated, verified by a CPA, approved by you, filed on time. See where you are registered, what is filed, and what is pending, any time.',
+ 'Nexus tracked across all 50 states, registrations handled, every return filed on time. You watch the whole thing from one page.',
  url: '/',
  type: 'website',
  },
@@ -140,12 +140,11 @@ export default function Home() {
  <section style={{ background: T.canvasSoft, padding: 'clamp(56px,9vw,112px) 0 clamp(48px,7vw,88px)' }}>
  <div style={container}>
  <div style={{ maxWidth: 940 }}>
- <span style={chip}>Ecommerce sales tax compliance</span>
- <h1 style={h1}>Filed by software. Checked by a CPA. Approved by you.</h1>
- <p style={{ ...lede, maxWidth: 720 }}>
- Tassetta tracks nexus in all 50 states, calculates every return, and files it. Before
- anything goes out, a CPA verifies the numbers and you approve them. Log in any time to see
- where you are registered, what is filed, and what is still pending.
+ <span style={chip}>For US ecommerce brands</span>
+ <h1 style={h1}>The sales tax platform that actually files.</h1>
+ <p style={{ ...lede, maxWidth: 700 }}>
+ Tassetta tracks where you owe across all 50 states, handles the registrations, and gets
+ every return filed on time. You watch the whole thing from one page.
  </p>
  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, alignItems: 'center' }}>
  <a href="/nexus-study" style={ctaPrimary} className="th-1">
@@ -250,32 +249,37 @@ export default function Home() {
  <section style={{ background: T.canvasSoft, padding: 'clamp(56px,8vw,104px) 0' }}>
  <div style={container}>
  <div style={{ maxWidth: 820, marginBottom: 48 }}>
- <p style={eyebrow}>What Tassetta does</p>
- <h2 style={h2}>Calculate. Verify. File. You watch all three.</h2>
+ <p style={eyebrow}>How it works</p>
+ <h2 style={h2}>Four steps. You are one of them.</h2>
  <p style={body}>
- One platform runs the whole obligation, from the first threshold to the archived confirmation
- number. Here is the loop it runs every filing period.
+ The same loop runs every filing period, in every state you are registered in.
  </p>
  </div>
  <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
  {[
  {
  num: '01',
- head: 'Calculate',
+ head: 'Tassetta calculates it',
  body:
- 'Connect Shopify, your marketplaces, Stripe and your accounting system. Orders and refunds sync continuously. Tassetta measures your sales against the current economic nexus threshold in all 50 states and DC, then builds each return: gross sales, net taxable, exempt, marketplace, tax collected, expected liability.',
+ 'Connect Shopify, your marketplaces, Stripe and your accounting system once. Orders and refunds sync continuously. The platform measures your sales against the current nexus threshold in every state and builds each return from the transaction data: gross, taxable, exempt, marketplace, tax collected, expected liability.',
  },
  {
  num: '02',
- head: 'Verify',
+ head: 'A CPA verifies it',
  body:
- 'A named CPA opens the workpaper and reconciles it against the tax you actually collected. Anything outside tolerance gets flagged and resolved first: a mistaxed invoice, a stale rate, a resale certificate that is not on file, a portal figure that disagrees with the workpaper. Then they sign off.',
+ 'A named CPA opens the workpaper and reconciles it against the tax you actually collected. Anything the platform flags gets resolved first: a mistaxed invoice, a stale rate, a resale certificate that is not on file. Then they sign it.',
  },
  {
  num: '03',
- head: 'File',
+ head: 'You approve it',
  body:
- 'The packet arrives in your portal with every line shown. You approve in one click. Tassetta files with the state, remits the payment, and stores the workpaper, the CPA sign-off, your approval and the confirmation number for seven years.',
+ 'The packet lands in your portal with every line visible and the full workpaper downloadable. One click. Nothing is filed in your name that you have not seen.',
+ },
+ {
+ num: '04',
+ head: 'A human files it',
+ body:
+ 'Someone at Tassetta submits it to the state portal, remits the payment, captures the confirmation number, and files the whole record: workpaper, sign-off, your approval, confirmation. Kept seven years.',
  },
  ].map((s) => (
  <div
@@ -344,7 +348,7 @@ export default function Home() {
  what you collected, clears the exceptions and puts their name on the return.
  </p>
  <p style={{ ...body, fontWeight: 600, color: T.ink }}>
- The platform will not let a return reach your approval queue until they have.
+ No return reaches your approval queue until they have.
  </p>
  </div>
  <div style={{ background: T.darkPanel, borderRadius: 24, padding: 'clamp(28px,3.4vw,40px)' }}>
