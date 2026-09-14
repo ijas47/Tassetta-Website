@@ -8,7 +8,7 @@ production of the Claude Design source (`Tassetta.dc.html`).
 - **Next.js 16** (App Router, Turbopack). Every marketing page is server-rendered as static HTML.
 - **Tailwind CSS v4** used for tokens/theme; the design ships as inline-styled markup that we preserve verbatim.
 - **Inter + Manrope** via `next/font/google`, self-hosted.
-- **Zero JS on marketing pages** except the sticky-header mobile menu (`Header`) and the nexus-study CSV uploader (`NexusStudyUploader`).
+- **Zero JS on marketing pages** except the sticky-header mobile menu (`Header`) and the two Web3Forms forms (`NexusStudyForm`, `ContactForm`).
 
 ## Design fidelity
 
@@ -22,10 +22,11 @@ rendered on the matching Next.js page via `SectionHtml`. The extractor:
 - desugars the design's custom `style-hover="..."` attribute into generated `.th-N`
  classes with matching `:hover` rules (all inlined into `globals.css`).
 
-The one section we **do not** render verbatim is the nexus-study upload form 
-the design's `study_none` / `study_has` blocks are replaced with the
-`<NexusStudyUploader />` React client component, which is a real functional
-file input with client-side validation.
+Several routes are no longer rendered from the extracted HTML at all. `/`,
+`/how-it-works`, `/what-we-handle`, `/compare/*`, `/about`, `/nexus-study`,
+`/contact` and `/book` are hand-written TSX: same layout language and palette,
+rewritten copy, and on `/nexus-study` and `/contact` a real form wired to
+Web3Forms. The design's CSV drag-and-drop is gone; see `docs/HANDOVER.md`.
 
 If you edit the design, drop the exported HTML at `_design/Tassetta.standalone.html`
 and re-run:

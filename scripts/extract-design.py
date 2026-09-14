@@ -2,8 +2,9 @@
 """Extract per-route HTML from the recovered Claude Design template.
 
 - Strips <sc-if> wrappers (Claude Design conditional render markers).
-- In r_study, drops the inline study_none/study_has upload sub-blocks;
-  the React component <NexusStudyUploader /> renders the upload UI instead.
+- In r_study, drops the inline study_none/study_has upload sub-blocks.
+  /nexus-study is now hand-written TSX (call-led, no upload), so the emitted
+  nexusStudyHtml is kept only as a reference copy of the original design.
 - Converts href="#/route" -> href="/route".
 - Converts inline `style-hover="prop: val;"` (Claude Design hover sugar) into
   a generated class whose :hover rule is emitted to `hover.css`.

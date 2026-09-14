@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { bookingHref, bookingLinkProps } from '@/lib/booking';
 
 /*
  * Home page. Positioning follows April Dunford's framework:
@@ -155,8 +156,8 @@ export default function Home() {
  </a>
  </div>
  <p style={{ ...body, fontSize: 14, color: T.mute, margin: '18px 0 0', maxWidth: 560 }}>
- Send one CSV from Shopify. We come back with the states you already owe in, the ones you are
- about to cross, and what it costs to get clean.
+ Start with a free nexus study. Fifteen minutes and one export, and you get the states you
+ already owe in, the ones you are about to cross, and what it costs to get clean.
  </p>
  </div>
  </div>
@@ -667,12 +668,21 @@ export default function Home() {
  Find out where you stand. It is free.
  </h2>
  <p style={{ fontSize: 'clamp(16px,1.7vw,19px)', lineHeight: 1.6, color: '#c7d2cf', margin: '0 auto 32px', maxWidth: 640 }}>
- Send one CSV export from Shopify. We come back with the states you already owe in, the ones
- you are about to cross, and what getting compliant actually costs. No call required.
+ Fifteen minutes and one export. We come back with the states you already owe in, the ones
+ you are about to cross, and what getting compliant actually costs.
  </p>
+ <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center' }}>
  <a href="/nexus-study" style={ctaPrimary} className="th-9">
  Get your free nexus study
  </a>
+ <a
+ href={bookingHref}
+ {...bookingLinkProps}
+ style={{ fontWeight: 600, fontSize: 15, color: '#fff', textDecoration: 'none', padding: '15px 8px' }}
+ >
+ Book a call →
+ </a>
+ </div>
  </div>
  </div>
  </section>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { bookingHref, bookingLinkProps } from "@/lib/booking";
 
 const LINK_STYLE = {
   fontSize: 14,
@@ -119,7 +120,7 @@ export default function Footer() {
             >
               Get your free nexus study
             </Link>
-            <Link href="/contact" className="t-flink" style={LINK_STYLE}>Book a call</Link>
+            <a href={bookingHref} {...bookingLinkProps} className="t-flink" style={LINK_STYLE}>Book a call</a>
             <Link href="/login" className="t-flink" style={LINK_STYLE}>Log in</Link>
           </div>
         </div>
