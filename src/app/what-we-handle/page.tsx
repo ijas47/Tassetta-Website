@@ -10,12 +10,12 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
  title: 'What we handle',
  description:
- 'The full lifecycle of a sales tax obligation. Nexus, registrations, filings, notices, exemptions. Each with a real surface in the Compliance OS and a defined next step.',
+ 'Five things have to happen for a state to consider you compliant: nexus, registration, filing, notices, exemption certificates. Tassetta does all five, with a CPA verifying every return.',
  alternates: { canonical: '/what-we-handle' },
  openGraph: {
  title: 'What Tassetta handles',
  description:
- 'Nexus, registrations, filings, notices, exemptions, with real product surfaces (workpaper, filing calendar, evidence archive) behind each one.',
+ 'Nexus, registrations, filing, notices, exemption certificates. All five, on one platform, with a named CPA on every return.',
  url: '/what-we-handle',
  type: 'website',
  },
@@ -92,12 +92,12 @@ const CAPS: Capability[] = [
  num: '01',
  slug: 'nexus',
  head: 'Nexus monitoring',
- claim: 'Know where you owe before the state does.',
+ claim: 'Know the day you cross, not the year after.',
  bullets: [
- 'All 50 states and DC watched live against your sales and transactions.',
- 'Threshold rule changes tracked. So your position never runs on a stale rulebook.',
+ 'All 50 states and DC, measured against your live sales and transaction counts.',
+ 'The rules dataset is versioned, so your position never runs on last year’s thresholds.',
  'Marketplace-remitted sales separated from your direct sales in the count.',
- 'A crossed threshold surfaces as an obligation in the Filing calendar automatically.',
+ 'Crossing a threshold creates the obligation on your filing calendar automatically.',
  ],
  surface: {
  label: 'Ops view · Liability by state',
@@ -114,11 +114,11 @@ const CAPS: Capability[] = [
  num: '02',
  slug: 'registrations',
  head: 'State registrations',
- claim: 'Cross a threshold, we register you in that state.',
+ claim: 'Crossed means registered, tracked to the account number.',
  bullets: [
- 'We prepare the registration; an expert reviews; you approve.',
- 'We track it through to the state’s confirmation and account number.',
- 'The state moves into your Filing calendar the moment it’s active.',
+ 'The platform prepares the registration. A CPA reviews it. You approve it.',
+ 'Tracked through to the state confirmation and account number.',
+ 'The state joins your filing calendar the moment it is active.',
  'Portal credentials get vaulted so filings can be submitted end-to-end.',
  ],
  surface: {
@@ -135,12 +135,12 @@ const CAPS: Capability[] = [
  num: '03',
  slug: 'filing',
  head: 'Filing and remittance',
- claim: 'Returns prepared by the platform. Signed by a CPA. Filed on time.',
+ claim: 'Calculated, verified by a CPA, approved by you, filed on time.',
  bullets: [
  'Every return, per state, on the frequency each state assigned you.',
- 'A tax expert prepares each one and reconciles to the tax you collected.',
- 'You approve in one click on the Client portal packet.',
- 'ACH runs on schedule; if it fails, we surface it and drive it to resolved.',
+ 'The platform calculates it; a named CPA reconciles it to the tax you collected and signs.',
+ 'You approve in one click, with every line of the workpaper visible.',
+ 'Remittance runs on schedule. A failure surfaces as an open exception until it clears.',
  ],
  surface: {
  label: 'Ops view · Filing calendar',
@@ -157,11 +157,11 @@ const CAPS: Capability[] = [
  num: '04',
  slug: 'notices',
  head: 'Notices and audits',
- claim: 'When a state writes back, we answer.',
+ claim: 'A notice gets matched to the return it is about.',
  bullets: [
  'Notices intake, matched to the filing period in question.',
- 'Response drafted by the expert who worked the original return.',
- 'You approve the reply; we send and log the whole exchange.',
+ 'The response is drafted by the CPA who worked that return.',
+ 'You approve the reply. The whole exchange is logged against the filing.',
  'The evidence trail (source data, workpaper, sign-offs) stays attached for audit.',
  ],
  surface: {
@@ -177,7 +177,7 @@ const CAPS: Capability[] = [
  num: '05',
  slug: 'exemptions',
  head: 'Exemption certificates',
- claim: 'Wholesale and exempt sales, documented properly.',
+ claim: 'An exempt line that holds up when someone checks it.',
  bullets: [
  'Certificates collected, validated, watched for expiry.',
  'Which sales are actually exempt is resolved before the return, not after.',
@@ -267,10 +267,10 @@ export default function WhatWeHandle() {
  <div style={container}>
  <p style={eyebrow}>What we handle</p>
  <h1 style={{ ...h1, maxWidth: 820 }}>
- Everything from &ldquo;you might owe&rdquo; to &ldquo;it is filed and archived.&rdquo;
+ Five things have to happen. Tassetta does all five.
  </h1>
  <p style={{ ...lede, maxWidth: 780 }}>
- Five capabilities. One platform. A CPA in the approval loop for every filing. Some of these show up in your Client Portal as things you see and approve. That&rsquo;s what you
+ Five capabilities on one platform, with a named CPA on every return. Some show up in your portal as things you see and approve. That is what you
  see when you sign in. The rest run in the ops workbench we operate on your behalf. Every screen below is
  labeled so you know which side of the wall it&rsquo;s on.
  </p>

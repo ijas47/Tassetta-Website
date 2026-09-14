@@ -3,12 +3,12 @@ import SectionHtml from '@/components/SectionHtml';
 import { noticesHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
- title: 'Notices and audits. When a state writes back, we answer',
- description: 'We intake the notice, match it to the filing period, draft the response, you approve, and we close it out. The whole exchange is logged.',
+ title: 'Notices and audits',
+ description: 'A notice is matched to the exact return and period it concerns. The CPA who worked that return drafts the response, you approve it, and the exchange is logged against the filing.',
  alternates: { canonical: '/what-we-handle/notices' },
  openGraph: {
- title: 'Notices and audits. When a state writes back, we answer',
- description: 'We intake the notice, match it to the filing period, draft the response, you approve, and we close it out. The whole exchange is logged.',
+ title: 'Notices and audits',
+ description: 'A notice is matched to the exact return and period it concerns. The CPA who worked that return drafts the response, you approve it, and the exchange is logged against the filing.',
  url: '/what-we-handle/notices',
  type: 'website',
  },

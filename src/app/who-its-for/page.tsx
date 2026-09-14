@@ -4,11 +4,11 @@ import { whoItsForHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
   title: 'Who Tassetta is for',
-  description: 'Built for ecommerce brands that have outgrown “we only collect in our home state” but do not want to turn sales tax into a job for someone on the team.',
+  description: 'For ecommerce brands shipping into many states who want sales tax handled without hiring for it, and without losing sight of where they stand.',
   alternates: { canonical: '/who-its-for' },
   openGraph: {
     title: 'Who Tassetta is for',
-    description: 'Built for ecommerce brands that have outgrown “we only collect in our home state” but do not want to turn sales tax into a job for someone on the team.',
+    description: 'For ecommerce brands shipping into many states who want sales tax handled without hiring for it, and without losing sight of where they stand.',
     url: '/who-its-for',
     type: 'website',
   },

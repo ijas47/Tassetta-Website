@@ -10,12 +10,12 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
  title: 'About Tassetta',
  description:
- 'Tassetta is software that automates US sales tax across all 50 states, with a CPA in the approval loop as the human check on every filing. Everything runs on one platform, and you see it happen live.',
+ 'Tassetta is an ecommerce sales tax compliance platform. It calculates and files based on nexus, a named CPA verifies every return, and the client approves it. Built because the two existing options both fail the same way.',
  alternates: { canonical: '/about' },
  openGraph: {
  title: 'About Tassetta',
  description:
- 'Software that automates US sales tax. A CPA in the approval loop. You watch every step live.',
+ 'Why we built a sales tax platform with a CPA on every return and the whole position visible to the client.',
  url: '/about',
  type: 'website',
  },
@@ -71,25 +71,25 @@ export default function About() {
  <section style={{ background: T.canvasSoft, padding: 'clamp(48px,7vw,88px) 0' }}>
  <div style={container}>
  <p style={eyebrow}>About</p>
- <h1 style={{ ...h1, maxWidth: 820 }}>Sales tax should run itself. A person should sign off.</h1>
+ <h1 style={{ ...h1, maxWidth: 860 }}>Nobody should file a number they cannot see the math behind.</h1>
  </div>
  </section>
 
  <section style={{ background: '#fff', padding: 'clamp(48px,7vw,88px) 0' }}>
  <div style={{ maxWidth: 820, margin: '0 auto', padding: '0 clamp(20px,4vw,32px)' }}>
  <p style={body}>
- The two ways to handle sales tax both leave the work with you. Software gives you a
- calculator and a dashboard, then hands you the filing. A CPA does it by hand, slowly,
- with no live view. Neither one actually takes it off your plate. And neither one shows
- you what is happening as it happens.
+ Sales tax has two accepted answers and they fail in opposite directions. Buy software and
+ you get a rate engine plus a dashboard, then you do the mapping, the watching, the
+ reconciling and the filing yourself. Hire a firm and the work gets done, but you find out
+ where you stand when the invoice arrives.
  </p>
  <p style={body}>
- Tassetta is the thing in between: <strong style={{ color: T.ink }}>software that runs
- your sales tax end to end, with a CPA in the loop as the human check on every filing.</strong>{' '}
- The platform tracks your nexus in real time, prepares every return automatically, files
- and remits on each state&rsquo;s schedule, and keeps a seven-year audit archive. A CPA
- reviews and signs off before any return reaches you. You approve in one click. Every step
- is visible in your dashboard as it happens.
+ We built the third answer. <strong style={{ color: T.ink }}>A platform that calculates,
+ verifies and files based on nexus, with a named CPA on every return and the whole position
+ visible to the client.</strong>{' '} The software does the volume work: continuous nexus
+ measurement across 50 states, the workpaper, the filing, the remittance, the archive. The
+ CPA does the judgement work: reviewing what the platform flags and signing the return. You
+ do the one thing that should stay yours, which is deciding it goes out.
  </p>
 
  <h2 style={{ ...h2, margin: '44px 0 24px' }}>What we believe about the work</h2>

@@ -47,7 +47,7 @@ export const homeHtml = `<!-- Hero -->
  <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
  <div style="max-width: 820px; margin-bottom: 48px;">
  <p style="font-family: Inter; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #7a8783; margin: 0 0 16px;">How Tassetta is different</p>
- <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px,4vw,46px); line-height: 1.07; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">You watch it. We file it.</h2>
+ <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px,4vw,46px); line-height: 1.07; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">You watch it. The platform files it.</h2>
  <p style="font-family: Inter; font-size: clamp(16px,1.6vw,19px); line-height: 1.62; color: #41504d; margin: 0;">Tassetta is a platform and a service in one. The platform gives you a live view of your entire sales tax position. The service is the part nobody else does for you: a tax expert who actually files.</p>
  </div>
  <div class="t-watch-file" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -74,25 +74,25 @@ export const homeHtml = `<!-- Hero -->
  <a class="th-3" href="/what-we-handle/nexus" style="text-decoration: none; background: #eef2f0; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; gap: 12px;">
  <span style="font-family: Manrope; font-weight: 800; font-size: 14px; color: #0d7d72;">01</span>
  <h3 style="font-family: Manrope; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">Nexus monitoring</h3>
- <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">We watch all 50 states and DC against your live sales and tell you where you have crossed before a state does.</p>
+ <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">All 50 states and DC, measured against your live sales, so you know the day you cross rather than the year after.</p>
  <span style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; margin-top: 4px;">Learn more →</span>
  </a>
  <a class="th-4" href="/what-we-handle/registrations" style="text-decoration: none; background: #eef2f0; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; gap: 12px;">
  <span style="font-family: Manrope; font-weight: 800; font-size: 14px; color: #0d7d72;">02</span>
  <h3 style="font-family: Manrope; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">Registrations</h3>
- <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">When you cross a threshold, we register you in that state and track it through to approved.</p>
+ <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">Cross a threshold and the registration is prepared, reviewed, filed and tracked to the state account number.</p>
  <span style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; margin-top: 4px;">Learn more →</span>
  </a>
  <a class="th-5" href="/what-we-handle/filing" style="text-decoration: none; background: #eef2f0; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; gap: 12px;">
  <span style="font-family: Manrope; font-weight: 800; font-size: 14px; color: #0d7d72;">03</span>
  <h3 style="font-family: Manrope; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">Filing and remittance</h3>
- <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">Expert-prepared returns, your one-click approval, then we file and remit on the schedule each state assigns you.</p>
+ <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">Calculated, verified by a CPA, approved by you in one click, then filed and remitted on the state schedule.</p>
  <span style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; margin-top: 4px;">Learn more →</span>
  </a>
  <a class="th-6" href="/what-we-handle/notices" style="text-decoration: none; background: #eef2f0; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; gap: 12px;">
  <span style="font-family: Manrope; font-weight: 800; font-size: 14px; color: #0d7d72;">04</span>
  <h3 style="font-family: Manrope; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0;">Notices and audits</h3>
- <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">A state sends a notice, we read it, draft the response, and keep the full evidence trail for seven years.</p>
+ <p style="font-family: Inter; font-size: 15px; line-height: 1.55; color: #41504d; margin: 0;">A notice is matched to its return, answered by the CPA who worked it, and kept with the evidence trail for seven years.</p>
  <span style="font-family: Inter; font-weight: 600; font-size: 14px; color: #0f1b1a; margin-top: 4px;">Learn more →</span>
  </a>
  </div>
@@ -108,7 +108,7 @@ export const homeHtml = `<!-- Hero -->
  <div class="t-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px,5vw,72px); align-items: center;">
  <div>
  <p style="font-family: Inter; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #7a8783; margin: 0 0 16px;">Marketplace-aware</p>
- <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(26px,3.4vw,42px); line-height: 1.08; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">We know the difference between your sales and Amazon’s.</h2>
+ <h2 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(26px,3.4vw,42px); line-height: 1.08; letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 24px;">Marketplace tax is not yours to file.</h2>
  <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0 0 20px;">If you sell on Amazon, Walmart, Etsy, or TikTok Shop, those marketplaces already collect and remit sales tax for you as the facilitator. The mistake brands and generic tools make is counting that tax as yours, which means you either over-remit or you cannot reconcile your own books.</p>
  <p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">Tassetta separates facilitator-collected sales from your direct Shopify sales automatically. You file on what is actually yours to file. Your liability matches your books, and you are not paying twice.</p>
  </div>
@@ -220,7 +220,7 @@ export const nexusStudyHtml = `<section style="background: #eef2f0; padding: cla
  </div>
  <div style="background: #fff; border-radius: 24px; padding: clamp(24px,3vw,36px);">
  <h3 style="font-family: Manrope; font-weight: 800; font-size: 22px; letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 16px;">The honest version of the pitch</h3>
- <p style="font-family: Inter; font-size: 16px; line-height: 1.6; color: #41504d; margin: 0;">We are not going to scare you with a number we made up. The report runs on your real sales data against current state thresholds. If anything in it needs a caveat, we flag it. The thresholds and rates we use are starting values that we verify against each state’s tax authority before anyone files, and we will tell you where a number is an estimate versus a confirmed obligation.</p>
+ <p style="font-family: Inter; font-size: 16px; line-height: 1.6; color: #41504d; margin: 0;">No invented number designed to scare you. The report runs on your real sales data against current state thresholds. If anything in it needs a caveat, we flag it. The thresholds and rates we use are starting values that we verify against each state’s tax authority before anyone files, and we will tell you where a number is an estimate versus a confirmed obligation.</p>
  </div>
  </div>
  </div>
@@ -236,7 +236,7 @@ export const howItWorksHtml = `<section style="background: #eef2f0; padding: cla
  <div style="max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px); display: flex; flex-direction: column; gap: 20px;">
  <div style="display: grid; grid-template-columns: 72px 1fr; gap: clamp(16px,3vw,32px); align-items: start; background: #eef2f0; border-radius: 24px; padding: clamp(24px,3vw,36px);">
  <span style="font-family: Manrope; font-weight: 800; font-size: clamp(28px,4vw,44px); color: #0d7d72; line-height: 1;">01</span>
- <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,30px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 12px;">Connect your sales</h2><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">You connect Shopify with one click, or upload a CSV. If you sell on Amazon, Walmart, Etsy, Stripe, PayPal, or TikTok Shop, we pull those too. We pull your order and refund history and keep it synced, so nexus tracking runs on what you are actually selling, not a snapshot.</p></div>
+ <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,30px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 12px;">Connect your sales</h2><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">Connect Shopify in one click, or upload a CSV. Amazon, Walmart, Etsy, Stripe, PayPal and TikTok Shop connect the same way. Orders and refunds stay synced, so nexus runs on what you are actually selling rather than a snapshot.</p></div>
  </div>
  <div style="display: grid; grid-template-columns: 72px 1fr; gap: clamp(16px,3vw,32px); align-items: start; background: #eef2f0; border-radius: 24px; padding: clamp(24px,3vw,36px);">
  <span style="font-family: Manrope; font-weight: 800; font-size: clamp(28px,4vw,44px); color: #0d7d72; line-height: 1;">02</span>
@@ -244,11 +244,11 @@ export const howItWorksHtml = `<section style="background: #eef2f0; padding: cla
  </div>
  <div style="display: grid; grid-template-columns: 72px 1fr; gap: clamp(16px,3vw,32px); align-items: start; background: #eef2f0; border-radius: 24px; padding: clamp(24px,3vw,36px);">
  <span style="font-family: Manrope; font-weight: 800; font-size: clamp(28px,4vw,44px); color: #0d7d72; line-height: 1;">03</span>
- <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,30px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 12px;">We prepare, you approve</h2><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">When a return is due, a Tassetta tax expert prepares it and checks it against the tax you actually collected that period. If something is off, an invoice taxed wrong, an exemption that does not hold, a rate that looks stale, we catch it and resolve it before it reaches you. You get a clean return. You approve it in one click.</p></div>
+ <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,30px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 12px;">We prepare, you approve</h2><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">When a return is due the platform calculates it and reconciles it against the tax you actually collected. Anything outside tolerance is raised as an exception: an invoice taxed wrong, an exemption that does not hold, a stale rate. A named CPA resolves each one and signs. You approve in one click.</p></div>
  </div>
  <div style="display: grid; grid-template-columns: 72px 1fr; gap: clamp(16px,3vw,32px); align-items: start; background: #eef2f0; border-radius: 24px; padding: clamp(24px,3vw,36px);">
  <span style="font-family: Manrope; font-weight: 800; font-size: clamp(28px,4vw,44px); color: #0d7d72; line-height: 1;">04</span>
- <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,30px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 12px;">We file, remit, and keep the record</h2><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">We handle the filing and the remittance on each state’s schedule. If a state sends a notice, we handle that too. Everything goes into your audit archive: the workpaper, your approval, the confirmation number. Every filing, every state, every period.</p></div>
+ <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(22px,2.6vw,30px); letter-spacing: -0.02em; color: #0f1b1a; margin: 0 0 12px;">We file, remit, and keep the record</h2><p style="font-family: Inter; font-size: 17px; line-height: 1.6; color: #41504d; margin: 0;">Filing and remittance run on each state’s schedule. A notice gets matched and answered. Everything lands in your audit archive: the workpaper, the CPA sign-off, your approval, the confirmation number. Every filing, every state, every period.</p></div>
  </div>
  </div>
  </section>
@@ -336,17 +336,17 @@ export const whatWeHandleHtml = `<section style="background: #eef2f0; padding: c
  </a>
  <a class="th-16" href="/what-we-handle/registrations" style="text-decoration: none; display: grid; grid-template-columns: 56px 1fr auto; gap: 20px; align-items: center; background: #eef2f0; border-radius: 24px; padding: clamp(22px,2.6vw,30px);">
  <span style="font-family: Manrope; font-weight: 800; font-size: 22px; color: #0d7d72;">02</span>
- <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(19px,2.2vw,24px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 6px;">Registrations</h2><p style="font-family: Inter; font-size: 15px; line-height: 1.5; color: #41504d; margin: 0;">We get you registered in new states.</p></div>
+ <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(19px,2.2vw,24px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 6px;">Registrations</h2><p style="font-family: Inter; font-size: 15px; line-height: 1.5; color: #41504d; margin: 0;">Crossed means registered.</p></div>
  <span style="font-family: Inter; font-weight: 700; font-size: 20px; color: #0f1b1a;">→</span>
  </a>
  <a class="th-17" href="/what-we-handle/filing" style="text-decoration: none; display: grid; grid-template-columns: 56px 1fr auto; gap: 20px; align-items: center; background: #eef2f0; border-radius: 24px; padding: clamp(22px,2.6vw,30px);">
  <span style="font-family: Manrope; font-weight: 800; font-size: 22px; color: #0d7d72;">03</span>
- <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(19px,2.2vw,24px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 6px;">Filing and remittance</h2><p style="font-family: Inter; font-size: 15px; line-height: 1.5; color: #41504d; margin: 0;">Returns filed, on time, reviewed by a person.</p></div>
+ <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(19px,2.2vw,24px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 6px;">Filing and remittance</h2><p style="font-family: Inter; font-size: 15px; line-height: 1.5; color: #41504d; margin: 0;">Calculated, verified by a CPA, filed on time.</p></div>
  <span style="font-family: Inter; font-weight: 700; font-size: 20px; color: #0f1b1a;">→</span>
  </a>
  <a class="th-18" href="/what-we-handle/notices" style="text-decoration: none; display: grid; grid-template-columns: 56px 1fr auto; gap: 20px; align-items: center; background: #eef2f0; border-radius: 24px; padding: clamp(22px,2.6vw,30px);">
  <span style="font-family: Manrope; font-weight: 800; font-size: 22px; color: #0d7d72;">04</span>
- <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(19px,2.2vw,24px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 6px;">Notices and audits</h2><p style="font-family: Inter; font-size: 15px; line-height: 1.5; color: #41504d; margin: 0;">When a state writes back, we answer.</p></div>
+ <div><h2 style="font-family: Manrope; font-weight: 800; font-size: clamp(19px,2.2vw,24px); letter-spacing: -0.01em; color: #0f1b1a; margin: 0 0 6px;">Notices and audits</h2><p style="font-family: Inter; font-size: 15px; line-height: 1.5; color: #41504d; margin: 0;">A notice matched to the return it is about.</p></div>
  <span style="font-family: Inter; font-weight: 700; font-size: 20px; color: #0f1b1a;">→</span>
  </a>
  <a class="th-19" href="/what-we-handle/exemptions" style="text-decoration: none; display: grid; grid-template-columns: 56px 1fr auto; gap: 20px; align-items: center; background: #eef2f0; border-radius: 24px; padding: clamp(22px,2.6vw,30px);">
@@ -365,7 +365,7 @@ export const nexusHtml = `<section style="background: #eef2f0; padding: clamp(48
  </section>
  <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
  <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
- <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">We track your sales against economic nexus thresholds in all 50 states and DC, updated as the rules change. Thresholds vary, some states count transactions, some count dollars, some count both, some include marketplace sales in the math and some do not. We handle that variation so you do not have to learn it. You get one view: where you have crossed, where you are close, where you are clear.</p>
+ <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">Tassetta measures your sales against the economic nexus threshold in all 50 states and DC, continuously, against a rules dataset that is versioned as states change them. Thresholds vary, some states count transactions, some count dollars, some count both, some include marketplace sales in the math and some do not. The platform handles that variation so nobody on your team has to learn it. You get one view: where you have crossed, where you are close, where you are clear.</p>
  <a class="th-21" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
  </div>
  </section>`;
@@ -373,12 +373,12 @@ export const nexusHtml = `<section style="background: #eef2f0; padding: clamp(48
 export const registrationsHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
  <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
  <a class="th-22" href="/what-we-handle" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #41504d; text-decoration: none; display: inline-block; margin-bottom: 20px;">← What we handle</a>
- <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px,5.2vw,62px); line-height: 1.05; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 880px;">We get you registered in new states</h1>
+ <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px,5.2vw,62px); line-height: 1.05; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 880px;">Crossed means registered</h1>
  </div>
  </section>
  <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
  <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
- <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">Crossing a threshold means you have to register before you can legally collect and file. We prepare the registration, an expert reviews it, you approve, and we track it through to the state’s confirmation. Then that state moves into your filing calendar automatically.</p>
+ <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">Crossing a threshold means you have to register before you can legally collect and file. The platform prepares the registration, a CPA reviews it, you approve it, and it is tracked through to the state confirmation and account number. Then that state moves into your filing calendar automatically.</p>
  <a class="th-23" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
  </div>
  </section>`;
@@ -391,8 +391,8 @@ export const filingHtml = `<section style="background: #eef2f0; padding: clamp(4
  </section>
  <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
  <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
- <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 24px;">We project every return you owe, per state, on the frequency each state assigns you, monthly, quarterly, or annual. Our experts prepare each one and reconcile it against the tax you collected. You approve. We file and remit.</p>
- <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">The filing itself stays human on purpose. A tax expert reviews and submits every return, because a filing that goes out under your name should have a person accountable for it, not a script. Everywhere automation helps, it runs; where a reviewer matters, there is one.</p>
+ <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 24px;">Every return you owe is projected per state, on the frequency that state assigned you. The platform calculates each one and reconciles it against the tax you actually collected. A named CPA reviews the exceptions and signs. You approve. Then it is filed and remitted.</p>
+ <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">The verification stays human on purpose. A named CPA signs every return, because a filing that goes out under your name should have a person accountable for the number. Automation does the volume work. The CPA does the judgement.</p>
  <a class="th-25" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
  </div>
  </section>`;
@@ -400,12 +400,12 @@ export const filingHtml = `<section style="background: #eef2f0; padding: clamp(4
 export const noticesHtml = `<section style="background: #eef2f0; padding: clamp(48px,7vw,88px) 0;">
  <div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
  <a class="th-26" href="/what-we-handle" style="font-family: Inter; font-weight: 600; font-size: 14px; color: #41504d; text-decoration: none; display: inline-block; margin-bottom: 20px;">← What we handle</a>
- <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px,5.2vw,62px); line-height: 1.05; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 880px;">When a state writes back, we answer</h1>
+ <h1 style="font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(34px,5.2vw,62px); line-height: 1.05; letter-spacing: -0.025em; color: #0f1b1a; margin: 0; max-width: 880px;">A notice matched to the return it is about</h1>
  </div>
  </section>
  <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
  <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
- <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">A state notice is stressful because most brands do not know what it means or how fast they have to respond. We intake the notice, match it to the filing period in question, draft the response, you approve it, and we close it out. The whole exchange is logged.</p>
+ <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">A state notice is stressful because most brands do not know what it means or how fast they have to respond. The notice is matched to the exact return and period it concerns. The CPA who worked that return drafts the response. You approve it. The whole exchange is logged against the filing.</p>
  <a class="th-27" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
  </div>
  </section>`;
@@ -418,7 +418,7 @@ export const exemptionsHtml = `<section style="background: #eef2f0; padding: cla
  </section>
  <section style="background: #fff; padding: clamp(48px,7vw,88px) 0;">
  <div style="max-width: 760px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
- <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">If you sell wholesale or to exempt buyers, you need valid exemption certificates on file, or that “exempt” sale becomes taxable and the liability is yours. We collect certificates, check them for validity and expiry, and resolve which sales are genuinely exempt. No more guessing at audit time.</p>
+ <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 40px;">If you sell wholesale or to exempt buyers, you need valid exemption certificates on file, or that “exempt” sale becomes taxable and the liability is yours. Certificates are collected, checked for validity and expiry, and tied to the exempt lines on your returns. No guessing at audit time about which exempt sale holds.</p>
  <a class="th-29" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
  </div>
  </section>`;
@@ -512,7 +512,7 @@ export const compareCpaHtml = `<section style="background: #eef2f0; padding: cla
  <div style="max-width: 820px; margin: 0 auto; padding: 0 clamp(20px,4vw,32px);">
  <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 22px;">A good CPA can absolutely handle your sales tax. The problem is usually how, not who. Most run on spreadsheets and manual logins to state portals. That means no live view of where your exposure is building, slower turnaround, and a bill that grows with the hours.</p>
  <p style="font-family: Inter; font-size: clamp(17px,1.8vw,20px); line-height: 1.62; color: #41504d; margin: 0 0 32px;">Tassetta does the same job on a platform built for it. Your nexus is tracked in real time, not recalculated at quarter-end. Returns are reconciled against your actual collected tax automatically. Everything is logged in an audit archive you can see any time. And the price is a flat fee, not an hourly meter.</p>
- <p style="font-family: Inter; font-size: clamp(16px,1.7vw,18px); line-height: 1.62; color: #41504d; margin: 0 0 36px;"><span style="font-weight: 600; color: #0f1b1a;">Where a CPA might be the better call:</span> if your tax situation is entangled with complex income tax, entity structure, or international questions, you want a full accounting relationship, and sales tax is just one piece. We do one thing. We do it completely. Many of our clients keep their CPA for everything else and use us for sales tax specifically.</p>
+ <p style="font-family: Inter; font-size: clamp(16px,1.7vw,18px); line-height: 1.62; color: #41504d; margin: 0 0 36px;"><span style="font-weight: 600; color: #0f1b1a;">Where a CPA might be the better call:</span> if your tax situation is entangled with complex income tax, entity structure, or international questions, you want a full accounting relationship, and sales tax is just one piece. Tassetta does one thing completely. Many of our clients keep their CPA for everything else and use us for sales tax specifically.</p>
  <a class="th-36" href="/nexus-study" style="display: inline-flex; align-items: center; justify-content: center; background: #0d7d72; color: #fff; font-family: Inter; font-weight: 600; font-size: 16px; padding: 15px 28px; border-radius: 24px; text-decoration: none;">Get your free nexus study</a>
  </div>
  </section>`;

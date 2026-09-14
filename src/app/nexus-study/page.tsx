@@ -3,14 +3,14 @@ import NexusStudyUploader from '@/components/NexusStudyUploader';
 import { nexusStudyHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
- title: 'Free nexus study, find out where you owe',
+ title: 'Free nexus study',
  description:
- 'Send us one CSV export from Shopify. Within 3 to 5 business days we send back a report showing every state where you have already crossed a sales tax threshold, where you are about to, and what it would take to get compliant.',
+ 'Send one CSV export from Shopify. Within 3 to 5 business days you get a report of every state where you have already crossed a sales tax threshold, where you are close, your estimated exposure, and the next step for each.',
  alternates: { canonical: '/nexus-study' },
  openGraph: {
- title: 'Free nexus study, find out where you owe',
+ title: 'Free nexus study',
  description:
- 'One CSV export. A report on every state where you have crossed a sales tax threshold, where you are close, and what it would take to get compliant.',
+ 'One CSV. A report of every state you have crossed in, where you are close, and what compliance costs.',
  url: '/nexus-study',
  type: 'website',
  },

@@ -3,12 +3,12 @@ import SectionHtml from '@/components/SectionHtml';
 import { filingHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
- title: 'Filing and remittance. Returns filed, on time, reviewed by a person',
- description: 'Expert-prepared returns reconciled against tax you actually collected. You approve. We file and remit on the schedule each state assigns you.',
+ title: 'Filing and remittance',
+ description: 'Each return calculated from your live sales, reconciled against the tax you actually collected, verified and signed by a named CPA, approved by you, then filed and remitted on the state schedule.',
  alternates: { canonical: '/what-we-handle/filing' },
  openGraph: {
- title: 'Filing and remittance. Returns filed, on time, reviewed by a person',
- description: 'Expert-prepared returns reconciled against tax you actually collected. You approve. We file and remit on the schedule each state assigns you.',
+ title: 'Filing and remittance',
+ description: 'Each return calculated from your live sales, reconciled against the tax you actually collected, verified and signed by a named CPA, approved by you, then filed and remitted on the state schedule.',
  url: '/what-we-handle/filing',
  type: 'website',
  },

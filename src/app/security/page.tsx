@@ -4,11 +4,11 @@ import { securityHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
   title: 'Security',
-  description: 'You are handing us your sales data and authority to file on your behalf. Here is how that is protected.',
+  description: 'You are giving Tassetta your sales data and the authority to file in your name. Here is how both are protected, and what is still on the roadmap.',
   alternates: { canonical: '/security' },
   openGraph: {
     title: 'Security',
-    description: 'You are handing us your sales data and authority to file on your behalf. Here is how that is protected.',
+    description: 'You are giving Tassetta your sales data and the authority to file in your name. Here is how both are protected, and what is still on the roadmap.',
     url: '/security',
     type: 'website',
   },

@@ -1,23 +1,21 @@
 import type { Metadata } from 'next';
 
 /*
- * /how-it-works, rewritten in Fletch voice, grounded in the real Compliance OS.
- * Structure follows the actual product lifecycle:
- * 1) Onboard once (Client readiness 8 items)
- * 2) Live, continuously (data + nexus + calendar)
- * 3) Every filing period (4-stage per-return progress)
- * 4) Forever (notices + evidence archive)
+ * /how-it-works. Dunford voice, grounded in the real product surfaces.
+ * Structure: setup once, then the loop that runs every filing period,
+ * then what happens after filing. The gate (CPA sign-off, then client
+ * approval) is the point of the page.
  */
 
 export const metadata: Metadata = {
  title: 'How it works',
  description:
- 'Onboard once. From then on, Tassetta watches your sales live, prepares every return, walks it through Expert sign-off → Client approval → Payment → Filed, and archives the evidence.',
+ 'Connect your sales channels once. Tassetta then measures nexus continuously, calculates each return, has a CPA verify it, waits for your approval, files with the state and archives the evidence.',
  alternates: { canonical: '/how-it-works' },
  openGraph: {
  title: 'How Tassetta works',
  description:
- 'Onboard once. Nexus tracked live. Each return goes Expert sign-off → Client approval → Payment → Filed. Evidence archived for 7 years.',
+ 'Connect once. Then every period: calculate, CPA verify, your approval, file, archive. Four stages, one of them yours.',
  url: '/how-it-works',
  type: 'website',
  },
@@ -31,11 +29,17 @@ const T = {
  pale: '#d9ede9',
  canvasSoft: '#eef2f0',
  darkPanel: '#0a1413',
+ warn: '#a67512',
+ warnPale: '#fbecc9',
+ pos: '#217a37',
+ posPale: '#d3ecd8',
 } as const;
 
 const container = { maxWidth: 1200, margin: '0 auto', padding: '0 clamp(20px,4vw,32px)' } as const;
+const mono = { fontFamily: 'ui-monospace, "JetBrains Mono", Menlo, monospace', fontVariantNumeric: 'tabular-nums' } as const;
+
 const eyebrow: React.CSSProperties = {
- fontFamily: 'ui-monospace, "JetBrains Mono", Menlo, monospace',
+ ...mono,
  fontSize: 12,
  letterSpacing: '0.12em',
  textTransform: 'uppercase',
@@ -54,11 +58,19 @@ const h1: React.CSSProperties = {
 const h2: React.CSSProperties = {
  fontFamily: 'var(--font-manrope), Manrope, sans-serif',
  fontWeight: 800,
- fontSize: 'clamp(28px,4vw,46px)',
+ fontSize: 'clamp(28px,4vw,44px)',
  lineHeight: 1.07,
  letterSpacing: '-0.02em',
  color: T.ink,
- margin: '0 0 24px',
+ margin: '0 0 20px',
+};
+const h3: React.CSSProperties = {
+ fontFamily: 'var(--font-manrope), Manrope, sans-serif',
+ fontWeight: 800,
+ fontSize: 'clamp(21px,2.4vw,27px)',
+ letterSpacing: '-0.018em',
+ color: T.ink,
+ margin: '0 0 10px',
 };
 const lede: React.CSSProperties = {
  fontFamily: 'var(--font-inter), Inter, system-ui, sans-serif',
@@ -70,21 +82,17 @@ const lede: React.CSSProperties = {
 const body: React.CSSProperties = {
  fontFamily: 'var(--font-inter), Inter, system-ui, sans-serif',
  fontSize: 17,
- lineHeight: 1.6,
+ lineHeight: 1.62,
  color: T.body,
  margin: 0,
 };
-const mono: React.CSSProperties = {
- fontFamily: 'ui-monospace, "JetBrains Mono", Menlo, monospace',
- fontVariantNumeric: 'tabular-nums',
-};
 
-function StageBadge({ n, label, state }: { n: string; label: string; state: 'done' | 'now' | 'todo' }) {
+function Stage({ n, label, state }: { n: string; label: string; state: 'done' | 'now' | 'todo' }) {
  const c =
  state === 'done'
- ? { bg: T.primary, ring: 'transparent', txt: '#fff' }
+ ? { bg: T.primary, ring: T.primary, txt: '#fff' }
  : state === 'now'
- ? { bg: '#fff', ring: T.primary, txt: T.primary }
+ ? { bg: '#fff', ring: T.warn, txt: T.warn }
  : { bg: 'transparent', ring: '#cdd8d4', txt: T.mute };
  return (
  <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 0 }}>
@@ -94,7 +102,7 @@ function StageBadge({ n, label, state }: { n: string; label: string; state: 'don
  height: 26,
  borderRadius: 9999,
  background: c.bg,
- border: `1.5px solid ${c.ring === 'transparent' ? c.bg : c.ring}`,
+ border: `1.5px solid ${c.ring}`,
  color: c.txt,
  fontFamily: 'var(--font-manrope), Manrope, sans-serif',
  fontWeight: 800,
@@ -108,7 +116,16 @@ function StageBadge({ n, label, state }: { n: string; label: string; state: 'don
  >
  {state === 'done' ? '✓' : n}
  </span>
- <span style={{ ...mono, fontSize: 12, letterSpacing: '0.06em', textTransform: 'uppercase', color: state === 'todo' ? T.mute : T.ink, whiteSpace: 'nowrap' }}>
+ <span
+ style={{
+ ...mono,
+ fontSize: 12,
+ letterSpacing: '0.06em',
+ textTransform: 'uppercase',
+ color: state === 'todo' ? T.mute : T.ink,
+ whiteSpace: 'nowrap',
+ }}
+ >
  {label}
  </span>
  </div>
@@ -122,41 +139,34 @@ export default function HowItWorks() {
  <section style={{ background: T.canvasSoft, padding: 'clamp(48px,7vw,88px) 0' }}>
  <div style={container}>
  <p style={eyebrow}>How it works</p>
- <h1 style={{ ...h1, maxWidth: 820 }}>Onboard once. The platform runs it. You watch it live.</h1>
+ <h1 style={{ ...h1, maxWidth: 860 }}>Set it up once. Then approve one thing a month.</h1>
  <p style={{ ...lede, maxWidth: 760 }}>
- Setup takes an afternoon. From then on, sales sync automatically, the platform prepares every return, a
- CPA signs off, you approve in one click, and the archive fills itself. Every step is visible in your
- dashboard as it happens.
+ Connecting your channels takes an afternoon. After that Tassetta measures nexus continuously,
+ builds each return, has a CPA verify it and waits on you. The only recurring thing you do is
+ read a packet and click approve.
  </p>
  </div>
  </section>
 
- {/* ============ STAGE 1, ONBOARD ============ */}
+ {/* ============ SETUP ============ */}
  <section style={{ background: '#fff', padding: 'clamp(56px,8vw,96px) 0' }}>
  <div style={container}>
  <div style={{ maxWidth: 820, marginBottom: 40 }}>
- <p style={eyebrow}>Stage 1 · Onboard</p>
- <h2 style={h2}>An afternoon. Eight boxes. Done.</h2>
+ <p style={eyebrow}>Setup, once</p>
+ <h2 style={h2}>Eight things, then it runs on its own.</h2>
  <p style={body}>
- You get a Client Portal with a readiness checklist. Ticking these once is what turns Tassetta from a
- signed contract into a running compliance function.
+ Your portal opens on a readiness checklist. Clearing it is what turns a signed contract into a
+ running compliance function. Most of it is information you already have.
  </p>
  </div>
  <div
  className="t-2col"
- style={{
- display: 'grid',
- gridTemplateColumns: '1fr 1.05fr',
- gap: 'clamp(28px,4vw,56px)',
- alignItems: 'start',
- }}
+ style={{ display: 'grid', gridTemplateColumns: '1fr 1.05fr', gap: 'clamp(28px,4vw,56px)', alignItems: 'start' }}
  >
- {/* Left: what you do */}
  <div>
- <ol
+ <ul
  style={{
  listStyle: 'none',
- counterReset: 'ck',
  margin: 0,
  padding: 0,
  display: 'grid',
@@ -166,57 +176,34 @@ export default function HowItWorks() {
  >
  {[
  'Entity details',
- 'FEIN and owner/officer data',
+ 'FEIN and officer data',
  'Shopify access',
- 'Marketplace channel list',
- 'Bank / payment authorization',
+ 'Marketplace channels',
+ 'Bank authorization',
  'Physical presence facts',
  'Prior registrations',
  'State portal credentials',
  ].map((item) => (
  <li
  key={item}
- style={{
- display: 'grid',
- gridTemplateColumns: '20px 1fr',
- gap: 10,
- alignItems: 'baseline',
- counterIncrement: 'ck',
- fontSize: 15,
- color: T.body,
- lineHeight: 1.45,
- }}
+ style={{ display: 'grid', gridTemplateColumns: '20px 1fr', gap: 10, alignItems: 'baseline', fontSize: 15, color: T.body, lineHeight: 1.45 }}
  >
- <span
- aria-hidden
- style={{
- ...mono,
- fontSize: 11,
- color: T.primary,
- letterSpacing: '0.08em',
- }}
- >
+ <span aria-hidden style={{ ...mono, fontSize: 11, color: T.primary }}>
  ✓
  </span>
  <span>{item}</span>
  </li>
  ))}
- </ol>
+ </ul>
  <p style={{ ...body, marginTop: 28, maxWidth: 480 }}>
- <strong style={{ color: T.ink }}>The result:</strong> the first month&rsquo;s return can run without
- you being pulled into a status meeting.
+ <strong style={{ color: T.ink }}>What this buys you:</strong> the first return can run without
+ anyone scheduling a call to chase a missing document.
  </p>
  </div>
 
- {/* Right: portal readiness mock */}
  <div
- style={{
- background: T.canvasSoft,
- borderRadius: 20,
- padding: 20,
- boxShadow: '0 24px 60px -32px rgba(15,27,26,0.28)',
- }}
- aria-label="Client portal. Client readiness mock"
+ style={{ background: T.canvasSoft, borderRadius: 20, padding: 20, boxShadow: '0 24px 60px -32px rgba(15,27,26,0.28)' }}
+ aria-label="Client portal readiness checklist"
  >
  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 14 }}>
  <span style={{ ...mono, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: T.mute }}>
@@ -234,19 +221,17 @@ export default function HowItWorks() {
  </div>
  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
  {[
- ['Entity details', 'LLC', 'Approved'],
- ['FEIN and owner/officer data', 'Verified', 'Approved'],
- ['Shopify access', 'OAuth connected', 'Approved'],
- ['Marketplace channel list', 'Client to confirm Amazon / Walmart', 'Needed'],
- ['Bank / payment authorization', 'ACH verification failed', 'Needed'],
- ['Physical presence facts', 'No warehouses', 'Approved'],
- ['Prior registrations', 'GA and IL active', 'Approved'],
- ['State portal credentials', 'IL account delegate missing', 'Needed'],
- ].map(([label, detail, status]) => {
- const isDone = status === 'Approved';
- return (
+ ['Entity details', 'LLC', true],
+ ['FEIN and owner/officer data', 'Verified', true],
+ ['Shopify access', 'OAuth connected', true],
+ ['Marketplace channel list', 'Confirm Amazon / Walmart', false],
+ ['Bank/payment authorization', 'ACH verification failed', false],
+ ['Physical presence facts', 'No warehouses', true],
+ ['Prior registrations', 'GA and IL active', true],
+ ['State portal credentials', 'IL delegate missing', false],
+ ].map(([label, detail, done]) => (
  <div
- key={label}
+ key={label as string}
  style={{
  display: 'grid',
  gridTemplateColumns: '20px 1fr auto',
@@ -264,8 +249,8 @@ export default function HowItWorks() {
  width: 16,
  height: 16,
  borderRadius: 9999,
- background: isDone ? T.primary : 'transparent',
- border: isDone ? 'none' : `1.5px solid #b9ccc6`,
+ background: done ? T.primary : 'transparent',
+ border: done ? 'none' : '1.5px solid #b9ccc6',
  color: '#fff',
  fontSize: 10,
  display: 'inline-flex',
@@ -275,76 +260,65 @@ export default function HowItWorks() {
  fontWeight: 800,
  }}
  >
- {isDone ? '✓' : ''}
+ {done ? '✓' : ''}
  </span>
  <div style={{ minWidth: 0 }}>
- <div style={{ fontSize: 14, fontWeight: 600, color: T.ink }}>{label}</div>
- <div style={{ ...mono, fontSize: 12, color: T.mute }}>{detail}</div>
+ <div style={{ fontSize: 14, fontWeight: 600, color: T.ink }}>{label as string}</div>
+ <div style={{ ...mono, fontSize: 12, color: T.mute }}>{detail as string}</div>
  </div>
  <span
  style={{
  ...mono,
  fontSize: 11,
  letterSpacing: '0.06em',
- color: isDone ? T.primary : '#a67512',
- background: isDone ? T.pale : '#fbecc9',
+ color: done ? T.pos : T.warn,
+ background: done ? T.posPale : T.warnPale,
  padding: '3px 10px',
  borderRadius: 9999,
  textTransform: 'uppercase',
  }}
  >
- {status}
+ {done ? 'Approved' : 'Needed'}
  </span>
  </div>
- );
- })}
+ ))}
  </div>
  </div>
  </div>
  </div>
  </section>
 
- {/* ============ STAGE 2, CONTINUOUS ============ */}
+ {/* ============ ALWAYS ON ============ */}
  <section style={{ background: T.canvasSoft, padding: 'clamp(56px,8vw,96px) 0' }}>
  <div style={container}>
  <div style={{ maxWidth: 820, marginBottom: 40 }}>
- <p style={eyebrow}>Stage 2 · Live, continuously</p>
- <h2 style={h2}>Your sales sync. Your nexus updates. Your calendar populates.</h2>
+ <p style={eyebrow}>Between filings</p>
+ <h2 style={h2}>Nexus is measured continuously, not at quarter-end.</h2>
  <p style={body}>
- After onboarding, the platform runs on its own. Nothing here is a manual monthly ritual.
+ The difference between knowing in March and knowing in October is usually six figures of
+ accrued liability. So none of this waits for a reporting cycle.
  </p>
  </div>
  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
  {[
  {
- head: 'Data imports',
+ head: 'Sales sync',
  body:
- 'Shopify direct API + CSV backup. Stripe Tax, Amazon, Walmart, Etsy, TikTok Shop, PayPal, QuickBooks, Xero. Orders, refunds, and marketplace-remit flags pull in continuously.',
+ 'Shopify by direct API or CSV. Stripe Tax, Amazon, Walmart, Etsy, TikTok Shop, PayPal, QuickBooks and Xero alongside it. Orders, refunds and facilitator flags come in continuously.',
  },
  {
- head: 'Nexus tracking',
+ head: 'Nexus recalculates',
  body:
- 'All 50 states and DC, watched live against your sales and transactions. Threshold rule changes tracked so your position never runs on stale rules.',
+ 'Every state and DC, against the current dollar and transaction thresholds, with the rules dataset versioned so your position never runs on last year’s numbers.',
  },
  {
- head: 'Filing calendar',
+ head: 'The calendar fills itself',
  body:
- 'Every obligation, per state, on the frequency each state assigned you, populated automatically as soon as you register. Overdue, due-soon, upcoming, filed, one view.',
+ 'Register in a state and its obligations appear on the filing calendar automatically, on the frequency that state assigned you, with due dates and projected liability.',
  },
  ].map((c) => (
  <div key={c.head} style={{ background: '#fff', borderRadius: 20, padding: 'clamp(22px,3vw,30px)' }}>
- <h3
- style={{
- fontFamily: 'var(--font-manrope), Manrope, sans-serif',
- fontWeight: 800,
- fontSize: 20,
- letterSpacing: '-0.01em',
- color: T.ink,
- margin: '0 0 10px',
- }}
- >
- {c.head}
- </h3>
+ <h3 style={{ ...h3, fontSize: 20 }}>{c.head}</h3>
  <p style={{ ...body, fontSize: 15, lineHeight: 1.55 }}>{c.body}</p>
  </div>
  ))}
@@ -352,19 +326,18 @@ export default function HowItWorks() {
  </div>
  </section>
 
- {/* ============ STAGE 3, PER RETURN ============ */}
+ {/* ============ THE LOOP ============ */}
  <section style={{ background: '#fff', padding: 'clamp(56px,8vw,96px) 0' }}>
  <div style={container}>
  <div style={{ maxWidth: 820, marginBottom: 40 }}>
- <p style={eyebrow}>Stage 3 · Every filing period</p>
- <h2 style={h2}>Every return goes through four stages. One is yours.</h2>
+ <p style={eyebrow}>Every filing period</p>
+ <h2 style={h2}>Four stages. One of them is yours.</h2>
  <p style={body}>
- Same shape every month, per state. A workpaper gets built, an expert signs off, you approve, we pay and
- file. The one stage where you touch it is the approval.
+ Same shape every period, in every state. A return cannot skip a stage, and the platform will not
+ let it move without the one before it clearing first.
  </p>
  </div>
 
- {/* Stage progress rail */}
  <div
  style={{
  background: T.canvasSoft,
@@ -376,95 +349,61 @@ export default function HowItWorks() {
  marginBottom: 24,
  }}
  >
- <StageBadge n="1" label="Expert sign-off" state="done" />
- <StageBadge n="2" label="Client approval" state="done" />
- <StageBadge n="3" label="Payment" state="now" />
- <StageBadge n="4" label="Filed" state="todo" />
+ <Stage n="1" label="CPA sign-off" state="done" />
+ <Stage n="2" label="Your approval" state="done" />
+ <Stage n="3" label="Payment" state="now" />
+ <Stage n="4" label="Filed" state="todo" />
  </div>
 
- <div
- className="t-2col"
- style={{
- display: 'grid',
- gridTemplateColumns: '1fr 1.05fr',
- gap: 'clamp(28px,4vw,56px)',
- alignItems: 'start',
- }}
- >
- {/* Left: the 4 stages */}
+ <div className="t-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1.05fr', gap: 'clamp(28px,4vw,56px)', alignItems: 'start' }}>
  <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
  {[
  {
  n: '01',
- head: 'Expert sign-off',
+ head: 'CPA sign-off',
  body:
- 'The platform builds the workpaper automatically and reconciles it against the tax you actually collected. A Tassetta CPA reviews any exception the platform flags (a mistaxed invoice, a stale rate, an exemption that does not hold), resolves it, and signs off. What lands in your portal is clean, and signed by a named CPA.',
+ 'The platform builds the workpaper and reconciles expected liability against what you actually collected. A named CPA reviews every exception it raises: variance outside tolerance, an unsupported resale certificate, a portal figure that disagrees with the calculation. They resolve each one and sign.',
  },
  {
  n: '02',
- head: 'Client approval',
+ head: 'Your approval',
  body:
- 'You get a Filing to approve packet: Gross sales, Net taxable, Exempt, Marketplace, Tax collected, Expected liability, Variance. One click approves it. Everything under it is downloadable as the workpaper CSV.',
+ 'The packet reaches your portal with gross sales, net taxable, exempt, marketplace, tax collected and expected liability all visible, and the full workpaper downloadable. One click approves it. You are the last gate before anything is filed in your name.',
  },
  {
  n: '03',
  head: 'Payment',
  body:
- 'ACH runs on the schedule the state assigned you. If it fails, we surface it as an exception on your portal and on the expert workbench, with the reason and the fix, until it clears.',
+ 'Remittance runs on the state’s schedule. If it fails, it surfaces as an open exception on your portal and in the workbench, with the reason attached, and stays there until it clears.',
  },
  {
  n: '04',
  head: 'Filed',
  body:
- 'Confirmation number lands in the archive alongside the workpaper, your approval, and the expert sign-off. Every filing, every state, every period, kept for seven years.',
+ 'Tassetta submits, captures the state confirmation number, and writes it to the archive next to the workpaper, the CPA sign-off and your approval. Seven years, per filing, per state.',
  },
  ].map((s) => (
  <div key={s.n} style={{ background: T.canvasSoft, borderRadius: 20, padding: 'clamp(22px,3vw,28px)', display: 'grid', gridTemplateColumns: '56px 1fr', gap: 18 }}>
- <span
- style={{
- fontFamily: 'var(--font-manrope), Manrope, sans-serif',
- fontWeight: 800,
- fontSize: 32,
- color: T.primary,
- lineHeight: 1,
- }}
- >
+ <span style={{ fontFamily: 'var(--font-manrope), Manrope, sans-serif', fontWeight: 800, fontSize: 32, color: T.primary, lineHeight: 1 }}>
  {s.n}
  </span>
  <div>
- <h3
- style={{
- fontFamily: 'var(--font-manrope), Manrope, sans-serif',
- fontWeight: 800,
- fontSize: 22,
- letterSpacing: '-0.01em',
- color: T.ink,
- margin: '0 0 8px',
- }}
- >
- {s.head}
- </h3>
+ <h3 style={{ ...h3, fontSize: 22 }}>{s.head}</h3>
  <p style={{ ...body, fontSize: 15.5, lineHeight: 1.55 }}>{s.body}</p>
  </div>
  </div>
  ))}
  </div>
 
- {/* Right: workpaper mock */}
  <div
- style={{
- background: T.canvasSoft,
- borderRadius: 20,
- padding: 20,
- boxShadow: '0 24px 60px -32px rgba(15,27,26,0.28)',
- }}
- aria-label="Return workpaper mock"
+ style={{ background: T.canvasSoft, borderRadius: 20, padding: 20, boxShadow: '0 24px 60px -32px rgba(15,27,26,0.28)' }}
+ aria-label="Return packet awaiting approval"
  >
  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 6 }}>
  <span style={{ ...mono, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: T.mute }}>
  Client portal · filing to approve
  </span>
- <span style={{ ...mono, fontSize: 11, letterSpacing: '0.06em', color: '#a67512', background: '#fbecc9', padding: '3px 10px', borderRadius: 9999, textTransform: 'uppercase' }}>
+ <span style={{ ...mono, fontSize: 11, letterSpacing: '0.06em', color: T.warn, background: T.warnPale, padding: '3px 10px', borderRadius: 9999, textTransform: 'uppercase' }}>
  Payment failed
  </span>
  </div>
@@ -482,87 +421,58 @@ export default function HowItWorks() {
  ].map(([k, v]) => (
  <div key={k} style={{ background: '#fff', border: '1px solid #e6ece9', borderRadius: 10, padding: '10px 12px' }}>
  <div style={{ ...mono, fontSize: 10.5, letterSpacing: '0.08em', color: T.mute, textTransform: 'uppercase' }}>{k}</div>
- <div style={{ fontFamily: 'var(--font-manrope), Manrope, sans-serif', fontWeight: 800, fontSize: 18, color: T.ink, ...mono }}>{v}</div>
+ <div style={{ ...mono, fontFamily: 'var(--font-manrope), Manrope, sans-serif', fontWeight: 800, fontSize: 18, color: T.ink }}>{v}</div>
  </div>
  ))}
  </div>
 
  <div style={{ background: T.pale, border: `1px solid ${T.primary}`, borderRadius: 12, padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
  <span style={{ fontWeight: 700, color: T.ink }}>Expected liability</span>
- <span style={{ fontFamily: 'var(--font-manrope), Manrope, sans-serif', fontWeight: 800, fontSize: 22, color: T.ink, ...mono }}>$2,932</span>
+ <span style={{ ...mono, fontFamily: 'var(--font-manrope), Manrope, sans-serif', fontWeight: 800, fontSize: 22, color: T.ink }}>$2,932</span>
  </div>
 
  <div style={{ marginTop: 20, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10, alignItems: 'center' }}>
- <StageBadge n="1" label="Expert" state="done" />
- <StageBadge n="2" label="Approval" state="done" />
- <StageBadge n="3" label="Payment" state="now" />
- <StageBadge n="4" label="Filed" state="todo" />
+ <Stage n="1" label="CPA" state="done" />
+ <Stage n="2" label="Approved" state="done" />
+ <Stage n="3" label="Payment" state="now" />
+ <Stage n="4" label="Filed" state="todo" />
  </div>
 
- <div style={{ marginTop: 18, borderTop: '1px dashed #cdd8d4', paddingTop: 14, ...mono, fontSize: 11.5, color: T.mute, display: 'flex', flexDirection: 'column', gap: 6 }}>
- <span>Evidence attached: Shopify source data · Normalized transaction file · Rate calculation workbook · Expert signoff</span>
+ <div style={{ marginTop: 18, borderTop: '1px dashed #cdd8d4', paddingTop: 14, ...mono, fontSize: 11.5, color: T.mute }}>
+ Evidence attached: Shopify source data · normalized transaction file · rate calculation workbook · CPA signoff
  </div>
  </div>
  </div>
  </div>
  </section>
 
- {/* ============ STAGE 4, FOREVER ============ */}
+ {/* ============ AFTER FILING ============ */}
  <section style={{ background: T.darkPanel, padding: 'clamp(56px,8vw,96px) 0' }}>
  <div style={container}>
  <div style={{ maxWidth: 820 }}>
- <p style={{ ...eyebrow, color: T.mute }}>Stage 4 · Forever</p>
- <h2 style={{ ...h2, color: '#fff' }}>Notices answered. Evidence kept. Nothing lost between filings.</h2>
+ <p style={{ ...eyebrow, color: T.mute }}>After it is filed</p>
+ <h2 style={{ ...h2, color: '#fff' }}>The part most tools stop caring about.</h2>
  <p style={{ ...body, color: '#c7d2cf', fontSize: 'clamp(16px,1.6vw,19px)', margin: '0 0 16px' }}>
- When a state writes back, we intake the notice, match it to the filing period, draft the response, you
- approve, we close it out. The whole exchange is logged.
+ When a state writes back, the notice is matched to the exact return and period it concerns, the
+ CPA who worked that return drafts the response, you approve it, and the whole exchange is logged
+ against the filing.
  </p>
  <p style={{ ...body, color: '#c7d2cf', fontSize: 'clamp(16px,1.6vw,19px)', margin: 0 }}>
- Every workpaper, approval, and confirmation lives in a tamper-evident archive kept for seven years. When
- an auditor calls, or a buyer&rsquo;s diligence asks for your history, the answer is a folder.
+ Nothing about a filing lives in somebody&rsquo;s inbox. It lives in the archive, for seven years,
+ with every input that produced it.
  </p>
- </div>
-
- {/* Controls-enforced badge, from the app */}
- <div
- style={{
- marginTop: 40,
- border: `1px solid #223330`,
- borderRadius: 16,
- padding: 24,
- background: 'rgba(255,255,255,0.02)',
- display: 'grid',
- gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
- gap: 18,
- }}
- >
- <div style={{ gridColumn: '1 / -1', marginBottom: 4 }}>
- <span style={{ ...mono, fontSize: 11, letterSpacing: '0.12em', color: T.mute, textTransform: 'uppercase' }}>
- Controls enforced
- </span>
- </div>
- {[
- ['Expert sign-off', 'before any return reaches client approval'],
- ['Client approval', 'before any return can be filed'],
- ['7-year evidence retention', 'per filing, tamper-evident'],
- ].map(([h, s]) => (
- <div key={h}>
- <div style={{ color: '#fff', fontWeight: 700, fontSize: 16, marginBottom: 4 }}>{h}</div>
- <div style={{ color: '#c7d2cf', fontSize: 14 }}>{s}</div>
- </div>
- ))}
  </div>
  </div>
  </section>
 
- {/* ============ CLOSING CTA ============ */}
+ {/* ============ CTA ============ */}
  <section style={{ background: T.canvasSoft, padding: 'clamp(56px,8vw,96px) 0' }}>
  <div style={container}>
  <div style={{ background: T.ink, borderRadius: 28, padding: 'clamp(36px,5vw,72px)', textAlign: 'center' }}>
- <h2 style={{ ...h2, color: '#fff', margin: '0 0 20px' }}>Start with the free study.</h2>
+ <h2 style={{ ...h2, color: '#fff', margin: '0 0 20px' }}>See your position before you commit to anything.</h2>
  <p style={{ color: '#c7d2cf', fontSize: 'clamp(16px,1.7vw,19px)', lineHeight: 1.6, margin: '0 auto 32px', maxWidth: 640 }}>
- One CSV. We tell you the states you already owe in, where you are about to cross, and what compliance
- would actually cost.
+ One CSV. We come back with the states you owe in, the ones you are about to cross, and what
+ compliance would cost.
  </p>
  <a
  href="/nexus-study"

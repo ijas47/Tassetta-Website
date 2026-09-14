@@ -4,11 +4,11 @@ import { whoShopifyHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
  title: 'Sales tax for Shopify brands',
- description: 'Shopify calculates tax at checkout. It does not tell you where you have a filing obligation, register you, or file. Tassetta closes that gap.',
+ description: 'Shopify charges tax at checkout. It does not tell you where you have a filing obligation, register you, or file anything. That gap is where the liability accumulates.',
  alternates: { canonical: '/who-its-for/shopify' },
  openGraph: {
  title: 'Sales tax for Shopify brands',
- description: 'Shopify calculates tax at checkout. It does not tell you where you have a filing obligation, register you, or file. Tassetta closes that gap.',
+ description: 'Shopify charges tax at checkout. It does not tell you where you have a filing obligation, register you, or file anything. That gap is where the liability accumulates.',
  url: '/who-its-for/shopify',
  type: 'website',
  },

@@ -4,11 +4,11 @@ import { whoMultiHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
   title: 'Sales tax when you sell on Shopify and marketplaces',
-  description: 'Marketplaces collect and remit for you. Your Shopify sales are yours to handle. We separate them so you never double-count.',
+  description: 'Marketplaces remit as the facilitator. Your direct sales are yours to file. Tassetta splits them at import so your return covers what is actually yours.',
   alternates: { canonical: '/who-its-for/multi-channel' },
   openGraph: {
     title: 'Sales tax when you sell on Shopify and marketplaces',
-    description: 'Marketplaces collect and remit for you. Your Shopify sales are yours to handle. We separate them so you never double-count.',
+    description: 'Marketplaces remit as the facilitator. Your direct sales are yours to file. Tassetta splits them at import so your return covers what is actually yours.',
     url: '/who-its-for/multi-channel',
     type: 'website',
   },

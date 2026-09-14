@@ -3,12 +3,12 @@ import SectionHtml from '@/components/SectionHtml';
 import { pricingHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
- title: 'Pricing, simple, flat, one line per state',
- description: 'A flat monthly base plus a flat fee per state you are registered in. No per-transaction fees, so a big sales month does not become a big software bill.',
+ title: 'Pricing',
+ description: 'A monthly base plus a flat fee for each state you are registered in. Priced on states, not transactions, so your compliance bill does not climb with your best month.',
  alternates: { canonical: '/pricing' },
  openGraph: {
- title: 'Pricing, simple, flat, one line per state',
- description: 'A flat monthly base plus a flat fee per state you are registered in. No per-transaction fees, so a big sales month does not become a big software bill.',
+ title: 'Pricing',
+ description: 'A monthly base plus a flat fee for each state you are registered in. Priced on states, not transactions, so your compliance bill does not climb with your best month.',
  url: '/pricing',
  type: 'website',
  },

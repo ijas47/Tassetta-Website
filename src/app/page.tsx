@@ -1,26 +1,29 @@
 import type { Metadata } from 'next';
 
 /*
- * Home page, rewritten in the Fletch (Anthony Pierre / Rob Kaminski) voice.
- * Structure follows the classic PMM stack: problem → cause → solution → capabilities → contrast → proof → price → CTA.
- * Every color, spacing token, font, and responsive class here comes from the design system;
- * only the copy and section rhythm are new.
+ * Home page. Positioning follows April Dunford's framework:
+ *   competitive alternatives -> unique attributes -> value -> target -> category.
+ * Category: ecommerce sales tax compliance platform.
+ * Differentiation: a named CPA verifies every return, the client approves it,
+ * and the whole compliance position is visible live. Everything else on the
+ * market either leaves the filing with you (software) or shows you nothing
+ * (accounting firms).
+ * Every color, spacing token, font, and responsive class comes from the design system.
  */
 
 export const metadata: Metadata = {
  description:
- 'Sales tax software for Shopify and multi-channel brands. The platform tracks nexus across all 50 states, prepares every return, and files after a CPA signs off and you approve. Watch it happen live.',
+ 'Ecommerce sales tax compliance platform. Tassetta tracks nexus in all 50 states, calculates every return, and files it. A CPA verifies each one and you approve it before it goes out.',
  alternates: { canonical: '/' },
  openGraph: {
- title: 'Tassetta. Sales tax, automated. CPA-approved.',
+ title: 'Tassetta. Sales tax filed by software, checked by a CPA.',
  description:
- 'Sales tax software. Live nexus across 50 states. Automated returns. A CPA signs off. You approve in one click. The platform files, remits, and archives, and you watch it all in real time.',
+ 'Nexus tracked in all 50 states. Every return calculated, verified by a CPA, approved by you, filed on time. See where you are registered, what is filed, and what is pending, any time.',
  url: '/',
  type: 'website',
  },
 };
 
-// Design tokens, keep in sync with globals.css / DESIGN-wise.
 const T = {
  ink: '#0f1b1a',
  body: '#41504d',
@@ -31,23 +34,31 @@ const T = {
  canvas: '#ffffff',
  canvasSoft: '#eef2f0',
  darkPanel: '#0a1413',
+ warn: '#a67512',
+ warnPale: '#fbecc9',
+ neg: '#a01f26',
+ negPale: '#fbe4e5',
+ pos: '#217a37',
+ posPale: '#d3ecd8',
 } as const;
 
 const container = { maxWidth: 1200, margin: '0 auto', padding: '0 clamp(20px,4vw,32px)' } as const;
-const eyebrow = {
- fontWeight: 600 as const,
- fontSize: 13,
- letterSpacing: '0.08em',
- textTransform: 'uppercase' as const,
+const mono = { fontFamily: 'ui-monospace, "JetBrains Mono", Menlo, monospace', fontVariantNumeric: 'tabular-nums' } as const;
+
+const eyebrow: React.CSSProperties = {
+ fontFamily: 'ui-monospace, "JetBrains Mono", Menlo, monospace',
+ fontSize: 12,
+ letterSpacing: '0.12em',
+ textTransform: 'uppercase',
  color: T.mute,
  margin: '0 0 16px',
 };
 const h1: React.CSSProperties = {
  fontFamily: 'var(--font-manrope), Manrope, sans-serif',
  fontWeight: 800,
- fontSize: 'clamp(40px,7vw,82px)',
- lineHeight: 1.02,
- letterSpacing: '-0.025em',
+ fontSize: 'clamp(38px,6.2vw,74px)',
+ lineHeight: 1.03,
+ letterSpacing: '-0.028em',
  color: T.ink,
  margin: '0 0 28px',
 };
@@ -59,6 +70,14 @@ const h2: React.CSSProperties = {
  letterSpacing: '-0.02em',
  color: T.ink,
  margin: '0 0 24px',
+};
+const h3: React.CSSProperties = {
+ fontFamily: 'var(--font-manrope), Manrope, sans-serif',
+ fontWeight: 800,
+ fontSize: 21,
+ letterSpacing: '-0.01em',
+ color: T.ink,
+ margin: 0,
 };
 const lede: React.CSSProperties = {
  fontFamily: 'var(--font-inter), Inter, system-ui, sans-serif',
@@ -114,35 +133,19 @@ const chip: React.CSSProperties = {
  marginBottom: 28,
 };
 
-function Card({ children, dark = false, style }: { children: React.ReactNode; dark?: boolean; style?: React.CSSProperties }) {
- return (
- <div
- style={{
- background: dark ? T.ink : '#fff',
- borderRadius: 24,
- padding: 'clamp(24px,3vw,36px)',
- color: dark ? '#c7d2cf' : T.body,
- ...style,
- }}
- >
- {children}
- </div>
- );
-}
-
 export default function Home() {
  return (
  <>
  {/* ============ HERO ============ */}
  <section style={{ background: T.canvasSoft, padding: 'clamp(56px,9vw,112px) 0 clamp(48px,7vw,88px)' }}>
  <div style={container}>
- <div style={{ maxWidth: 920 }}>
- <span style={chip}>For Shopify and multi-channel brands</span>
- <h1 style={h1}>Sales tax you actually watch happen.</h1>
+ <div style={{ maxWidth: 940 }}>
+ <span style={chip}>Ecommerce sales tax compliance</span>
+ <h1 style={h1}>Filed by software. Checked by a CPA. Approved by you.</h1>
  <p style={{ ...lede, maxWidth: 720 }}>
- Most brands outsource sales tax to an accountant and hope. Tassetta puts it on a platform in
- front of you. Software does the heavy lifting. A CPA checks every filing. You approve in one
- click, and see every step in real time.
+ Tassetta tracks nexus in all 50 states, calculates every return, and files it. Before
+ anything goes out, a CPA verifies the numbers and you approve them. Log in any time to see
+ where you are registered, what is filed, and what is still pending.
  </p>
  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, alignItems: 'center' }}>
  <a href="/nexus-study" style={ctaPrimary} className="th-1">
@@ -153,8 +156,8 @@ export default function Home() {
  </a>
  </div>
  <p style={{ ...body, fontSize: 14, color: T.mute, margin: '18px 0 0', maxWidth: 560 }}>
- One CSV export from Shopify. In 3 to 5 business days, a report of every state you owe in, are about to,
- and what it would take to get clean.
+ Send one CSV from Shopify. We come back with the states you already owe in, the ones you are
+ about to cross, and what it costs to get clean.
  </p>
  </div>
  </div>
@@ -188,7 +191,7 @@ export default function Home() {
  aspectRatio: '16 / 9',
  }}
  >
- Your browser doesn&rsquo;t support video playback.{' '}
+ Your browser does not support video playback.{' '}
  <a href="/videos/explainer-45s.mp4" style={{ color: T.primary }}>
  Download the explainer
  </a>
@@ -198,103 +201,88 @@ export default function Home() {
  </div>
  </section>
 
- {/* ============ THE PROBLEM ============ */}
+ {/* ============ COMPETITIVE ALTERNATIVES ============ */}
  <section style={{ background: '#fff', padding: 'clamp(56px,8vw,104px) 0' }}>
  <div style={container}>
  <div style={{ maxWidth: 860, marginBottom: 48 }}>
- <p style={eyebrow}>The problem</p>
- <h2 style={h2}>Right now, you probably owe sales tax in states you have never registered in.</h2>
- <p style={body}>
- The moment your sales crossed a threshold in another state, you got a filing obligation there.
- Nothing in Shopify told you. Here is how the exposure gets built.
- </p>
+ <p style={eyebrow}>What you are choosing between today</p>
+ <h2 style={h2}>Every option leaves you doing the work or leaves you in the dark.</h2>
  </div>
- <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
+ <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
  {[
  {
- num: '01',
- head: 'A threshold gets crossed. Nobody says a word.',
- body: 'Most states register you at $100,000 in sales or 200 transactions. Ship into 30 states on Shopify and you have likely tripped several, with no alert, no email, no dashboard flag.',
+ label: 'Sales tax software',
+ head: 'It calculates. You still file.',
+ body:
+ 'Avalara, TaxJar and the rest give you a rate engine and a dashboard. You map the products, watch the thresholds, reconcile marketplace tax by hand, and click file yourself. Or you pay again for managed filing on top of the software.',
  },
  {
- num: '02',
- head: 'Uncollected tax compounds out of your margin.',
- body: 'From that day on, tax you did not collect is tax you owe. Add penalties. Add interest. Every month you do not register, the number grows and it is coming out of you, not the customer.',
+ label: 'An accounting firm',
+ head: 'They file. You see nothing.',
+ body:
+ 'Spreadsheets and manual portal logins, on their schedule. Ask where you stand in Ohio today and you wait two days. You find out about a missed registration when the bill or the notice arrives.',
  },
  {
- num: '03',
- head: 'Software and CPAs both leave the work with you.',
- body: 'Software gives you a calculator and a dashboard. You still file. A CPA files but works blind, with no live view. So it sits on the someday list until a state or a diligence question forces it up.',
+ label: 'Nobody, for now',
+ head: 'It sits on the list.',
+ body:
+ 'Most brands pick this one without deciding to. Sales tax stays on a someday list until a state notice or a diligence question forces it to the top, by which point the exposure has been compounding for a year.',
  },
- ].map((p) => (
- <div key={p.num} style={{ background: T.canvasSoft, borderRadius: 24, padding: 'clamp(24px,3vw,32px)' }}>
- <span
- style={{
- fontFamily: 'var(--font-manrope), Manrope, sans-serif',
- fontWeight: 800,
- fontSize: 14,
- color: T.primary,
- }}
- >
- {p.num}
+ ].map((c) => (
+ <div key={c.label} style={{ background: T.canvasSoft, borderRadius: 24, padding: 'clamp(24px,3vw,32px)' }}>
+ <span style={{ ...mono, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: T.mute }}>
+ {c.label}
  </span>
- <h3
- style={{
- fontFamily: 'var(--font-manrope), Manrope, sans-serif',
- fontWeight: 800,
- fontSize: 20,
- letterSpacing: '-0.01em',
- color: T.ink,
- margin: '10px 0 12px',
- }}
- >
- {p.head}
- </h3>
- <p style={{ ...body, fontSize: 15, lineHeight: 1.55 }}>{p.body}</p>
+ <h3 style={{ ...h3, margin: '12px 0 12px' }}>{c.head}</h3>
+ <p style={{ ...body, fontSize: 15.5, lineHeight: 1.55 }}>{c.body}</p>
  </div>
  ))}
  </div>
  <p style={{ ...body, marginTop: 40, maxWidth: 860 }}>
- <strong style={{ color: T.ink }}>The result:</strong> brands usually learn the expensive way. A state
- notice, or a question in due diligence that stalls a fundraise or an acquisition.
+ <strong style={{ color: T.ink }}>What it costs:</strong> the day a threshold breaks, uncollected tax
+ becomes your liability. It comes out of margin, with penalties and interest on top, and it grows every
+ month nobody is watching.
  </p>
  </div>
  </section>
 
- {/* ============ HOW WE SOLVE IT ============ */}
+ {/* ============ THE MECHANISM ============ */}
  <section style={{ background: T.canvasSoft, padding: 'clamp(56px,8vw,104px) 0' }}>
  <div style={container}>
  <div style={{ maxWidth: 820, marginBottom: 48 }}>
- <p style={eyebrow}>How it works</p>
- <h2 style={h2}>The platform does the work. A CPA signs off. You approve.</h2>
+ <p style={eyebrow}>What Tassetta does</p>
+ <h2 style={h2}>Calculate. Verify. File. You watch all three.</h2>
  <p style={body}>
- Automated end to end. A CPA is in the loop as the human check before anything gets filed
- under your name. You watch every step from your dashboard, in real time.
+ One platform runs the whole obligation, from the first threshold to the archived confirmation
+ number. Here is the loop it runs every filing period.
  </p>
  </div>
  <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
  {[
  {
  num: '01',
- head: 'The platform pulls your live sales.',
- body: 'Shopify connects in one click. Amazon, Walmart, Etsy, TikTok Shop, Stripe, and PayPal pull in the same way. Orders and refunds sync continuously, so the nexus math runs on what you are actually selling, not last quarter.',
+ head: 'Calculate',
+ body:
+ 'Connect Shopify, your marketplaces, Stripe and your accounting system. Orders and refunds sync continuously. Tassetta measures your sales against the current economic nexus threshold in all 50 states and DC, then builds each return: gross sales, net taxable, exempt, marketplace, tax collected, expected liability.',
  },
  {
  num: '02',
- head: 'The platform prepares every return. A CPA signs off.',
- body: 'The workpaper builds itself: gross, taxable, exempt, marketplace, tax collected, expected liability. Anything off (a mistaxed invoice, a stale rate, an exemption that does not hold) is flagged as an exception for a Tassetta CPA to resolve. Nothing reaches you until they sign off.',
+ head: 'Verify',
+ body:
+ 'A named CPA opens the workpaper and reconciles it against the tax you actually collected. Anything outside tolerance gets flagged and resolved first: a mistaxed invoice, a stale rate, a resale certificate that is not on file, a portal figure that disagrees with the workpaper. Then they sign off.',
  },
  {
  num: '03',
- head: 'You approve. The platform files, remits, archives.',
- body: 'One click and it is out the door. The platform files on each state’s schedule, remits the money, and drops the workpaper, your approval, the CPA sign-off, and the confirmation number into a tamper-evident archive kept for seven years.',
+ head: 'File',
+ body:
+ 'The packet arrives in your portal with every line shown. You approve in one click. Tassetta files with the state, remits the payment, and stores the workpaper, the CPA sign-off, your approval and the confirmation number for seven years.',
  },
  ].map((s) => (
  <div
  key={s.num}
  style={{
  display: 'grid',
- gridTemplateColumns: '72px 1fr',
+ gridTemplateColumns: '88px 1fr',
  gap: 'clamp(16px,3vw,32px)',
  alignItems: 'start',
  background: '#fff',
@@ -316,11 +304,9 @@ export default function Home() {
  <div>
  <h3
  style={{
- fontFamily: 'var(--font-manrope), Manrope, sans-serif',
- fontWeight: 800,
+ ...h3,
  fontSize: 'clamp(22px,2.6vw,30px)',
  letterSpacing: '-0.02em',
- color: T.ink,
  margin: '0 0 12px',
  }}
  >
@@ -334,91 +320,69 @@ export default function Home() {
  </div>
  </section>
 
- {/* ============ YOUR PORTAL ============ */}
+ {/* ============ THE DIFFERENCE ============ */}
  <section style={{ background: '#fff', padding: 'clamp(56px,8vw,104px) 0' }}>
  <div style={container}>
- <div className="t-2col" style={{ display: 'grid', gridTemplateColumns: '5fr 7fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }}>
- <div>
- <p style={eyebrow}>Your view</p>
- <h2 style={h2}>You sign in and watch it happen.</h2>
- <p style={{ ...body, marginBottom: 20 }}>
- Your Client Portal is a live view of your sales tax as the platform runs it: your onboarding
- readiness, the return waiting for your approval, your live nexus across 50 states, the states
- you&rsquo;re already registered in.
- </p>
+ <div style={{ maxWidth: 860, marginBottom: 48 }}>
+ <p style={eyebrow}>Why this is different</p>
+ <h2 style={h2}>Two things no other platform gives you.</h2>
  <p style={body}>
- The CPA workbench, the notice workflow, the automation logs, run on the same platform in
- the background. You do not have to open them. You can, if you ever want to see the receipt.
+ Plenty of software calculates sales tax. What it does not do is put a person behind the number
+ or show you the position while it is happening.
  </p>
  </div>
- <div
- style={{
- background: T.canvasSoft,
- borderRadius: 24,
- padding: 'clamp(12px,1.6vw,18px)',
- boxShadow: '0 24px 60px -28px rgba(15,27,26,0.28)',
- }}
- >
- {/* eslint-disable-next-line @next/next/no-img-element */}
- <img
- src="/app/client-portal.jpg"
- alt="Client Portal. Client readiness checklist and the current filing packet waiting for your one-click approval."
- loading="lazy"
- decoding="async"
- width={1512}
- height={949}
- style={{
- width: '100%',
- height: 'auto',
- display: 'block',
- borderRadius: 14,
- aspectRatio: '1512 / 949',
- }}
- />
- <p style={{ ...body, fontFamily: 'ui-monospace, Menlo, monospace', fontSize: 12, color: T.mute, margin: '12px 6px 4px', letterSpacing: '0.04em' }}>
- Client Portal. Your only screen.
+ <div className="t-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+ <div style={{ background: T.canvasSoft, borderRadius: 24, padding: 'clamp(28px,3.4vw,40px)' }}>
+ <span style={{ ...mono, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: T.primary }}>
+ 01
+ </span>
+ <h3 style={{ ...h3, fontSize: 'clamp(22px,2.6vw,28px)', margin: '12px 0 16px' }}>
+ A CPA signs off before you do.
+ </h3>
+ <p style={{ ...body, marginBottom: 16 }}>
+ Not a support agent clearing a queue. A named CPA who opens the workpaper, checks it against
+ what you collected, clears the exceptions and puts their name on the return.
+ </p>
+ <p style={{ ...body, fontWeight: 600, color: T.ink }}>
+ The platform will not let a return reach your approval queue until they have.
+ </p>
+ </div>
+ <div style={{ background: T.darkPanel, borderRadius: 24, padding: 'clamp(28px,3.4vw,40px)' }}>
+ <span style={{ ...mono, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: T.pale }}>
+ 02
+ </span>
+ <h3 style={{ ...h3, fontSize: 'clamp(22px,2.6vw,28px)', color: '#fff', margin: '12px 0 16px' }}>
+ You see the whole position, live.
+ </h3>
+ <p style={{ ...body, color: '#c7d2cf', marginBottom: 16 }}>
+ Which states you have crossed. Which you are approaching, and by what percentage. Where you
+ are registered. What is filed, what is pending, what is overdue, and the liability against
+ each one.
+ </p>
+ <p style={{ fontSize: 17, lineHeight: 1.62, fontWeight: 600, color: '#fff' }}>
+ Not a quarterly PDF. A page you can open right now.
  </p>
  </div>
  </div>
  </div>
  </section>
 
- {/* ============ CONTRAST ============ */}
- <section style={{ background: '#fff', padding: 'clamp(56px,8vw,104px) 0', borderTop: '1px solid #e6ece9' }}>
+ {/* ============ YOUR VIEW ============ */}
+ <section style={{ background: T.canvasSoft, padding: 'clamp(56px,8vw,104px) 0' }}>
  <div style={container}>
- <div style={{ maxWidth: 820, marginBottom: 48 }}>
- <p style={eyebrow}>What changes for you</p>
- <h2 style={h2}>You watch it. The platform files it. A CPA signs off.</h2>
- <p style={body}>
- A live dashboard for you. Software that does the work. A CPA on the hook for the sign-off.
- All three at once, on one platform.
- </p>
- </div>
- <div className="t-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
- <Card>
- <span
- style={{
- ...chip,
- marginBottom: 20,
- }}
+ <div
+ className="t-2col"
+ style={{ display: 'grid', gridTemplateColumns: '5fr 7fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }}
  >
- You · the live dashboard
- </span>
- <ul
- style={{
- listStyle: 'none',
- padding: 0,
- margin: 0,
- display: 'flex',
- flexDirection: 'column',
- gap: 14,
- }}
- >
+ <div>
+ <p style={eyebrow}>What you see</p>
+ <h2 style={h2}>Your whole compliance position on one page.</h2>
+ <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 14 }}>
  {[
- 'See where you have crossed, where you are close, where you are clear, updated live.',
- 'See every upcoming return, per state, before it is due.',
- 'Approve each return in one click, from your inbox or the dashboard.',
- 'Pull a monthly report and an audit archive whenever a buyer or auditor asks.',
+ 'A state map showing crossed, approaching, registered and clear, with the percentage against each threshold.',
+ 'The return waiting on your approval, with every line on the workpaper visible.',
+ 'Your filing calendar: what is overdue, due soon, upcoming and filed, per state and period.',
+ 'The audit archive, seven years of workpapers, sign-offs and confirmation numbers.',
  ].map((it, i) => (
  <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
  <span
@@ -444,81 +408,46 @@ export default function Home() {
  </li>
  ))}
  </ul>
- </Card>
- <Card dark>
- <span
- style={{
- display: 'inline-flex',
- alignItems: 'center',
- gap: 8,
- background: 'rgba(217,237,233,0.16)',
- color: T.pale,
- fontWeight: 600,
- fontSize: 13,
- padding: '6px 14px',
- borderRadius: 9999,
- marginBottom: 20,
- }}
- >
- The platform · a CPA in the loop
- </span>
- <ul
- style={{
- listStyle: 'none',
- padding: 0,
- margin: 0,
- display: 'flex',
- flexDirection: 'column',
- gap: 14,
- }}
- >
- {[
- 'The platform prepares every return, reconciled to the tax you actually collected.',
- 'A CPA reviews and signs off before anything reaches your approval queue.',
- 'The platform files and remits on each state’s schedule. A CPA drafts the response to any notice that comes back.',
- 'Every workpaper, sign-off, approval, and confirmation is retained for seven years.',
- ].map((it, i) => (
- <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
- <span
- style={{
- flex: 'none',
- width: 22,
- height: 22,
- borderRadius: 9999,
- background: 'rgba(217,237,233,0.16)',
- color: T.pale,
- fontFamily: 'var(--font-manrope), Manrope, sans-serif',
- fontWeight: 800,
- fontSize: 13,
- display: 'inline-flex',
- alignItems: 'center',
- justifyContent: 'center',
- marginTop: 2,
- }}
- >
- ✓
- </span>
- <span style={{ fontSize: 16, lineHeight: 1.6, color: '#c7d2cf' }}>{it}</span>
- </li>
- ))}
- </ul>
- </Card>
- </div>
- <p style={{ ...body, marginTop: 40, maxWidth: 920 }}>
- Avalara and TaxJar sell you a calculator and hand you the filing. A CPA does it by hand with no
- real-time view. Tassetta is software that does both, with a CPA in the loop as the human check.
- You watch it happen.
+ <p style={{ ...body, fontSize: 16, color: T.mute }}>
+ The CPA workbench and the notice workflow run on the same platform in the background. You do
+ not have to open them. You can, when you want the receipt.
  </p>
+ </div>
+ <div
+ style={{
+ background: '#fff',
+ borderRadius: 24,
+ padding: 'clamp(12px,1.6vw,18px)',
+ boxShadow: '0 24px 60px -28px rgba(15,27,26,0.28)',
+ }}
+ >
+ {/* eslint-disable-next-line @next/next/no-img-element */}
+ <img
+ src="/app/client-portal.jpg"
+ alt="The Tassetta client portal, showing the readiness checklist and the current filing packet waiting for one-click approval."
+ loading="lazy"
+ decoding="async"
+ width={1512}
+ height={949}
+ style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 14, aspectRatio: '1512 / 949' }}
+ />
+ <p style={{ ...mono, fontSize: 12, color: T.mute, margin: '12px 6px 4px', letterSpacing: '0.04em' }}>
+ Client portal, the filing packet awaiting approval.
+ </p>
+ </div>
+ </div>
  </div>
  </section>
 
- {/* ============ CAPABILITIES ============ */}
- <section style={{ background: T.canvasSoft, padding: 'clamp(56px,8vw,104px) 0' }}>
+ {/* ============ COVERAGE ============ */}
+ <section style={{ background: '#fff', padding: 'clamp(56px,8vw,104px) 0' }}>
  <div style={container}>
  <div style={{ maxWidth: 860, marginBottom: 48 }}>
- <p style={eyebrow}>What Tassetta handles</p>
- <h2 style={h2}>Everything from &ldquo;you might owe&rdquo; to &ldquo;it is filed and archived.&rdquo;</h2>
- <p style={body}>The whole lifecycle of a sales tax obligation. Five capabilities. One team.</p>
+ <p style={eyebrow}>Coverage</p>
+ <h2 style={h2}>From the first threshold to the archived confirmation.</h2>
+ <p style={body}>
+ Five things have to happen for a state to consider you compliant. Tassetta does all five.
+ </p>
  </div>
  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
  {[
@@ -526,31 +455,31 @@ export default function Home() {
  num: '01',
  slug: 'nexus',
  head: 'Nexus monitoring',
- body: 'All 50 states and DC, watched live against your sales. You hear from us before the state does.',
+ body: 'All 50 states and DC, measured live against your sales and transaction counts as thresholds change.',
  },
  {
  num: '02',
  slug: 'registrations',
  head: 'State registrations',
- body: 'Cross a threshold, we file the registration and track it through to approved.',
+ body: 'Cross a threshold and the registration is prepared, reviewed, filed and tracked through to the state account number.',
  },
  {
  num: '03',
  slug: 'filing',
  head: 'Filing and remittance',
- body: 'Expert-prepared, reconciled to collected tax, filed and remitted on each state’s schedule.',
+ body: 'Every return, on the frequency each state assigned you, calculated and reconciled before a CPA signs it.',
  },
  {
  num: '04',
  slug: 'notices',
  head: 'Notices and audits',
- body: 'A notice arrives, we read it, draft the response, log the exchange, close it out.',
+ body: 'A notice is matched to the return it concerns, answered by the CPA who worked it, and logged in full.',
  },
  {
  num: '05',
  slug: 'exemptions',
  head: 'Exemption certificates',
- body: 'Wholesale and exempt sales collected, validated, watched for expiry. No audit-time guessing.',
+ body: 'Wholesale and exempt sales collected, validated and watched for expiry, so an exempt line holds up.',
  },
  ].map((c) => (
  <a
@@ -559,7 +488,7 @@ export default function Home() {
  className="th-3"
  style={{
  textDecoration: 'none',
- background: '#fff',
+ background: T.canvasSoft,
  borderRadius: 24,
  padding: 30,
  display: 'flex',
@@ -567,28 +496,8 @@ export default function Home() {
  gap: 12,
  }}
  >
- <span
- style={{
- fontFamily: 'var(--font-manrope), Manrope, sans-serif',
- fontWeight: 800,
- fontSize: 14,
- color: T.primary,
- }}
- >
- {c.num}
- </span>
- <h3
- style={{
- fontFamily: 'var(--font-manrope), Manrope, sans-serif',
- fontWeight: 800,
- fontSize: 21,
- letterSpacing: '-0.01em',
- color: T.ink,
- margin: 0,
- }}
- >
- {c.head}
- </h3>
+ <span style={{ ...mono, fontSize: 12, letterSpacing: '0.08em', color: T.primary }}>{c.num}</span>
+ <h3 style={h3}>{c.head}</h3>
  <p style={{ ...body, fontSize: 15, lineHeight: 1.55 }}>{c.body}</p>
  <span style={{ fontWeight: 600, fontSize: 14, color: T.ink, marginTop: 4 }}>Learn more →</span>
  </a>
@@ -596,66 +505,101 @@ export default function Home() {
  </div>
  <div style={{ marginTop: 28 }}>
  <a href="/what-we-handle" className="th-7" style={{ fontWeight: 600, fontSize: 15, color: T.primary, textDecoration: 'none' }}>
- See everything we handle →
+ See everything Tassetta covers →
  </a>
  </div>
  </div>
  </section>
 
- {/* ============ MARKETPLACE-AWARE ============ */}
- <section style={{ background: '#fff', padding: 'clamp(56px,8vw,104px) 0' }}>
+ {/* ============ MARKETPLACE ============ */}
+ <section style={{ background: T.canvasSoft, padding: 'clamp(56px,8vw,104px) 0' }}>
  <div style={container}>
  <div className="t-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,72px)', alignItems: 'center' }}>
  <div>
- <p style={eyebrow}>Marketplace-aware</p>
- <h2 style={h2}>Amazon collects its tax. You file yours. We keep them apart.</h2>
+ <p style={eyebrow}>Multi-channel</p>
+ <h2 style={h2}>Marketplace tax is not yours to file. We keep it out of your return.</h2>
  <p style={{ ...body, marginBottom: 20 }}>
- Amazon, Walmart, Etsy, and TikTok Shop already collect and remit as the facilitator. Count that tax as
- yours and you either over-remit or your books stop matching.
+ Amazon, Walmart, Etsy and TikTok Shop already collect and remit as the facilitator. Count
+ that tax as yours and you either over-remit or your books stop reconciling.
  </p>
  <p style={body}>
- Tassetta separates facilitator-collected sales from your direct Shopify sales automatically. You file
- on what is actually yours. You never pay it twice.
+ Tassetta separates facilitator-collected sales from your direct sales at the transaction
+ level, on import. Your return covers what is actually yours to file.
  </p>
  </div>
- <div style={{ background: T.canvasSoft, borderRadius: 24, padding: 'clamp(20px,2.4vw,30px)', display: 'flex', flexDirection: 'column', gap: 12 }}>
+ <div style={{ background: '#fff', borderRadius: 24, padding: 'clamp(20px,2.4vw,30px)', display: 'flex', flexDirection: 'column', gap: 12 }}>
  {[
- { label: 'Direct Shopify sales', tag: 'Yours to file', tagBg: T.pale, tagColor: T.primary },
- { label: 'Amazon · Walmart · Etsy', tag: 'Facilitator remits', tagBg: '#fff', tagColor: T.body },
- { label: 'TikTok Shop · Stripe · PayPal', tag: 'Facilitator remits', tagBg: '#fff', tagColor: T.body },
+ { label: 'Direct Shopify sales', tag: 'Yours to file', color: T.pos, bg: T.posPale },
+ { label: 'Amazon · Walmart · Etsy', tag: 'Facilitator remits', color: T.body, bg: T.canvasSoft },
+ { label: 'TikTok Shop · Stripe · PayPal', tag: 'Facilitator remits', color: T.body, bg: T.canvasSoft },
  ].map((r) => (
- <div key={r.label} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 18px', borderRadius: 14, background: '#fff' }}>
+ <div
+ key={r.label}
+ style={{
+ display: 'flex',
+ alignItems: 'center',
+ justifyContent: 'space-between',
+ gap: 12,
+ padding: '16px 18px',
+ borderRadius: 14,
+ background: '#f4f7f5',
+ }}
+ >
  <span style={{ fontWeight: 600, fontSize: 15, color: T.ink }}>{r.label}</span>
- <span style={{ fontWeight: 600, fontSize: 13, color: r.tagColor, background: r.tagBg, padding: '5px 12px', borderRadius: 9999 }}>{r.tag}</span>
+ <span style={{ ...mono, fontWeight: 600, fontSize: 12, color: r.color, background: r.bg, padding: '5px 12px', borderRadius: 9999 }}>
+ {r.tag}
+ </span>
  </div>
  ))}
- <p style={{ fontFamily: 'ui-monospace, Menlo, monospace', fontSize: 12, color: T.mute, margin: '6px 2px 0' }}>
- Separated automatically. No double-counting.
+ <p style={{ ...mono, fontSize: 12, color: T.mute, margin: '6px 2px 0' }}>
+ Split on import. No double counting.
  </p>
  </div>
  </div>
  </div>
  </section>
 
- {/* ============ TRUST BAND (dark) ============ */}
+ {/* ============ PROOF ============ */}
  <section style={{ background: T.darkPanel, padding: 'clamp(56px,8vw,104px) 0' }}>
  <div style={container}>
  <div style={{ maxWidth: 820 }}>
- <p style={eyebrow}>Proof and trust</p>
- <h2 style={{ ...h2, color: '#fff' }}>Built for the day someone checks your work.</h2>
+ <p style={eyebrow}>Proof</p>
+ <h2 style={{ ...h2, color: '#fff' }}>Every number traces back to a source file.</h2>
  <p style={{ ...body, color: '#c7d2cf', fontSize: 'clamp(16px,1.6vw,19px)', margin: '0 0 22px' }}>
- Every return carries a workpaper the platform generates: gross, taxable, exempt, and marketplace
- sales, the expected liability against what you collected, and any variance the platform flagged
- for a CPA to resolve. Every approval and sign-off is recorded. Every filing carries
- a confirmation number. All of it lives in a tamper-evident archive for seven years.
+ Each return carries its workpaper, the raw platform export it came from, the normalized
+ transaction file, the rate calculation, the CPA sign-off, your approval and the state
+ confirmation number. All hash-chained, all kept for seven years.
  </p>
  <p style={{ ...body, color: '#c7d2cf', fontSize: 'clamp(16px,1.6vw,19px)', margin: 0 }}>
- When an auditor calls, or a buyer&rsquo;s diligence team asks for your sales tax history, the answer is a
- folder. Not a fire drill.
+ When an auditor asks how you arrived at a figure, or a buyer&rsquo;s diligence team asks for
+ your filing history, you send a folder instead of starting an investigation.
  </p>
  </div>
- <div style={{ marginTop: 44, border: '1px dashed #41504d', borderRadius: 16, padding: 28 }}>
- <p style={{ fontFamily: 'ui-monospace, Menlo, monospace', fontSize: 12, letterSpacing: '0.04em', color: T.mute, margin: '0 0 10px' }}>
+
+ <div
+ style={{
+ marginTop: 44,
+ display: 'grid',
+ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+ gap: 18,
+ }}
+ >
+ {[
+ ['CPA sign-off', 'required before a return can reach your approval queue'],
+ ['Your approval', 'required before a return can be filed'],
+ ['Seven-year retention', 'per filing, tamper-evident, exportable'],
+ ].map(([head, sub]) => (
+ <div key={head} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid #223330', borderRadius: 16, padding: 24 }}>
+ <div style={{ color: '#fff', fontFamily: 'var(--font-manrope), Manrope, sans-serif', fontWeight: 800, fontSize: 17, marginBottom: 6 }}>
+ {head}
+ </div>
+ <div style={{ color: '#c7d2cf', fontSize: 14.5, lineHeight: 1.55 }}>{sub}</div>
+ </div>
+ ))}
+ </div>
+
+ <div style={{ marginTop: 28, border: '1px dashed #41504d', borderRadius: 16, padding: 28 }}>
+ <p style={{ ...mono, fontSize: 12, letterSpacing: '0.04em', color: T.mute, margin: '0 0 10px' }}>
  [ PLACEHOLDER, customer logos, pending permission to use ]
  </p>
  <p style={{ color: '#c7d2cf', fontSize: 16, lineHeight: 1.55, margin: 0 }}>
@@ -666,15 +610,43 @@ export default function Home() {
  </div>
  </section>
 
- {/* ============ PRICING TEASER ============ */}
+ {/* ============ WHO IT IS FOR ============ */}
  <section style={{ background: '#fff', padding: 'clamp(56px,8vw,104px) 0' }}>
+ <div style={container}>
+ <div className="t-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+ <div style={{ background: T.canvasSoft, borderRadius: 24, padding: 'clamp(28px,3.4vw,40px)' }}>
+ <p style={eyebrow}>Worth your time if</p>
+ <p style={{ ...body, marginBottom: 16 }}>
+ You sell on Shopify, or Shopify plus marketplaces. You ship into a lot of states. You are
+ somewhere between $1M and $20M. And you suspect you have crossed thresholds you have not
+ dealt with.
+ </p>
+ <p style={{ ...body, fontWeight: 600, color: T.ink }}>
+ That suspicion is almost always right.
+ </p>
+ </div>
+ <div style={{ background: T.canvasSoft, borderRadius: 24, padding: 'clamp(28px,3.4vw,40px)' }}>
+ <p style={eyebrow}>Not yet if</p>
+ <p style={body}>
+ You only sell in one state, or you are pre-revenue. You do not have this problem yet, and we
+ would rather say so than sell you a plan you do not need. Come back when you are shipping
+ across state lines at volume.
+ </p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ {/* ============ PRICING ============ */}
+ <section style={{ background: T.canvasSoft, padding: 'clamp(56px,8vw,104px) 0' }}>
  <div style={container}>
  <div style={{ maxWidth: 760 }}>
  <p style={eyebrow}>Pricing</p>
- <h2 style={h2}>Flat fee per state. Your bill does not spike when you have a good month.</h2>
+ <h2 style={h2}>Priced per state, not per transaction.</h2>
  <p style={{ ...body, fontSize: 'clamp(16px,1.6vw,19px)', margin: '0 0 28px' }}>
- A monthly base plus a flat fee per state you are registered in. No per-transaction meter. No surprise
- invoice after a launch or Black Friday.
+ A monthly base plus a flat fee for each state you are registered in. Filing one state&rsquo;s
+ return costs the same in your best month as your slowest, so your compliance bill does not
+ spike the month you have a good sale.
  </p>
  <a href="/pricing" className="th-8" style={{ fontWeight: 600, fontSize: 15, color: T.primary, textDecoration: 'none' }}>
  See pricing →
@@ -683,26 +655,16 @@ export default function Home() {
  </div>
  </section>
 
- {/* ============ CLOSING CTA ============ */}
- <section style={{ background: T.canvasSoft, padding: 'clamp(56px,8vw,104px) 0' }}>
+ {/* ============ CTA ============ */}
+ <section style={{ background: '#fff', padding: 'clamp(56px,8vw,104px) 0' }}>
  <div style={container}>
  <div style={{ background: T.ink, borderRadius: 28, padding: 'clamp(36px,5vw,72px)', textAlign: 'center' }}>
- <h2
- style={{
- fontFamily: 'var(--font-manrope), Manrope, sans-serif',
- fontWeight: 800,
- fontSize: 'clamp(30px,4.4vw,52px)',
- lineHeight: 1.05,
- letterSpacing: '-0.02em',
- color: '#fff',
- margin: '0 0 20px',
- }}
- >
+ <h2 style={{ ...h2, color: '#fff', fontSize: 'clamp(30px,4.4vw,52px)', margin: '0 0 20px' }}>
  Find out where you stand. It is free.
  </h2>
- <p style={{ fontSize: 'clamp(16px,1.7vw,19px)', lineHeight: 1.6, color: '#c7d2cf', margin: '0 auto 32px', maxWidth: 680 }}>
- One CSV export from Shopify. We tell you which states you already owe in, where you are about to cross,
- and what getting compliant would actually cost. No call required to get the report.
+ <p style={{ fontSize: 'clamp(16px,1.7vw,19px)', lineHeight: 1.6, color: '#c7d2cf', margin: '0 auto 32px', maxWidth: 640 }}>
+ Send one CSV export from Shopify. We come back with the states you already owe in, the ones
+ you are about to cross, and what getting compliant actually costs. No call required.
  </p>
  <a href="/nexus-study" style={ctaPrimary} className="th-9">
  Get your free nexus study

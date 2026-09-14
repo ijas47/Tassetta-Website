@@ -3,12 +3,12 @@ import SectionHtml from '@/components/SectionHtml';
 import { resourcesHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
- title: 'Resources, sales tax explained for ecommerce brands',
- description: 'Plain-English writing on the parts of sales tax that actually affect Shopify and multi-channel brands. No jargon for its own sake.',
+ title: 'Resources',
+ description: 'Plain writing on the parts of sales tax that actually affect Shopify and multi-channel brands.',
  alternates: { canonical: '/resources' },
  openGraph: {
- title: 'Resources, sales tax explained for ecommerce brands',
- description: 'Plain-English writing on the parts of sales tax that actually affect Shopify and multi-channel brands. No jargon for its own sake.',
+ title: 'Resources',
+ description: 'Plain writing on the parts of sales tax that actually affect Shopify and multi-channel brands.',
  url: '/resources',
  type: 'website',
  },

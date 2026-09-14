@@ -3,12 +3,12 @@ import SectionHtml from '@/components/SectionHtml';
 import { exemptionsHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
- title: 'Exemption certificates. Wholesale and exempt sales, documented properly',
- description: 'We collect certificates, check them for validity and expiry, and resolve which sales are genuinely exempt. No more guessing at audit time.',
+ title: 'Exemption certificates',
+ description: 'Certificates collected, checked for validity and expiry, and tied to the exempt lines on your returns, so an exempt sale holds up when somebody checks it.',
  alternates: { canonical: '/what-we-handle/exemptions' },
  openGraph: {
- title: 'Exemption certificates. Wholesale and exempt sales, documented properly',
- description: 'We collect certificates, check them for validity and expiry, and resolve which sales are genuinely exempt. No more guessing at audit time.',
+ title: 'Exemption certificates',
+ description: 'Certificates collected, checked for validity and expiry, and tied to the exempt lines on your returns, so an exempt sale holds up when somebody checks it.',
  url: '/what-we-handle/exemptions',
  type: 'website',
  },

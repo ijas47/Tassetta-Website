@@ -20,12 +20,12 @@ const manrope = Manrope({
 
 const SITE_NAME = "Tassetta";
 const DEFAULT_DESC =
- "Software that automates US sales tax across all 50 states. The platform prepares every return; a CPA signs off before you approve; the platform files. You watch the whole thing happen live.";
+ "Ecommerce sales tax compliance platform. Tassetta tracks nexus in all 50 states, calculates every return, has a CPA verify it, and files once you approve. See what is filed and what is pending, any time.";
 
 export const metadata: Metadata = {
  metadataBase: new URL("https://tassetta.com"),
  title: {
- default: "Tassetta, Sales tax, handled. Not handed back to you.",
+ default: "Tassetta. Filed by software, checked by a CPA.",
  template: "%s. Tassetta",
  },
  description: DEFAULT_DESC,
@@ -33,12 +33,12 @@ export const metadata: Metadata = {
  openGraph: {
  type: "website",
  siteName: SITE_NAME,
- title: "Tassetta, Sales tax, handled. Not handed back to you.",
+ title: "Tassetta. Filed by software, checked by a CPA.",
  description: DEFAULT_DESC,
  },
  twitter: {
  card: "summary_large_image",
- title: "Tassetta, Sales tax, handled. Not handed back to you.",
+ title: "Tassetta. Filed by software, checked by a CPA.",
  description: DEFAULT_DESC,
  },
  robots: { index: true, follow: true },

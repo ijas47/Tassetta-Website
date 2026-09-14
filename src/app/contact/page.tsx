@@ -3,12 +3,12 @@ import SectionHtml from '@/components/SectionHtml';
 import { contactHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
- title: 'Contact, talk to us about your sales tax',
- description: 'Reach out if you have a notice, or are sizing up the service. Give us the basics and we will get back fast.',
+ title: 'Contact',
+ description: 'Got a notice and need help fast, or sizing up the platform. Either way, give us the basics and we will come back quickly.',
  alternates: { canonical: '/contact' },
  openGraph: {
- title: 'Contact, talk to us about your sales tax',
- description: 'Reach out if you have a notice, or are sizing up the service. Give us the basics and we will get back fast.',
+ title: 'Contact',
+ description: 'Got a notice and need help fast, or sizing up the platform. Either way, give us the basics and we will come back quickly.',
  url: '/contact',
  type: 'website',
  },
