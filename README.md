@@ -5,8 +5,8 @@ production of the Claude Design source (`Tassetta.dc.html`).
 
 ## Stack
 
-- **Next.js 16** (App Router, Turbopack) — every marketing page is server-rendered as static HTML.
-- **Tailwind CSS v4** — used for tokens/theme; the design ships as inline-styled markup that we preserve verbatim.
+- **Next.js 16** (App Router, Turbopack). Every marketing page is server-rendered as static HTML.
+- **Tailwind CSS v4** used for tokens/theme; the design ships as inline-styled markup that we preserve verbatim.
 - **Inter + Manrope** via `next/font/google`, self-hosted.
 - **Zero JS on marketing pages** except the sticky-header mobile menu (`Header`) and the nexus-study CSV uploader (`NexusStudyUploader`).
 
@@ -20,9 +20,9 @@ rendered on the matching Next.js page via `SectionHtml`. The extractor:
 - strips Claude Design's `<sc-if>` conditional wrappers,
 - converts `href="#/route"` to real `/route` links,
 - desugars the design's custom `style-hover="..."` attribute into generated `.th-N`
-  classes with matching `:hover` rules (all inlined into `globals.css`).
+ classes with matching `:hover` rules (all inlined into `globals.css`).
 
-The one section we **do not** render verbatim is the nexus-study upload form —
+The one section we **do not** render verbatim is the nexus-study upload form 
 the design's `study_none` / `study_has` blocks are replaced with the
 `<NexusStudyUploader />` React client component, which is a real functional
 file input with client-side validation.

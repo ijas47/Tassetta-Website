@@ -1,113 +1,113 @@
 @import "tailwindcss";
 
-/* Design tokens — from Tassetta DESIGN-wise */
+/* Design tokens. From Tassetta DESIGN-wise */
 :root {
-  --tas-primary: #0d7d72;
-  --tas-primary-active: #0a655c;
-  --tas-primary-pale: #d9ede9;
-  --tas-ink: #0f1b1a;
-  --tas-body: #41504d;
-  --tas-mute: #7a8783;
-  --tas-canvas: #ffffff;
-  --tas-canvas-soft: #eef2f0;
-  --tas-positive: #2ead4b;
-  --tas-warning: #e0a32e;
-  --tas-negative: #d03238;
-  --tas-dark-panel: #0a1413; /* used by dark trust bands / footer */
+ --tas-primary: #0d7d72;
+ --tas-primary-active: #0a655c;
+ --tas-primary-pale: #d9ede9;
+ --tas-ink: #0f1b1a;
+ --tas-body: #41504d;
+ --tas-mute: #7a8783;
+ --tas-canvas: #ffffff;
+ --tas-canvas-soft: #eef2f0;
+ --tas-positive: #2ead4b;
+ --tas-warning: #e0a32e;
+ --tas-negative: #d03238;
+ --tas-dark-panel: #0a1413; /* used by dark trust bands / footer */
 }
 
 @theme inline {
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-manrope);
-  --color-primary: var(--tas-primary);
-  --color-primary-active: var(--tas-primary-active);
-  --color-primary-pale: var(--tas-primary-pale);
-  --color-ink: var(--tas-ink);
-  --color-body: var(--tas-body);
-  --color-mute: var(--tas-mute);
-  --color-canvas: var(--tas-canvas);
-  --color-canvas-soft: var(--tas-canvas-soft);
+ --font-sans: var(--font-inter);
+ --font-display: var(--font-manrope);
+ --color-primary: var(--tas-primary);
+ --color-primary-active: var(--tas-primary-active);
+ --color-primary-pale: var(--tas-primary-pale);
+ --color-ink: var(--tas-ink);
+ --color-body: var(--tas-body);
+ --color-mute: var(--tas-mute);
+ --color-canvas: var(--tas-canvas);
+ --color-canvas-soft: var(--tas-canvas-soft);
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+ box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
+ scroll-behavior: smooth;
+ -webkit-text-size-adjust: 100%;
 }
 
 body {
-  margin: 0;
-  background: #ffffff;
-  color: var(--tas-body);
-  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  min-height: 100vh;
+ margin: 0;
+ background: #ffffff;
+ color: var(--tas-body);
+ font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+ -webkit-font-smoothing: antialiased;
+ text-rendering: optimizeLegibility;
+ min-height: 100vh;
 }
 
 ::selection {
-  background: var(--tas-primary-pale);
-  color: var(--tas-ink);
+ background: var(--tas-primary-pale);
+ color: var(--tas-ink);
 }
 
-/* Focus ring — a11y default the design didn't spec */
+/* Focus ring. A11y default the design didn't spec */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid var(--tas-primary);
-  outline-offset: 2px;
-  border-radius: 4px;
+ outline: 2px solid var(--tas-primary);
+ outline-offset: 2px;
+ border-radius: 4px;
 }
 
-/* Design keyframe — a subtle rise-in the design defines but uses sparingly */
+/* Design keyframe. A subtle rise-in the design defines but uses sparingly */
 @keyframes t-rise {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
+ from {
+ opacity: 0;
+ transform: translateY(10px);
+ }
+ to {
+ opacity: 1;
+ transform: none;
+ }
 }
 
-/* Nav responsive rules — hoisted verbatim from the design's <style> block */
+/* Nav responsive rules, hoisted verbatim from the design's <style> block */
 .t-nav-desktop {
-  display: flex;
+ display: flex;
 }
 .t-burger {
-  display: none;
+ display: none;
 }
 .t-mobile-menu {
-  display: none;
+ display: none;
 }
 .t-mobile-menu.t-open {
-  display: flex;
+ display: flex;
 }
 
 @media (max-width: 960px) {
-  .t-nav-desktop {
-    display: none;
-  }
-  .t-burger {
-    display: inline-flex;
-  }
-  .t-hero-split {
-    grid-template-columns: 1fr !important;
-  }
-  .t-2col {
-    grid-template-columns: 1fr !important;
-  }
-  .t-watch-file {
-    grid-template-columns: 1fr !important;
-  }
+ .t-nav-desktop {
+ display: none;
+ }
+ .t-burger {
+ display: inline-flex;
+ }
+ .t-hero-split {
+ grid-template-columns: 1fr !important;
+ }
+ .t-2col {
+ grid-template-columns: 1fr !important;
+ }
+ .t-watch-file {
+ grid-template-columns: 1fr !important;
+ }
 }
 
 /* Hover states for header/footer link components (React side) */
@@ -124,7 +124,7 @@ textarea:focus-visible,
  * Hover rules for the extracted design HTML.
  * The design uses a custom `style-hover="..."` attribute; the extractor
  * converts each into a class .th-N with the :hover rule below.
- * Generated — do not hand-edit; re-run scripts/extract-design.py to update.
+ * Generated. Do not hand-edit; re-run scripts/extract-design.py to update.
  */
 .th-1:hover { background: #0a655c; }
 .th-2:hover { background: #0f1b1a; color: #fff; }
@@ -169,7 +169,7 @@ textarea:focus-visible,
 
 /* Interactive links inside extracted markup get a smooth transition. */
 [class*="th-"] {
-  transition: background-color 140ms ease, color 140ms ease;
+ transition: background-color 140ms ease, color 140ms ease;
 }
 
 /*
@@ -179,15 +179,15 @@ textarea:focus-visible,
  * (buttons, links) shrink to a hair so state changes still register.
  */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
+ html {
+ scroll-behavior: auto;
+ }
+ *,
+ *::before,
+ *::after {
+ animation-duration: 0.001ms !important;
+ animation-iteration-count: 1 !important;
+ transition-duration: 0.001ms !important;
+ scroll-behavior: auto !important;
+ }
 }
