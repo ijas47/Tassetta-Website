@@ -112,6 +112,7 @@ Booking is **live** on a Google Calendar appointment schedule, "Tassetta · 15-m
 - The window is deliberately wide because the customers are in the US. Google renders the booking page in the visitor's timezone, so an IST-business-hours-only window would have shown a New York buyer nothing but 12:30am-7:30am slots.
 - That Workspace plan allows exactly **one** appointment schedule. This one replaced an earlier "30 min with Ijas" schedule, so any old link to that now lands on the 15-minute nexus call.
 - `calendar.app.google` short links cannot be iframed, so `/book` links out with a "Pick a time" button. If the schedule is ever re-shared as the longer `calendar.google.com/calendar/appointments/schedules/...` URL, `/book` embeds it automatically with `?gv=true`.
+- Copying the schedule URL out of the browser while signed in gives the **owner** view, `/calendar/u/0/appointments/...`, which only renders for the account that owns it. `booking.ts` strips that `/u/N/` segment, so pasting either form works.
 - No 24-hour reminder is configured. Appointment schedules expose no per-schedule reminder timing, only a calendar-wide default that would fire on every event in the calendar. The "Calendar invitation" setting is on, so the booking lands in the invitee's calendar and their own reminder settings apply.
 
 ## Files worth knowing about
