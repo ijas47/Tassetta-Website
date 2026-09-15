@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { bookingHref, bookingLinkProps } from '@/lib/booking';
 
 /*
  * /compare/software. Positions against the rate-engine category
@@ -147,7 +148,7 @@ export default function CompareSoftware() {
  </div>
 
  <a
- href="/nexus-study"
+ href={bookingHref} {...bookingLinkProps}
  className="th-9"
  style={{
  display: 'inline-flex',
@@ -162,7 +163,7 @@ export default function CompareSoftware() {
  textDecoration: 'none',
  }}
  >
- Get your free nexus study
+ Book a call
  </a>
  </div>
  </section>

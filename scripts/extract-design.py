@@ -2,9 +2,11 @@
 """Extract per-route HTML from the recovered Claude Design template.
 
 - Strips <sc-if> wrappers (Claude Design conditional render markers).
-- In r_study, drops the inline study_none/study_has upload sub-blocks.
-  /nexus-study is now hand-written TSX (call-led, no upload), so the emitted
-  nexusStudyHtml is kept only as a reference copy of the original design.
+- In r_study, drops the inline study_none/study_has upload sub-blocks. The
+  free nexus study offer has since been dropped entirely, so nexusStudyHtml
+  is emitted only as a reference copy of the original design and is unused.
+- Rewrites the design's nexus-study CTAs to point at /book, since booking a
+  call is now the site's single conversion action.
 - Converts href="#/route" -> href="/route".
 - Converts inline `style-hover="prop: val;"` (Claude Design hover sugar) into
   a generated class whose :hover rule is emitted to `hover.css`.

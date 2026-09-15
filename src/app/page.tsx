@@ -148,16 +148,16 @@ export default function Home() {
  every return filed on time. You watch the whole thing from one page.
  </p>
  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, alignItems: 'center' }}>
- <a href="/nexus-study" style={ctaPrimary} className="th-1">
- Get your free nexus study
+ <a href={bookingHref} {...bookingLinkProps} style={ctaPrimary} className="th-1">
+ Book a call
  </a>
  <a href="/how-it-works" style={ctaGhost} className="th-2">
  See how it works
  </a>
  </div>
  <p style={{ ...body, fontSize: 14, color: T.mute, margin: '18px 0 0', maxWidth: 560 }}>
- Start with a free nexus study. Fifteen minutes and one export, and you get the states you
- already owe in, the ones you are about to cross, and what it costs to get clean.
+ Fifteen minutes on where you sell, what you are exposed to, and what it would take to get
+ clean. No deck, no pitch.
  </p>
  </div>
  </div>
@@ -665,22 +665,21 @@ export default function Home() {
  <div style={container}>
  <div style={{ background: T.ink, borderRadius: 28, padding: 'clamp(36px,5vw,72px)', textAlign: 'center' }}>
  <h2 style={{ ...h2, color: '#fff', fontSize: 'clamp(30px,4.4vw,52px)', margin: '0 0 20px' }}>
- Find out where you stand. It is free.
+ Find out where you stand.
  </h2>
  <p style={{ fontSize: 'clamp(16px,1.7vw,19px)', lineHeight: 1.6, color: '#c7d2cf', margin: '0 auto 32px', maxWidth: 640 }}>
- Fifteen minutes and one export. We come back with the states you already owe in, the ones
- you are about to cross, and what getting compliant actually costs.
+ Fifteen minutes. Where you sell, the states you have probably already crossed in, and what
+ getting compliant actually costs.
  </p>
- <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center' }}>
- <a href="/nexus-study" style={ctaPrimary} className="th-9">
- Get your free nexus study
+ <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center', alignItems: 'center' }}>
+ <a href={bookingHref} {...bookingLinkProps} style={ctaPrimary} className="th-9">
+ Book a call
  </a>
  <a
- href={bookingHref}
- {...bookingLinkProps}
+ href="/contact"
  style={{ fontWeight: 600, fontSize: 15, color: '#fff', textDecoration: 'none', padding: '15px 8px' }}
  >
- Book a call →
+ Or send a message →
  </a>
  </div>
  </div>

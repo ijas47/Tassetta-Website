@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
-import NexusStudyForm from '@/components/NexusStudyForm';
 import { BOOKING_URL, BOOKING_LIVE } from '@/lib/booking';
 
 /*
  * /book. Fifteen minutes on the Google Calendar appointment schedule.
  *
  * Most "Book a call" controls now link straight to Google, so this page is
- * mainly for people who land on /book directly. It keeps the form underneath
- * as the no-call path, and degrades to a visibly provisional placeholder if
- * the scheduler URL is ever unset.
+ * mainly for people who land on /book directly, and for the /nexus-study
+ * redirect. It degrades to a visibly provisional placeholder if the
+ * scheduler URL is ever unset.
  */
 
 export const metadata: Metadata = {
@@ -40,14 +39,6 @@ const h1: React.CSSProperties = {
   letterSpacing: '-0.025em',
   color: T.ink,
   margin: '0 0 20px',
-};
-const h2: React.CSSProperties = {
-  fontFamily: 'var(--font-manrope), Manrope, sans-serif',
-  fontWeight: 800,
-  fontSize: 'clamp(22px,2.8vw,30px)',
-  letterSpacing: '-0.02em',
-  color: T.ink,
-  margin: '0 0 12px',
 };
 const body: React.CSSProperties = {
   fontFamily: 'var(--font-inter), Inter, system-ui, sans-serif',
@@ -90,8 +81,8 @@ export default function BookPage() {
         </p>
         <h1 style={h1}>Book a call.</h1>
         <p style={{ ...body, maxWidth: 620, marginBottom: 36 }}>
-          Where you sell, which channels, roughly what volume. We tell you which export to pull, and
-          your free nexus study follows 3 to 5 business days later. No deck, no pitch.
+          Where you sell, which channels, roughly what volume. We come back with the states you
+          have probably already crossed in and what it would take to get clean. No deck, no pitch.
         </p>
 
         {embedSrc ? (
@@ -147,21 +138,23 @@ export default function BookPage() {
                 NEXT_PUBLIC_BOOKING_URL
               </code>{' '}
               in the Vercel project and every &ldquo;Book a call&rdquo; control on the site points
-              straight at it. Until then, the form below reaches the same inbox.
+              straight at it. Until then, send a message from{' '}
+              <a href="/contact" style={{ color: T.primary, fontWeight: 600 }}>
+                /contact
+              </a>
+              .
             </p>
           </div>
         )}
 
-        <div style={{ marginTop: 'clamp(40px,5vw,64px)' }}>
-          <h2 style={h2}>Rather not talk?</h2>
-          <p style={{ ...body, maxWidth: 620, marginBottom: 24 }}>
-            The call is faster, because half the questions get answered in the first two minutes. But
-            it is not required. Send your details and we reply with the exact export to pull.
-          </p>
-          <div style={card}>
-            <NexusStudyForm subject="Nexus study request" cta="Send my details" />
-          </div>
-        </div>
+        <p style={{ ...body, fontSize: 15, color: T.mute, marginTop: 'clamp(32px,4vw,48px)' }}>
+          Rather write than talk?{' '}
+          <a href="/contact" style={{ color: T.primary, fontWeight: 600, textDecoration: 'none' }}>
+            Send a message instead.
+          </a>{' '}
+          Same inbox, same answer, one extra round trip.
+        </p>
+
       </div>
     </section>
   );

@@ -80,7 +80,6 @@ export default function Footer() {
             <Link href="/how-it-works" className="t-flink" style={LINK_STYLE}>How it works</Link>
             <Link href="/what-we-handle" className="t-flink" style={LINK_STYLE}>What we handle</Link>
             <Link href="/pricing" className="t-flink" style={LINK_STYLE}>Pricing</Link>
-            <Link href="/nexus-study" className="t-flink" style={LINK_STYLE}>Free nexus study</Link>
             <Link href="/security" className="t-flink" style={LINK_STYLE}>Security</Link>
           </div>
 
@@ -102,8 +101,9 @@ export default function Footer() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <p style={COL_HEAD}>Get started</p>
-            <Link
-              href="/nexus-study"
+            <a
+              href={bookingHref}
+              {...bookingLinkProps}
               className="t-cta-primary"
               style={{
                 display: "inline-flex",
@@ -118,9 +118,9 @@ export default function Footer() {
                 textDecoration: "none",
               }}
             >
-              Get your free nexus study
-            </Link>
-            <a href={bookingHref} {...bookingLinkProps} className="t-flink" style={LINK_STYLE}>Book a call</a>
+              Book a call
+            </a>
+            <Link href="/contact" className="t-flink" style={LINK_STYLE}>Contact</Link>
             <Link href="/login" className="t-flink" style={LINK_STYLE}>Log in</Link>
           </div>
         </div>

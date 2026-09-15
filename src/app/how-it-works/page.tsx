@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { bookingHref, bookingLinkProps } from '@/lib/booking';
 
 /*
  * /how-it-works. Dunford voice, grounded in the real product surfaces.
@@ -475,7 +476,7 @@ export default function HowItWorks() {
  compliance would cost.
  </p>
  <a
- href="/nexus-study"
+ href={bookingHref} {...bookingLinkProps}
  className="th-9"
  style={{
  display: 'inline-flex',
@@ -490,7 +491,7 @@ export default function HowItWorks() {
  textDecoration: 'none',
  }}
  >
- Get your free nexus study
+ Book a call
  </a>
  </div>
  </div>

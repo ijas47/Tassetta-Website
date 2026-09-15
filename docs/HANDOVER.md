@@ -1,11 +1,11 @@
 # Handover
 
-## Pages built (26 total)
+## Pages built (25 total)
 
 All match the Claude Design source. Each is server-rendered as static HTML with
 per-page `<title>`, description, canonical, and Open Graph tags.
 
-**Primary marketing pages (19):**
+**Primary marketing pages (18):**
 
 | Route | Source section | Notes |
 | --- | --- | --- |
@@ -21,7 +21,6 @@ per-page `<title>`, description, canonical, and Open Graph tags.
 | `/what-we-handle/notices` | `r_notices` | Matched cleanly. |
 | `/what-we-handle/exemptions` | `r_exempt` | Matched cleanly. |
 | `/pricing` | `r_pricing` | Four tiers + one-time projects. All `validate` badges preserved visibly. Matched cleanly. |
-| `/nexus-study` | `r_study` | **Rewritten in TSX.** The design's CSV upload card is gone. The offer is unchanged (a free nexus study) but the way in is a 15-minute call, with a short form as the no-call path. See "Forms and booking". |
 | `/compare/software` | `r_cmp_software` | Matched cleanly. |
 | `/compare/cpa` | `r_cmp_cpa` | Matched cleanly. |
 | `/about` | `r_about` | Includes the `[PLACEHOLDER, team section]` block, preserved visibly. Matched cleanly. |
@@ -38,10 +37,12 @@ per-page `<title>`, description, canonical, and Open Graph tags.
 
 **Plus:** `/book` (a real page now, `noindex`, see "Forms and booking") and `/_not-found` (Next.js default).
 
+**Removed:** `/nexus-study`. The free nexus study offer was dropped; booking a call is the site's single conversion action. `next.config.ts` holds a permanent redirect from `/nexus-study` to `/book` so the old URL does not 404 and drops out of the index.
+
 ## What matched cleanly vs needed interpretation
 
-- **Cleanly matched:** every route above except the ones since rewritten in TSX (`/`, `/how-it-works`, `/what-we-handle`, `/compare/software`, `/compare/cpa`, `/about`, `/nexus-study`, `/contact`, `/book`). Those follow the design's layout, palette and spacing but carry rewritten copy and, on `/nexus-study` and `/contact`, working forms.
-- **Departure worth knowing about:** the design put a CSV drag-and-drop at the centre of `/nexus-study`. That is gone. Web3Forms Free cannot take attachments, and a sales export should not travel through a browser form to a third-party relay anyway. The study itself is unchanged; the file now moves once, by email, after we have told the customer which export to pull.
+- **Cleanly matched:** every route above except the ones since rewritten in TSX (`/`, `/how-it-works`, `/what-we-handle`, `/compare/software`, `/compare/cpa`, `/about`, `/contact`, `/book`). Those follow the design's layout, palette and spacing but carry rewritten copy and, on `/contact`, a working form.
+- **Departure worth knowing about:** the design's whole free-nexus-study funnel is gone, CSV drag-and-drop and all. Every CTA that offered a study now books a call. `/contact` remains for people who would rather write.
 
 ## Motion
 
@@ -94,14 +95,13 @@ In code (not visible on-screen):
 
 ## Forms and booking
 
-Both forms post to **Web3Forms** (Free plan, 250 submissions/month) and land in `ijas@tassetta.com`.
+Booking a call is the site's single conversion action. One form remains, on `/contact`, for people who would rather write.
 
+- `src/components/ContactForm.tsx` posts to **Web3Forms** (Free plan, 250 submissions/month) and lands in `ijas@tassetta.com`.
 - `src/lib/web3forms.ts` holds the access key and the `submitToWeb3Forms()` helper. The key is public by design, it identifies the destination inbox and is not a secret. Override with `NEXT_PUBLIC_WEB3FORMS_KEY` to rotate without a code change.
-- `src/components/NexusStudyForm.tsx` on `/nexus-study` and `/book`.
-- `src/components/ContactForm.tsx` on `/contact`.
-- Both carry a hidden `botcheck` honeypot. Web3Forms' Advanced Spam Filter is already on at Basic; hCaptcha is available free if spam becomes a problem.
-- **Nothing uploads.** Free Web3Forms has no file attachments (Pro only), and sales exports do not belong in a browser form anyway. The CSV moves once, by email, after we tell the customer which export to pull.
-- Autoresponder is also Pro only, so the first reply is manual either way.
+- It carries a hidden `botcheck` honeypot. Web3Forms' Advanced Spam Filter is already on at Basic; hCaptcha is available free if spam becomes a problem.
+- Nothing uploads anywhere on the site. Free Web3Forms has no file attachments (Pro only), and sales exports do not belong in a browser form regardless.
+- Autoresponder is also Pro only, so the first reply is manual.
 
 Booking is **live** on a Google Calendar appointment schedule, "Tassetta · 15-minute nexus call", on ijas@tassetta.com.
 

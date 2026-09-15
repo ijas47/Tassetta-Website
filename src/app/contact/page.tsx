@@ -128,11 +128,8 @@ export default function ContactPage() {
             </div>
 
             <p style={{ ...body, fontSize: 15, color: T.mute, marginTop: 24 }}>
-              Not ready to talk yet? The{' '}
-              <a href="/nexus-study" style={{ color: T.primary, fontWeight: 600, textDecoration: 'none' }}>
-                free nexus study
-              </a>{' '}
-              is the low friction way in.
+              Not ready to talk yet? Write instead. The form goes to the same inbox and gets the
+              same answer, it just takes a round trip.
             </p>
           </div>
 

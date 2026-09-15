@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { bookingHref, bookingLinkProps } from '@/lib/booking';
 
 /*
  * /about, in-tsx rewrite that leads with the software framing:
@@ -148,7 +149,7 @@ export default function About() {
  </div>
 
  <a
- href="/nexus-study"
+ href={bookingHref} {...bookingLinkProps}
  style={{
  display: 'inline-flex',
  alignItems: 'center',
@@ -162,7 +163,7 @@ export default function About() {
  textDecoration: 'none',
  }}
  >
- Get your free nexus study
+ Book a call
  </a>
  </div>
  </section>

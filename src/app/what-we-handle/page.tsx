@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { bookingHref, bookingLinkProps } from '@/lib/booking';
 
 /*
  * /what-we-handle, rewritten in Fletch voice, grounded in the real product surfaces.
@@ -391,7 +392,7 @@ export default function WhatWeHandle() {
  what getting compliant would actually cost.
  </p>
  <a
- href="/nexus-study"
+ href={bookingHref} {...bookingLinkProps}
  style={{
  display: 'inline-flex',
  alignItems: 'center',
@@ -405,7 +406,7 @@ export default function WhatWeHandle() {
  textDecoration: 'none',
  }}
  >
- Get your free nexus study
+ Book a call
  </a>
  </div>
  </div>

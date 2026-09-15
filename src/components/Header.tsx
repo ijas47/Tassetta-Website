@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { bookingHref, bookingLinkProps } from "@/lib/booking";
 import { useState } from "react";
 
 const NAV = [
@@ -95,8 +96,9 @@ export default function Header() {
           >
             Log in
           </Link>
-          <Link
-            href="/nexus-study"
+          <a
+            href={bookingHref}
+            {...bookingLinkProps}
             className="t-cta-primary"
             style={{
               display: "inline-flex",
@@ -110,8 +112,8 @@ export default function Header() {
               textDecoration: "none",
             }}
           >
-            Get your free nexus study
-          </Link>
+            Book a call
+          </a>
         </div>
 
         <button
@@ -181,8 +183,9 @@ export default function Header() {
         >
           Log in
         </Link>
-        <Link
-          href="/nexus-study"
+        <a
+          href={bookingHref}
+          {...bookingLinkProps}
           onClick={close}
           style={{
             marginTop: 12,
@@ -196,8 +199,8 @@ export default function Header() {
             textDecoration: "none",
           }}
         >
-          Get your free nexus study
-        </Link>
+          Book a call
+        </a>
       </div>
     </header>
   );

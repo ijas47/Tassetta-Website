@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { bookingHref, bookingLinkProps } from '@/lib/booking';
 
 /*
  * /compare/cpa. Positions against the outsourced-accounting alternative.
@@ -141,7 +142,7 @@ export default function CompareCpa() {
  </div>
 
  <a
- href="/nexus-study"
+ href={bookingHref} {...bookingLinkProps}
  className="th-9"
  style={{
  display: 'inline-flex',
@@ -156,7 +157,7 @@ export default function CompareCpa() {
  textDecoration: 'none',
  }}
  >
- Get your free nexus study
+ Book a call
  </a>
  </div>
  </section>
