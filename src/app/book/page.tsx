@@ -3,16 +3,18 @@ import NexusStudyForm from '@/components/NexusStudyForm';
 import { BOOKING_URL, BOOKING_LIVE } from '@/lib/booking';
 
 /*
- * /book. Fifteen minutes on a Google Calendar appointment schedule.
+ * /book. Fifteen minutes on the Google Calendar appointment schedule.
  *
- * Until NEXT_PUBLIC_BOOKING_URL is set this renders a visibly provisional
- * placeholder plus the same short form, so the page never becomes a dead end.
- * Kept out of the index either way: it duplicates /nexus-study intent.
+ * Most "Book a call" controls now link straight to Google, so this page is
+ * mainly for people who land on /book directly. It keeps the form underneath
+ * as the no-call path, and degrades to a visibly provisional placeholder if
+ * the scheduler URL is ever unset.
  */
 
 export const metadata: Metadata = {
   title: 'Book a call',
-  description: 'Fifteen minutes on where you sell, what you are exposed to, and what it would take to get clean.',
+  description:
+    'Fifteen minutes on where you sell, what you are exposed to, and what it would take to get clean.',
   alternates: { canonical: '/book' },
   robots: { index: false, follow: true },
 };
@@ -25,7 +27,6 @@ const T = {
   pale: '#d9ede9',
   canvasSoft: '#eef2f0',
   warn: '#a67512',
-  warnPale: '#fbecc9',
 } as const;
 
 const container = { maxWidth: 900, margin: '0 auto', padding: '0 clamp(20px,4vw,32px)' } as const;
@@ -40,6 +41,14 @@ const h1: React.CSSProperties = {
   color: T.ink,
   margin: '0 0 20px',
 };
+const h2: React.CSSProperties = {
+  fontFamily: 'var(--font-manrope), Manrope, sans-serif',
+  fontWeight: 800,
+  fontSize: 'clamp(22px,2.8vw,30px)',
+  letterSpacing: '-0.02em',
+  color: T.ink,
+  margin: '0 0 12px',
+};
 const body: React.CSSProperties = {
   fontFamily: 'var(--font-inter), Inter, system-ui, sans-serif',
   fontSize: 17,
@@ -47,8 +56,17 @@ const body: React.CSSProperties = {
   color: T.body,
   margin: 0,
 };
+const card: React.CSSProperties = {
+  background: '#fff',
+  borderRadius: 24,
+  padding: 'clamp(24px,3vw,34px)',
+  boxShadow: '0 30px 70px -34px rgba(15,27,26,0.32)',
+};
 
-/** Google's own embeddable schedule URL, when the configured link is one. */
+/**
+ * Google only allows the long schedule URL in an iframe. The
+ * calendar.app.google short links must be opened in a new tab.
+ */
 const embedSrc =
   BOOKING_LIVE && BOOKING_URL.includes('/calendar/appointments/')
     ? `${BOOKING_URL}${BOOKING_URL.includes('?') ? '&' : '?'}gv=true`
@@ -73,18 +91,11 @@ export default function BookPage() {
         <h1 style={h1}>Book a call.</h1>
         <p style={{ ...body, maxWidth: 620, marginBottom: 36 }}>
           Where you sell, which channels, roughly what volume. We tell you which export to pull, and
-          your free nexus study follows 3 to 5 business days later.
+          your free nexus study follows 3 to 5 business days later. No deck, no pitch.
         </p>
 
         {embedSrc ? (
-          <div
-            style={{
-              background: '#fff',
-              borderRadius: 24,
-              padding: 'clamp(12px,1.6vw,18px)',
-              boxShadow: '0 30px 70px -34px rgba(15,27,26,0.32)',
-            }}
-          >
+          <div style={{ ...card, padding: 'clamp(12px,1.6vw,18px)' }}>
             <iframe
               src={embedSrc}
               title="Book a call with Tassetta"
@@ -93,25 +104,31 @@ export default function BookPage() {
             />
           </div>
         ) : BOOKING_LIVE ? (
-          <a
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-block',
-              background: T.primary,
-              color: '#fff',
-              fontFamily: 'var(--font-inter), Inter, system-ui, sans-serif',
-              fontWeight: 600,
-              fontSize: 16,
-              padding: '15px 30px',
-              borderRadius: 24,
-              textDecoration: 'none',
-            }}
-            className="th-1"
-          >
-            Open the scheduler
-          </a>
+          <div style={card}>
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                background: T.primary,
+                color: '#fff',
+                fontFamily: 'var(--font-inter), Inter, system-ui, sans-serif',
+                fontWeight: 600,
+                fontSize: 16,
+                padding: '15px 30px',
+                borderRadius: 24,
+                textDecoration: 'none',
+              }}
+              className="th-1"
+            >
+              Pick a time →
+            </a>
+            <p style={{ ...body, fontSize: 14.5, color: T.mute, marginTop: 18 }}>
+              Opens Google Calendar in a new tab. Times show in your own timezone, and you get a
+              Google Meet link with the confirmation.
+            </p>
+          </div>
         ) : (
           <div
             style={{
@@ -119,14 +136,13 @@ export default function BookPage() {
               border: `2px dashed ${T.warn}`,
               borderRadius: 20,
               padding: 'clamp(20px,3vw,28px)',
-              marginBottom: 32,
             }}
           >
             <p style={{ ...mono, fontSize: 13, color: T.warn, fontWeight: 700, margin: '0 0 10px' }}>
-              [ PLACEHOLDER, scheduler not connected yet ]
+              [ PLACEHOLDER, scheduler not connected ]
             </p>
             <p style={{ ...body, fontSize: 15.5 }}>
-              The Google Calendar booking page goes here. Set{' '}
+              Set{' '}
               <code style={{ ...mono, fontSize: 14, background: T.pale, padding: '2px 6px', borderRadius: 6 }}>
                 NEXT_PUBLIC_BOOKING_URL
               </code>{' '}
@@ -136,18 +152,16 @@ export default function BookPage() {
           </div>
         )}
 
-        {!BOOKING_LIVE && (
-          <div
-            style={{
-              background: '#fff',
-              borderRadius: 24,
-              padding: 'clamp(24px,3vw,34px)',
-              boxShadow: '0 30px 70px -34px rgba(15,27,26,0.32)',
-            }}
-          >
-            <NexusStudyForm subject="Call request" cta="Ask us to call you" />
+        <div style={{ marginTop: 'clamp(40px,5vw,64px)' }}>
+          <h2 style={h2}>Rather not talk?</h2>
+          <p style={{ ...body, maxWidth: 620, marginBottom: 24 }}>
+            The call is faster, because half the questions get answered in the first two minutes. But
+            it is not required. Send your details and we reply with the exact export to pull.
+          </p>
+          <div style={card}>
+            <NexusStudyForm subject="Nexus study request" cta="Send my details" />
           </div>
-        )}
+        </div>
       </div>
     </section>
   );

@@ -1,20 +1,30 @@
 /**
  * Call booking.
  *
- * Bookings run on a Google Calendar appointment schedule attached to the
- * Google Workspace account on the tassetta.com domain. That schedule has a
- * public booking page URL of the shape:
- *   https://calendar.app.google/XXXXXXXXXXXXXXXX
+ * Live. Bookings run on the Google Calendar appointment schedule
+ * "Tassetta · 15-minute nexus call", on ijas@tassetta.com.
  *
- * Set it once, in Vercel, as NEXT_PUBLIC_BOOKING_URL. Until it is set every
- * "Book a call" control routes to /book, which renders a visibly provisional
- * placeholder plus a form, so no lead is dropped while the schedule is
- * being created.
+ *   15 minutes, Google Meet, 15 minute buffer, max 6 per day.
+ *   Availability Mon-Fri 06:00-24:00 IST, 21 days out, 4 hours notice.
+ *   Booking form collects name, email, store URL, and states sold into.
  *
- * [TODO: paste the real Google Calendar booking URL into
- * NEXT_PUBLIC_BOOKING_URL in the Vercel project settings.]
+ * The URL is public by design, it is the page we ask strangers to open.
+ * Kept in code rather than env so a fresh clone or preview deploy books
+ * correctly with no setup; NEXT_PUBLIC_BOOKING_URL overrides it if the
+ * schedule ever moves.
+ *
+ * Note this is a calendar.app.google short link, which Google does not allow
+ * in an iframe. /book therefore links out rather than embedding. If the
+ * schedule is ever re-shared as the longer
+ * calendar.google.com/calendar/appointments/schedules/... form, /book will
+ * embed it automatically.
+ *
+ * That Workspace plan allows exactly one appointment schedule, so this
+ * single URL is the only booking entry point the business has.
  */
-const raw = (process.env.NEXT_PUBLIC_BOOKING_URL ?? '').trim();
+const FALLBACK = 'https://calendar.app.google/9D9La2YiW1aq4sDR7';
+
+const raw = (process.env.NEXT_PUBLIC_BOOKING_URL ?? FALLBACK).trim();
 
 /** The live Google Calendar booking URL, or '' while it is not configured. */
 export const BOOKING_URL = raw.startsWith('https://') ? raw : '';

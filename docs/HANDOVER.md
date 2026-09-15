@@ -87,8 +87,6 @@ Rendered visibly to the user per your brief:
 - `/resources` mono-font `[ PLACEHOLDER, starter article angles, not yet published ]` above the article stubs.
 - **Footer legal disclaimer** always visible on every page, unchanged: "Tassetta provides managed sales tax compliance services. We are not a law firm and do not provide legal advice…" followed by the mono-styled `[TODO: Add your real entity name, and once they exist, your E&O insurance and any certifications.]`. Entity name is still a placeholder as specified.
 
-- `/book` amber dashed card `[ PLACEHOLDER, scheduler not connected yet ]`, shown only while `NEXT_PUBLIC_BOOKING_URL` is unset.
-
 In code (not visible on-screen):
 
 - `robots.ts` / `sitemap.ts` not generated. Add them once the production domain is confirmed.
@@ -105,12 +103,16 @@ Both forms post to **Web3Forms** (Free plan, 250 submissions/month) and land in 
 - **Nothing uploads.** Free Web3Forms has no file attachments (Pro only), and sales exports do not belong in a browser form anyway. The CSV moves once, by email, after we tell the customer which export to pull.
 - Autoresponder is also Pro only, so the first reply is manual either way.
 
-Booking runs on a **Google Calendar appointment schedule**:
+Booking is **live** on a Google Calendar appointment schedule, "Tassetta · 15-minute nexus call", on ijas@tassetta.com.
 
-- Set `NEXT_PUBLIC_BOOKING_URL` in the Vercel project to the public booking URL (`https://calendar.app.google/...`, or the longer `https://calendar.google.com/calendar/appointments/schedules/...` form).
-- Every "Book a call" control reads `src/lib/booking.ts` and points straight at it once set, opening in a new tab.
-- Until it is set, they all route to `/book`, which shows the placeholder card plus the same form. No dead links at any point.
-- If the configured URL is the long `/calendar/appointments/` form, `/book` embeds it directly with `?gv=true`. The short `calendar.app.google` links cannot be embedded, so `/book` renders an "Open the scheduler" button instead.
+- Public URL: `https://calendar.app.google/9D9La2YiW1aq4sDR7`. It lives in `src/lib/booking.ts` rather than in env, so a fresh clone or a preview deploy books correctly with no setup. It is a link we hand to strangers, not a secret.
+- `NEXT_PUBLIC_BOOKING_URL` overrides it if the schedule ever moves. No code change needed.
+- Every "Book a call" control across the site reads `src/lib/booking.ts` and opens it in a new tab.
+- Schedule config: 15 minutes, Google Meet, 15 minute buffer, max 6 bookings/day, 21 days out, 4 hours minimum notice. Availability Mon-Fri 06:00-24:00 IST. Booking form collects name, email, store URL (required) and states sold into (optional).
+- The window is deliberately wide because the customers are in the US. Google renders the booking page in the visitor's timezone, so an IST-business-hours-only window would have shown a New York buyer nothing but 12:30am-7:30am slots.
+- That Workspace plan allows exactly **one** appointment schedule. This one replaced an earlier "30 min with Ijas" schedule, so any old link to that now lands on the 15-minute nexus call.
+- `calendar.app.google` short links cannot be iframed, so `/book` links out with a "Pick a time" button. If the schedule is ever re-shared as the longer `calendar.google.com/calendar/appointments/schedules/...` URL, `/book` embeds it automatically with `?gv=true`.
+- No 24-hour reminder is configured. Appointment schedules expose no per-schedule reminder timing, only a calendar-wide default that would fire on every event in the calendar. The "Calendar invitation" setting is on, so the booking lands in the invitee's calendar and their own reminder settings apply.
 
 ## Files worth knowing about
 

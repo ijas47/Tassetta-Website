@@ -151,9 +151,9 @@ export default function NexusStudyPage() {
                 Rather not talk? Send your details
               </a>
             </div>
-            <p style={{ ...body, fontSize: 14, color: T.mute, margin: '18px 0 0', maxWidth: 600 }}>
-              No charge, and no obligation to become a customer. If the report says you are fine, you
-              are fine.
+            <p style={{ ...body, fontSize: 14, color: T.mute, margin: '18px 0 0', maxWidth: 620 }}>
+              Fifteen minutes on Google Meet, at a time in your own timezone. No charge, and no
+              obligation to become a customer. If the report says you are fine, you are fine.
             </p>
           </div>
         </div>
