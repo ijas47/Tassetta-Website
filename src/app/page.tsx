@@ -175,14 +175,14 @@ export default function Home() {
  }}
  >
  <video
- src="/videos/explainer-45s.mp4"
+ src="/videos/explainer-40s.mp4"
  controls
  playsInline
  muted
  autoPlay
  loop
  preload="metadata"
- aria-label="Tassetta 45-second explainer"
+ aria-label="Tassetta 40-second app walkthrough"
  style={{
  width: '100%',
  display: 'block',
@@ -192,7 +192,7 @@ export default function Home() {
  }}
  >
  Your browser does not support video playback.{' '}
- <a href="/videos/explainer-45s.mp4" style={{ color: T.primary }}>
+ <a href="/videos/explainer-40s.mp4" style={{ color: T.primary }}>
  Download the explainer
  </a>
  .
