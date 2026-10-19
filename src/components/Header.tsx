@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { appUrl } from "@/lib/app";
 import { bookingHref, bookingLinkProps } from "@/lib/booking";
 import { useState } from "react";
 
@@ -89,13 +90,13 @@ export default function Header() {
         </nav>
 
         <div className="t-nav-desktop" style={{ alignItems: "center", gap: 18, flex: "none" }}>
-          <Link
-            href="/login"
+          <a
+            href={appUrl}
             className="t-loginlink"
             style={{ fontWeight: 600, fontSize: 14, color: "#41504d", textDecoration: "none" }}
           >
             Log in
-          </Link>
+          </a>
           <a
             href={bookingHref}
             {...bookingLinkProps}
@@ -169,8 +170,8 @@ export default function Header() {
             {item.label}
           </Link>
         ))}
-        <Link
-          href="/login"
+        <a
+          href={appUrl}
           onClick={close}
           style={{
             fontWeight: 600,
@@ -182,7 +183,7 @@ export default function Header() {
           }}
         >
           Log in
-        </Link>
+        </a>
         <a
           href={bookingHref}
           {...bookingLinkProps}

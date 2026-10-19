@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { appUrl } from "@/lib/app";
 import { bookingHref, bookingLinkProps } from "@/lib/booking";
 
 const LINK_STYLE = {
@@ -121,7 +122,7 @@ export default function Footer() {
               Book a call
             </a>
             <Link href="/contact" className="t-flink" style={LINK_STYLE}>Contact</Link>
-            <Link href="/login" className="t-flink" style={LINK_STYLE}>Log in</Link>
+            <a href={appUrl} className="t-flink" style={LINK_STYLE}>Log in</a>
           </div>
         </div>
 
