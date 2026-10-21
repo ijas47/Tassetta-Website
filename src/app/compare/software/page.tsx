@@ -69,7 +69,7 @@ const ROWS: [string, string, string][] = [
  ['Separating marketplace tax', 'You reconcile it', 'Split at import'],
  ['Answering a state notice', 'Your problem', 'Matched, drafted, logged'],
  ['Evidence for an audit', 'Export what you can find', 'Seven-year archive per filing'],
- ['What you pay on', 'Transaction volume', 'A flat fee per state'],
+ ['What you pay on', 'Transaction volume', '$1,000 a year, unlimited states'],
 ];
 
 export default function CompareSoftware() {

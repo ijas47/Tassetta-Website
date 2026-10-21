@@ -4,11 +4,11 @@ import { pricingHtml } from '@/lib/design-html';
 
 export const metadata: Metadata = {
  title: 'Pricing',
- description: 'A monthly base plus a flat fee for each state you are registered in. Priced on states, not transactions, so your compliance bill does not climb with your best month.',
+ description: '$1,000 a year. Unlimited filing and unlimited states.',
  alternates: { canonical: '/pricing' },
  openGraph: {
  title: 'Pricing',
- description: 'A monthly base plus a flat fee for each state you are registered in. Priced on states, not transactions, so your compliance bill does not climb with your best month.',
+ description: '$1,000 a year. Unlimited filing and unlimited states.',
  url: '/pricing',
  type: 'website',
  },

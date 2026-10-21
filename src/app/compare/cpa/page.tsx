@@ -98,7 +98,7 @@ export default function CompareCpa() {
  {
  head: 'The price does not move with the hours',
  them: 'Billed on time spent, which rises exactly when your volume does.',
- us: 'A flat fee per state. Filing one return costs the same in December as in February.',
+ us: '$1,000 a year. Unlimited states and unlimited filings.',
  },
  ].map((r) => (
  <div key={r.head} style={{ background: T.canvasSoft, borderRadius: 20, padding: 'clamp(22px,3vw,28px)' }}>

@@ -647,11 +647,9 @@ export default function Home() {
  <div style={container}>
  <div style={{ maxWidth: 760 }}>
  <p style={eyebrow}>Pricing</p>
- <h2 style={h2}>Priced per state, not per transaction.</h2>
+ <h2 style={h2}>$1,000 a year. Unlimited states.</h2>
  <p style={{ ...body, fontSize: 'clamp(16px,1.6vw,19px)', margin: '0 0 28px' }}>
- A monthly base plus a flat fee for each state you are registered in. Filing one state&rsquo;s
- return costs the same in your best month as your slowest, so your compliance bill does not
- spike the month you have a good sale.
+ One price covers every state and every filing. It does not grow with how much you sell.
  </p>
  <a href="/pricing" className="th-8" style={{ fontWeight: 600, fontSize: 15, color: T.primary, textDecoration: 'none' }}>
  See pricing →
